@@ -85,17 +85,25 @@
 
                 <StackPanel Grid.Row="1" Margin="0,0,0,12">
                     <TextBlock Text="Imię" FontSize="16" Margin="0,0,0,5"/>
-                    <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"
+                    <TextBox x:Name="NameTextBox"
+                             Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"
                              FontSize="18"
-                             Height="42"/>
+                             Height="42"
+                             IsReadOnly="True"
+                             Cursor="Hand"
+                             PreviewMouseDown="NameTextBox_PreviewMouseDown"/>
                 </StackPanel>
 
                 <StackPanel Grid.Row="2" Margin="0,0,0,12">
                     <TextBlock Text="PIN (4 cyfry)" FontSize="16" Margin="0,0,0,5"/>
-                    <TextBox Text="{Binding Pin, UpdateSourceTrigger=PropertyChanged}"
+                    <TextBox x:Name="PinTextBox"
+                             Text="{Binding Pin, UpdateSourceTrigger=PropertyChanged}"
                              FontSize="18"
                              Height="42"
-                             MaxLength="4"/>
+                             MaxLength="4"
+                             IsReadOnly="True"
+                             Cursor="Hand"
+                             PreviewMouseDown="PinTextBox_PreviewMouseDown"/>
                 </StackPanel>
 
                 <StackPanel Grid.Row="3" Margin="0,0,0,12">
