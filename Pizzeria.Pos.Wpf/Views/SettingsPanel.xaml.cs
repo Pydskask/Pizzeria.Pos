@@ -1,12 +1,16 @@
-﻿using System.Windows.Controls;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Pizzeria.Pos.Services;
+using Pizzeria.Pos.Wpf.ViewModels;
+using System.Windows.Controls;
 
-namespace Pizzeria.Pos.Wpf.Views
+namespace Pizzeria.Pos.Wpf.Views;
+
+public partial class SettingsPanel : UserControl
 {
-    public partial class SettingsPanel : UserControl
+    public SettingsPanel()
     {
-        public SettingsPanel()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+        var backupService = App.ServiceProvider!.GetRequiredService<IBackupService>();
+        DataContext = new SettingsPanelViewModel(backupService);
     }
 }

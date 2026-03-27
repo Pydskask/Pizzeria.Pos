@@ -15,6 +15,7 @@ public partial class ReportsViewModel : ObservableObject
     private readonly IOrderRepository orderRepo;
     private readonly IPrintService printService;
     private readonly User currentUser;
+    private readonly IBackupService backupService;
 
     // ─── DZIENNY ───────────────────────────────────────────
     [ObservableProperty] private DateTime? selectedDate;
@@ -155,12 +156,67 @@ public partial class ReportsViewModel : ObservableObject
     [RelayCommand]
     private void CloseDay()
     {
-        var result = MessageBox.Show(
-            "Czy na pewno chcesz zamknąć dzień? Ta operacja oznacza koniec zmiany i archiwizację danych.",
-            "Zamknięcie dnia", MessageBoxButton.YesNo, MessageBoxImage.Question);
+        var today = DateTime.Today;
 
-        if (result == MessageBoxResult.Yes)
-            StatusMessage = "Dzień zamknięty.";
+        // Sprawdź czy jest co zamykać
+        var todayOrders = orderRepo.GetAll()
+            .Where(o => o.CreatedAt.Date == today)
+            .ToList();
+
+        if (!todayOrders.Any())
+        {
+            MessageBox.Show("Brak zamówień z dzisiaj — nie ma czego zamykać.",
+                "Zamknięcie dnia", MessageBoxButton.OK, MessageBoxImage.Information);
+            return;
+        }
+
+        var paid = todayOrders.Where(o => o.IsPaid && !o.IsCanceled).ToList();
+        var canceled = todayOrders.Where(o => o.IsCanceled).ToList();
+        var gross = paid.Sum(o => o.Total);
+
+        var confirm = MessageBox.Show(
+            $"ZAMKNIĘCIE DNIA {today:dd.MM.yyyy}\n\n" +
+            $"Zamówień łącznie:  {todayOrders.Count}\n" +
+            $"  Opłaconych:      {paid.Count}\n" +
+            $"  Anulowanych:     {canceled.Count}\n" +
+            $"  Obrót brutto:    {gross:F2} zł\n\n" +
+            "Czy na pewno chcesz zamknąć dzień?\n" +
+            "Zostanie wydrukowany raport i wykonany backup bazy.",
+            "Zamknięcie dnia",
+            MessageBoxButton.YesNo,
+            MessageBoxImage.Question);
+
+        if (confirm != MessageBoxResult.Yes)
+            return;
+
+        // 1. Załaduj i wydrukuj raport dnia
+        SelectedDate = today;
+        LoadDailyReport();
+        var printSuccess = printService.PrintTextDocument(
+            title: $"ZAMKNIECIE_DNIA_{today:yyyy-MM-dd}",
+            content: ReportText,
+            orderId: null,
+            printedBy: currentUser,
+            documentType: "Zamknięcie dnia");
+
+        // 2. Backup bazy
+        var backupPath = backupService.CreateBackup();
+        var backupInfo = backupPath != null
+            ? $"✔ Backup: {System.IO.Path.GetFileName(backupPath)}"
+            : "⚠ Backup nie powiódł się!";
+
+        // 3. Podsumowanie
+        var printInfo = printSuccess
+            ? "✔ Raport zapisany do pliku TXT."
+            : "⚠ Nie udało się zapisać raportu.";
+
+        MessageBox.Show(
+            $"Dzień {today:dd.MM.yyyy} zamknięty.\n\n{printInfo}\n{backupInfo}",
+            "Zamknięcie dnia — gotowe",
+            MessageBoxButton.OK,
+            printSuccess && backupPath != null ? MessageBoxImage.Information : MessageBoxImage.Warning);
+
+        StatusMessage = $"Dzień {today:dd.MM.yyyy} zamknięty. {backupInfo}";
     }
 
     [RelayCommand]
@@ -276,4 +332,14 @@ public partial class ReportsViewModel : ObservableObject
             .Where(o => o.IsPaid && !o.IsCanceled &&
                         string.Equals(o.PaymentMethod, method, StringComparison.OrdinalIgnoreCase))
             .Sum(o => o.Total);
+
+    public ReportsViewModel(IOrderRepository orderRepo, User currentUser,
+    IPrintService printService, IBackupService backupService)
+    {
+        this.orderRepo = orderRepo ?? throw new ArgumentNullException(nameof(orderRepo));
+        this.currentUser = currentUser ?? throw new ArgumentNullException(nameof(currentUser));
+        this.printService = printService ?? throw new ArgumentNullException(nameof(printService));
+        this.backupService = backupService ?? throw new ArgumentNullException(nameof(backupService));
+        SelectedDate = DateTime.Today;
+    }
 }

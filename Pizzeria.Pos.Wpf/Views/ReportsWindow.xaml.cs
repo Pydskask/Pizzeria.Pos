@@ -13,7 +13,8 @@ public partial class ReportsWindow : Window
         InitializeComponent();
 
         var printService = App.ServiceProvider!.GetRequiredService<IPrintService>();
-        DataContext = new ReportsViewModel(orderRepo, currentUser, printService);
+        var backupService = App.ServiceProvider!.GetRequiredService<IBackupService>();
+        DataContext = new ReportsViewModel(orderRepo, currentUser, printService, backupService);
 
         MainTabControl.SelectedIndex = initialTab;
     }

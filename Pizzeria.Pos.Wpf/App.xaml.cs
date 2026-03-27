@@ -31,6 +31,7 @@ public partial class App : Application
         services.AddScoped<IProductRepository, ProductRepository>();
         services.AddScoped<IPrintService, PrintService>();
         services.AddScoped<IPizzaAddonRepository, PizzaAddonRepository>();
+        services.AddSingleton<IBackupService, BackupService>();
 
         services.AddTransient<LoginViewModel>();
         services.AddTransient<OrderViewModel>();

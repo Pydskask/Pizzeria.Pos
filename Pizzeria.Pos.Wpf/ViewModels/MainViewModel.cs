@@ -28,6 +28,7 @@ public partial class MainViewModel : ObservableObject
     private readonly IOrderRepository _orderRepo;
     private readonly IUserRepository _userRepo;
     private readonly IPrintService _printService;
+    private readonly IBackupService _backupService;
     private readonly DispatcherTimer _timer;
 
     [ObservableProperty]
@@ -73,15 +74,17 @@ public partial class MainViewModel : ObservableObject
         IOrderRepository orderRepo,
         IUserRepository userRepo,
         IPrintService printService,
+        IBackupService backupService,
         User user)
     {
         _orderRepo = orderRepo;
         _userRepo = userRepo;
         _printService = printService;
+        _backupService = backupService;
         CurrentUser = user;
 
         UserManagement = new UserManagementViewModel(_userRepo, CurrentUser);
-        SettingsPanel = new SettingsPanelViewModel();
+        SettingsPanel = new SettingsPanelViewModel(_backupService);
 
         LoadOpenOrders();
 
@@ -621,8 +624,23 @@ public partial class MainViewModel : ObservableObject
     [RelayCommand]
     private void Logout()
     {
-        _timer.Stop();
-        Application.Current.Shutdown();
+        var confirm = MessageBox.Show(
+            "Czy na pewno chcesz się wylogować?",
+            "Wylogowanie",
+            MessageBoxButton.YesNo,
+            MessageBoxImage.Question);
+
+        if (confirm != MessageBoxResult.Yes) return;
+
+        // Otwórz nowe okno logowania
+        var login = new Pizzeria.Pos.Wpf.Views.LoginWindow();
+        login.Show();
+
+        // Zamknij MainWindow
+        Application.Current.Windows
+            .OfType<System.Windows.Window>()
+            .FirstOrDefault(w => w is Pizzeria.Pos.Wpf.MainWindow)
+            ?.Close();
     }
 
     [RelayCommand]
