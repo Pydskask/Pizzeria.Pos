@@ -9,25 +9,16 @@
         Background="#0F172A">
 
     <Window.Resources>
-        <SolidColorBrush x:Key="CardBrush"         Color="#1E293B"/>
-        <SolidColorBrush x:Key="CardBorderBrush"   Color="#334155"/>
-        <SolidColorBrush x:Key="MutedBrush"        Color="#94A3B8"/>
-        <SolidColorBrush x:Key="PrimaryBrush"      Color="#2563EB"/>
-        <SolidColorBrush x:Key="PrimarySoftBrush"  Color="#1E3A5F"/>
-        <SolidColorBrush x:Key="SuccessBrush"      Color="#16A34A"/>
-        <SolidColorBrush x:Key="SuccessSoftBrush"  Color="#14532D"/>
-        <SolidColorBrush x:Key="TextBrush"         Color="#F1F5F9"/>
-
         <!-- Kafelek RadioButton (rozmiar / ciasto) -->
         <Style x:Key="TileRadio" TargetType="RadioButton">
-            <Setter Property="Cursor"                    Value="Hand"/>
-            <Setter Property="Margin"                    Value="0,0,0,8"/>
-            <Setter Property="Height"                    Value="72"/>
+            <Setter Property="Cursor"                     Value="Hand"/>
+            <Setter Property="Margin"                     Value="0,0,0,8"/>
+            <Setter Property="Height"                     Value="68"/>
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-            <Setter Property="Background"                Value="#0F172A"/>
-            <Setter Property="BorderBrush"               Value="#334155"/>
-            <Setter Property="BorderThickness"           Value="2"/>
-            <Setter Property="Padding"                   Value="14,10"/>
+            <Setter Property="Background"                 Value="#0F172A"/>
+            <Setter Property="BorderBrush"                Value="#334155"/>
+            <Setter Property="BorderThickness"            Value="2"/>
+            <Setter Property="Padding"                    Value="14,10"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="RadioButton">
@@ -42,8 +33,43 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsChecked" Value="True">
-                                <Setter TargetName="Bd" Property="Background"   Value="#1E3A5F"/>
-                                <Setter TargetName="Bd" Property="BorderBrush"  Value="#2563EB"/>
+                                <Setter TargetName="Bd" Property="Background"  Value="#1E3A5F"/>
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="#2563EB"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="#60A5FA"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Przycisk kategorii dodatku -->
+        <Style x:Key="CategoryBtn" TargetType="RadioButton">
+            <Setter Property="Cursor"                     Value="Hand"/>
+            <Setter Property="Margin"                     Value="0,0,0,8"/>
+            <Setter Property="Height"                     Value="52"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Background"                 Value="#0F172A"/>
+            <Setter Property="BorderBrush"                Value="#334155"/>
+            <Setter Property="BorderThickness"            Value="2"/>
+            <Setter Property="Padding"                    Value="14,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Border x:Name="Bd"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="10">
+                            <ContentPresenter Margin="{TemplateBinding Padding}"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="Bd" Property="Background"  Value="#1E3A5F"/>
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="#2563EB"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="Bd" Property="BorderBrush" Value="#60A5FA"/>
@@ -56,14 +82,14 @@
 
         <!-- Kafelek CheckBox (dodatki) -->
         <Style x:Key="TileCheck" TargetType="CheckBox">
-            <Setter Property="Cursor"                    Value="Hand"/>
-            <Setter Property="Margin"                    Value="0,0,0,8"/>
-            <Setter Property="Height"                    Value="64"/>
+            <Setter Property="Cursor"                     Value="Hand"/>
+            <Setter Property="Margin"                     Value="0,0,0,8"/>
+            <Setter Property="Height"                     Value="64"/>
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-            <Setter Property="Background"                Value="#0F172A"/>
-            <Setter Property="BorderBrush"               Value="#334155"/>
-            <Setter Property="BorderThickness"           Value="2"/>
-            <Setter Property="Padding"                   Value="14,10"/>
+            <Setter Property="Background"                 Value="#0F172A"/>
+            <Setter Property="BorderBrush"                Value="#334155"/>
+            <Setter Property="BorderThickness"            Value="2"/>
+            <Setter Property="Padding"                    Value="14,10"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="CheckBox">
@@ -92,12 +118,12 @@
 
         <!-- Duży przycisk akcji -->
         <Style x:Key="ActionBtn" TargetType="Button">
-            <Setter Property="Height"        Value="60"/>
-            <Setter Property="FontSize"      Value="18"/>
-            <Setter Property="FontWeight"    Value="SemiBold"/>
-            <Setter Property="Foreground"    Value="White"/>
+            <Setter Property="Height"          Value="60"/>
+            <Setter Property="FontSize"        Value="18"/>
+            <Setter Property="FontWeight"      Value="SemiBold"/>
+            <Setter Property="Foreground"      Value="White"/>
             <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Cursor"        Value="Hand"/>
+            <Setter Property="Cursor"          Value="Hand"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
@@ -131,7 +157,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- ═══ HEADER ═══ -->
+        <!-- HEADER -->
         <Border Grid.Row="0"
                 Background="#111827"
                 BorderBrush="#1E293B"
@@ -178,89 +204,136 @@
             </Grid>
         </Border>
 
-        <!-- ═══ GŁÓWNA TREŚĆ: Rozmiar | Ciasto | Dodatki ═══ -->
+        <!-- GŁÓWNA TREŚĆ -->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
+                <!-- Lewa: Rozmiar + Ciasto -->
                 <ColumnDefinition Width="260"/>
-                <ColumnDefinition Width="280"/>
+                <!-- Środu: Kategorie dodatków -->
+                <ColumnDefinition Width="220"/>
+                <!-- Prawa: Lista dodatków z wybranej kategorii -->
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <!-- ROZMIAR PIZZY -->
-            <Border Grid.Column="0"
-                    Background="#1E293B"
-                    BorderBrush="#334155"
-                    BorderThickness="1"
-                    CornerRadius="14"
-                    Padding="14"
-                    Margin="0,0,10,0">
-                <StackPanel>
-                    <TextBlock Text="ROZMIAR"
-                               Foreground="#94A3B8"
-                               FontSize="12"
-                               FontWeight="Bold"
-                               Margin="0,0,0,12"/>
+            <!-- LEWA: Rozmiar + Ciasto -->
+            <Grid Grid.Column="0" Margin="0,0,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="16"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
-                    <RadioButton x:Name="Size30Radio"
-                                 GroupName="SizeGroup"
-                                 Checked="Size30Checked"
-                                 Style="{StaticResource TileRadio}">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
+                <!-- ROZMIAR -->
+                <Border Grid.Row="0"
+                        Background="#1E293B"
+                        BorderBrush="#334155"
+                        BorderThickness="1"
+                        CornerRadius="14"
+                        Padding="14">
+                    <StackPanel>
+                        <TextBlock Text="ROZMIAR"
+                                   Foreground="#94A3B8"
+                                   FontSize="12"
+                                   FontWeight="Bold"
+                                   Margin="0,0,0,10"/>
+
+                        <RadioButton x:Name="Size30Radio"
+                                     GroupName="SizeGroup"
+                                     Checked="Size30Checked"
+                                     Style="{StaticResource TileRadio}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel>
+                                    <TextBlock Text="30 cm" Foreground="White" FontSize="20" FontWeight="Bold"/>
+                                    <TextBlock Text="Cena bazowa" Foreground="#94A3B8" FontSize="12" Margin="0,2,0,0"/>
+                                </StackPanel>
+                                <TextBlock Grid.Column="1" Text="+0,00 zł"
+                                           Foreground="#38BDF8" FontSize="15" FontWeight="Bold"
+                                           VerticalAlignment="Center"/>
+                            </Grid>
+                        </RadioButton>
+
+                        <RadioButton x:Name="Size40Radio"
+                                     GroupName="SizeGroup"
+                                     Checked="Size40Checked"
+                                     Style="{StaticResource TileRadio}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel>
+                                    <TextBlock Text="40 cm" Foreground="White" FontSize="20" FontWeight="Bold"/>
+                                    <TextBlock Text="Większa pizza" Foreground="#94A3B8" FontSize="12" Margin="0,2,0,0"/>
+                                </StackPanel>
+                                <TextBlock Grid.Column="1" Text="+10,00 zł"
+                                           Foreground="#38BDF8" FontSize="15" FontWeight="Bold"
+                                           VerticalAlignment="Center"/>
+                            </Grid>
+                        </RadioButton>
+
+                        <RadioButton x:Name="Size50Radio"
+                                     GroupName="SizeGroup"
+                                     Checked="Size50Checked"
+                                     Style="{StaticResource TileRadio}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel>
+                                    <TextBlock Text="50 cm" Foreground="White" FontSize="20" FontWeight="Bold"/>
+                                    <TextBlock Text="Największy wariant" Foreground="#94A3B8" FontSize="12" Margin="0,2,0,0"/>
+                                </StackPanel>
+                                <TextBlock Grid.Column="1" Text="+18,00 zł"
+                                           Foreground="#38BDF8" FontSize="15" FontWeight="Bold"
+                                           VerticalAlignment="Center"/>
+                            </Grid>
+                        </RadioButton>
+                    </StackPanel>
+                </Border>
+
+                <!-- CIASTO -->
+                <Border Grid.Row="2"
+                        Background="#1E293B"
+                        BorderBrush="#334155"
+                        BorderThickness="1"
+                        CornerRadius="14"
+                        Padding="14">
+                    <StackPanel>
+                        <TextBlock Text="CIASTO"
+                                   Foreground="#94A3B8"
+                                   FontSize="12"
+                                   FontWeight="Bold"
+                                   Margin="0,0,0,10"/>
+
+                        <RadioButton x:Name="DoughThinRadio"
+                                     GroupName="DoughGroup"
+                                     Checked="DoughThinChecked"
+                                     Style="{StaticResource TileRadio}">
                             <StackPanel>
-                                <TextBlock Text="30 cm" Foreground="White" FontSize="20" FontWeight="Bold"/>
-                                <TextBlock Text="Cena bazowa" Foreground="#94A3B8" FontSize="12" Margin="0,2,0,0"/>
+                                <TextBlock Text="Cienkie" Foreground="White" FontSize="20" FontWeight="Bold"/>
+                                <TextBlock Text="Lżejsze, chrupiące" Foreground="#94A3B8" FontSize="12" Margin="0,2,0,0"/>
                             </StackPanel>
-                            <TextBlock Grid.Column="1" Text="+0,00 zł"
-                                       Foreground="#38BDF8" FontSize="16" FontWeight="Bold"
-                                       VerticalAlignment="Center"/>
-                        </Grid>
-                    </RadioButton>
+                        </RadioButton>
 
-                    <RadioButton x:Name="Size40Radio"
-                                 GroupName="SizeGroup"
-                                 Checked="Size40Checked"
-                                 Style="{StaticResource TileRadio}">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
+                        <RadioButton x:Name="DoughTraditionalRadio"
+                                     GroupName="DoughGroup"
+                                     Checked="DoughTraditionalChecked"
+                                     Style="{StaticResource TileRadio}">
                             <StackPanel>
-                                <TextBlock Text="40 cm" Foreground="White" FontSize="20" FontWeight="Bold"/>
-                                <TextBlock Text="Większa pizza" Foreground="#94A3B8" FontSize="12" Margin="0,2,0,0"/>
+                                <TextBlock Text="Tradycyjne" Foreground="White" FontSize="20" FontWeight="Bold"/>
+                                <TextBlock Text="Klasyczne ciasto" Foreground="#94A3B8" FontSize="12" Margin="0,2,0,0"/>
                             </StackPanel>
-                            <TextBlock Grid.Column="1" Text="+10,00 zł"
-                                       Foreground="#38BDF8" FontSize="16" FontWeight="Bold"
-                                       VerticalAlignment="Center"/>
-                        </Grid>
-                    </RadioButton>
+                        </RadioButton>
+                    </StackPanel>
+                </Border>
+            </Grid>
 
-                    <RadioButton x:Name="Size50Radio"
-                                 GroupName="SizeGroup"
-                                 Checked="Size50Checked"
-                                 Style="{StaticResource TileRadio}">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <StackPanel>
-                                <TextBlock Text="50 cm" Foreground="White" FontSize="20" FontWeight="Bold"/>
-                                <TextBlock Text="Największy wariant" Foreground="#94A3B8" FontSize="12" Margin="0,2,0,0"/>
-                            </StackPanel>
-                            <TextBlock Grid.Column="1" Text="+18,00 zł"
-                                       Foreground="#38BDF8" FontSize="16" FontWeight="Bold"
-                                       VerticalAlignment="Center"/>
-                        </Grid>
-                    </RadioButton>
-                </StackPanel>
-            </Border>
-
-            <!-- GRUBOŚĆ CIASTA -->
+            <!-- ŚRODEK: Kategorie dodatków -->
             <Border Grid.Column="1"
                     Background="#1E293B"
                     BorderBrush="#334155"
@@ -268,36 +341,47 @@
                     CornerRadius="14"
                     Padding="14"
                     Margin="0,0,10,0">
-                <StackPanel>
-                    <TextBlock Text="CIASTO"
+                <DockPanel>
+                    <TextBlock Text="KATEGORIE"
                                Foreground="#94A3B8"
                                FontSize="12"
                                FontWeight="Bold"
-                               Margin="0,0,0,12"/>
+                               Margin="0,0,0,10"
+                               DockPanel.Dock="Top"/>
 
-                    <RadioButton x:Name="DoughThinRadio"
-                                 GroupName="DoughGroup"
-                                 Checked="DoughThinChecked"
-                                 Style="{StaticResource TileRadio}">
-                        <StackPanel>
-                            <TextBlock Text="Cienkie" Foreground="White" FontSize="20" FontWeight="Bold"/>
-                            <TextBlock Text="Lżejsze, chrupiące" Foreground="#94A3B8" FontSize="12" Margin="0,2,0,0"/>
-                        </StackPanel>
-                    </RadioButton>
-
-                    <RadioButton x:Name="DoughTraditionalRadio"
-                                 GroupName="DoughGroup"
-                                 Checked="DoughTraditionalChecked"
-                                 Style="{StaticResource TileRadio}">
-                        <StackPanel>
-                            <TextBlock Text="Tradycyjne" Foreground="White" FontSize="20" FontWeight="Bold"/>
-                            <TextBlock Text="Klasyczne ciasto" Foreground="#94A3B8" FontSize="12" Margin="0,2,0,0"/>
-                        </StackPanel>
-                    </RadioButton>
-                </StackPanel>
+                    <ItemsControl ItemsSource="{Binding AddonGroups}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <RadioButton GroupName="AddonCategoryGroup"
+                                             Style="{StaticResource CategoryBtn}"
+                                             IsChecked="{Binding IsSelected, Mode=TwoWay}"
+                                             Command="{Binding DataContext.SelectAddonGroupCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                             CommandParameter="{Binding}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding GroupName}"
+                                                   Foreground="White"
+                                                   FontSize="16"
+                                                   FontWeight="SemiBold"
+                                                   VerticalAlignment="Center"/>
+                                        <Border Background="#334155"
+                                                CornerRadius="10"
+                                                Padding="6,2"
+                                                Margin="8,0,0,0"
+                                                VerticalAlignment="Center">
+                                            <TextBlock Text="{Binding SelectedCount}"
+                                                       Foreground="#38BDF8"
+                                                       FontSize="13"
+                                                       FontWeight="Bold"/>
+                                        </Border>
+                                    </StackPanel>
+                                </RadioButton>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </DockPanel>
             </Border>
 
-            <!-- DODATKI -->
+            <!-- PRAWA: Dodatki z wybranej kategorii -->
             <Border Grid.Column="2"
                     Background="#1E293B"
                     BorderBrush="#334155"
@@ -305,7 +389,7 @@
                     CornerRadius="14"
                     Padding="14">
                 <DockPanel>
-                    <TextBlock Text="DODATKI"
+                    <TextBlock Text="{Binding SelectedAddonGroup.GroupName, FallbackValue='Wybierz kategorię'}"
                                Foreground="#94A3B8"
                                FontSize="12"
                                FontWeight="Bold"
@@ -313,43 +397,30 @@
                                DockPanel.Dock="Top"/>
 
                     <ScrollViewer VerticalScrollBarVisibility="Auto">
-                        <ItemsControl ItemsSource="{Binding AddonGroups}">
+                        <ItemsControl ItemsSource="{Binding SelectedAddonGroup.Items}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
-                                    <StackPanel Margin="0,0,0,14">
-                                        <TextBlock Text="{Binding GroupName}"
-                                                   Foreground="#CBD5E1"
-                                                   FontSize="15"
-                                                   FontWeight="SemiBold"
-                                                   Margin="0,0,0,6"/>
-                                        <ItemsControl ItemsSource="{Binding Items}">
-                                            <ItemsControl.ItemTemplate>
-                                                <DataTemplate>
-                                                    <CheckBox IsChecked="{Binding IsSelected}"
-                                                              Style="{StaticResource TileCheck}">
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="*"/>
-                                                                <ColumnDefinition Width="Auto"/>
-                                                            </Grid.ColumnDefinitions>
-                                                            <TextBlock Text="{Binding Name}"
-                                                                       Foreground="White"
-                                                                       FontSize="18"
-                                                                       FontWeight="SemiBold"
-                                                                       VerticalAlignment="Center"/>
-                                                            <TextBlock Grid.Column="1"
-                                                                       Text="{Binding Price, StringFormat={}{0:F2} zł}"
-                                                                       Foreground="#38BDF8"
-                                                                       FontSize="16"
-                                                                       FontWeight="Bold"
-                                                                       VerticalAlignment="Center"
-                                                                       Margin="10,0,0,0"/>
-                                                        </Grid>
-                                                    </CheckBox>
-                                                </DataTemplate>
-                                            </ItemsControl.ItemTemplate>
-                                        </ItemsControl>
-                                    </StackPanel>
+                                    <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}"
+                                              Style="{StaticResource TileCheck}">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Text="{Binding Name}"
+                                                       Foreground="White"
+                                                       FontSize="18"
+                                                       FontWeight="SemiBold"
+                                                       VerticalAlignment="Center"/>
+                                            <TextBlock Grid.Column="1"
+                                                       Text="{Binding Price, StringFormat={}{0:F2} zł}"
+                                                       Foreground="#38BDF8"
+                                                       FontSize="16"
+                                                       FontWeight="Bold"
+                                                       VerticalAlignment="Center"
+                                                       Margin="10,0,0,0"/>
+                                        </Grid>
+                                    </CheckBox>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
@@ -358,7 +429,7 @@
             </Border>
         </Grid>
 
-        <!-- ═══ FOOTER: Anuluj | Dodaj do zamówienia ═══ -->
+        <!-- FOOTER -->
         <Grid Grid.Row="2" Margin="0,12,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>

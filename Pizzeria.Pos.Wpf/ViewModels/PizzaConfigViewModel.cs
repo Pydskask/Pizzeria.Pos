@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Pizzeria.Pos.Core.Models;
 using Pizzeria.Pos.Services;
@@ -24,6 +24,9 @@ namespace Pizzeria.Pos.Wpf.ViewModels
 
         [ObservableProperty]
         private string selectedDough = "Tradycyjne";
+
+        [ObservableProperty]
+        private PizzaAddonGroupViewModel? selectedAddonGroup;
 
         public ObservableCollection<PizzaAddonGroupViewModel> AddonGroups { get; } = new();
 
@@ -54,6 +57,11 @@ namespace Pizzeria.Pos.Wpf.ViewModels
 
             LoadAddons(existingConfig);
             OnPropertyChanged(nameof(TotalPrice));
+
+            // Zaznacz pierwszą kategorię domyślnie
+            SelectedAddonGroup = AddonGroups.FirstOrDefault();
+            if (SelectedAddonGroup is not null)
+                SelectedAddonGroup.IsSelected = true;
         }
 
         partial void OnSelectedSizeChanged(string value)
@@ -64,6 +72,17 @@ namespace Pizzeria.Pos.Wpf.ViewModels
         partial void OnSelectedDoughChanged(string value)
         {
             OnPropertyChanged(nameof(TotalPrice));
+        }
+
+        [RelayCommand]
+        private void SelectAddonGroup(PizzaAddonGroupViewModel group)
+        {
+            // Od-zaznacz poprzednią
+            if (SelectedAddonGroup is not null)
+                SelectedAddonGroup.IsSelected = false;
+
+            SelectedAddonGroup = group;
+            group.IsSelected = true;
         }
 
         [RelayCommand]
@@ -175,6 +194,10 @@ namespace Pizzeria.Pos.Wpf.ViewModels
         private void OnAddonSelectionChanged()
         {
             OnPropertyChanged(nameof(TotalPrice));
+
+            // Odśwież licznik w kategorii
+            foreach (var g in AddonGroups)
+                g.RefreshSelectedCount();
         }
 
         private decimal CalculateTotalPrice()
@@ -230,28 +253,19 @@ namespace Pizzeria.Pos.Wpf.ViewModels
         private static bool NameMatches(string? actual, params string[] expected)
         {
             var normalizedActual = Normalize(actual);
-
             return expected.Any(x => Normalize(x) == normalizedActual);
         }
 
         private static string BuildAddonKey(PizzaAddonDefinition addon)
-        {
-            return BuildAddonKey(addon.Name, addon.GroupName, addon.Price);
-        }
+            => BuildAddonKey(addon.Name, addon.GroupName, addon.Price);
 
         private static string BuildAddonKey(PizzaAddonSelection addon)
-        {
-            return BuildAddonKey(addon.Name, addon.GroupName, addon.Price);
-        }
+            => BuildAddonKey(addon.Name, addon.GroupName, addon.Price);
 
         private static string BuildAddonKey(string? name, string? groupName, decimal price)
-        {
-            return $"{Normalize(groupName)}|{Normalize(name)}|{price:F2}";
-        }
+            => $"{Normalize(groupName)}|{Normalize(name)}|{price:F2}";
 
         private static string Normalize(string? value)
-        {
-            return (value ?? string.Empty).Trim().ToUpperInvariant();
-        }
+            => (value ?? string.Empty).Trim().ToUpperInvariant();
     }
 }
