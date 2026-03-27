@@ -23,6 +23,13 @@ public partial class RegisterOrderRow : ObservableObject
     public bool IsCanceled { get; set; }
     public string StatusText { get; set; } = string.Empty;
     public string ItemsSummary { get; set; } = string.Empty;
+    public string TypeLabel => Type switch
+    {
+        "M" => "Na miejscu",
+        "W" => "Wynos",
+        "D" => "Dostawa",
+        _ => Type
+    };
 }
 
 public partial class RegistersViewModel : ObservableObject
@@ -57,12 +64,11 @@ public partial class RegistersViewModel : ObservableObject
     [ObservableProperty]
     private string statusMessage = "Gotowe.";
 
+
+
     public ObservableCollection<string> TypeOptions { get; } = new()
     {
-        "Wszystkie",
-        "M",
-        "W",
-        "D"
+    "Wszystkie", "Na miejscu", "Wynos", "Dostawa"
     };
 
     public ObservableCollection<string> StatusOptions { get; } = new()
@@ -106,7 +112,16 @@ public partial class RegistersViewModel : ObservableObject
             .Where(o => o.CreatedAt >= from && o.CreatedAt < to);
 
         if (SelectedType != "Wszystkie")
-            filtered = filtered.Where(o => o.Type == SelectedType);
+        {
+            var typeCode = SelectedType switch
+            {
+                "Na miejscu" => "M",
+                "Wynos" => "W",
+                "Dostawa" => "D",
+                _ => SelectedType
+            };
+            filtered = filtered.Where(o => o.Type == typeCode);
+        }
 
         filtered = SelectedStatus switch
         {

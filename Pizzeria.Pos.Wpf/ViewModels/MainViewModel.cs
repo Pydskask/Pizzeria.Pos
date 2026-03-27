@@ -576,6 +576,27 @@ public partial class MainViewModel : ObservableObject
     }
 
     [RelayCommand]
+    private void OpenCustomersRegister()
+    {
+        var window = new CustomersRegisterWindow(_orderRepo) { Owner = GetOwnerWindow() };
+        window.ShowDialog();
+    }
+
+    [RelayCommand]
+    private void OpenDeliveriesRegister()
+    {
+        var window = new DeliveriesRegisterWindow(_orderRepo) { Owner = GetOwnerWindow() };
+        window.ShowDialog();
+    }
+
+    [RelayCommand]
+    private void OpenReceiptsRegister()
+    {
+        var window = new ReceiptsRegisterWindow(_orderRepo) { Owner = GetOwnerWindow() };
+        window.ShowDialog();
+    }
+
+    [RelayCommand]
     private void OpenReports()
     {
         var reportsWindow = new ReportsWindow(_orderRepo, CurrentUser)

@@ -182,3 +182,9 @@ C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Wpf\obj\Debug\net8.0-wi
 C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Wpf\obj\Debug\net8.0-windows7.0\Views\PizzaAddonsWindow.baml
 C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Wpf\obj\Debug\net8.0-windows7.0\Views\PizzaAddonsWindow.g.cs
 C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Wpf\obj\Debug\net8.0-windows7.0\Pizzeria.Pos.Wpf.sourcelink.json
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Wpf\obj\Debug\net8.0-windows7.0\Views\CustomersRegisterWindow.baml
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Wpf\obj\Debug\net8.0-windows7.0\Views\DeliveriesRegisterWindow.baml
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Wpf\obj\Debug\net8.0-windows7.0\Views\ReceiptsRegisterWindow.baml
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Wpf\obj\Debug\net8.0-windows7.0\Views\CustomersRegisterWindow.g.cs
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Wpf\obj\Debug\net8.0-windows7.0\Views\DeliveriesRegisterWindow.g.cs
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Wpf\obj\Debug\net8.0-windows7.0\Views\ReceiptsRegisterWindow.g.cs
