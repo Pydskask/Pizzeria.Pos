@@ -1,0 +1,192 @@
+﻿<Window x:Class="Pizzeria.Pos.Wpf.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:Pizzeria.Pos.Wpf.Views.Controls"
+        Title="Pizzeria POS"
+        Height="900"
+        Width="1600"
+        WindowState="Maximized"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="#0B1220">
+
+    <Window.Resources>
+        <Style x:Key="LoginKeyButton" TargetType="Button" BasedOn="{StaticResource TouchButton}">
+            <Setter Property="Width" Value="110"/>
+            <Setter Property="Height" Value="82"/>
+            <Setter Property="Margin" Value="6"/>
+            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#2563EB"/>
+        </Style>
+
+        <Style x:Key="SideActionButton" TargetType="Button" BasedOn="{StaticResource TouchButton}">
+            <Setter Property="Width" Value="180"/>
+            <Setter Property="Height" Value="68"/>
+            <Setter Property="Margin" Value="0,0,0,12"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="#0B1220">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="90"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <Border Grid.Row="0"
+                Background="#0F172A"
+                BorderBrush="#1E293B"
+                BorderThickness="0,0,0,1">
+            <Grid Margin="24,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="280"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="280"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="PIZZERIA POS"
+                               Foreground="#38BDF8"
+                               FontSize="24"
+                               FontWeight="Bold"/>
+                    <TextBlock Text="Ekran logowania"
+                               Foreground="#94A3B8"
+                               FontSize="14"/>
+                </StackPanel>
+
+                <TextBlock Grid.Column="1"
+                           Text="Logowanie operatora"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           FontSize="28"
+                           FontWeight="SemiBold"/>
+
+                <StackPanel Grid.Column="2"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Right">
+                    <TextBlock Text="{Binding CurrentDateTime, StringFormat={}{0:dd.MM.yyyy}}"
+                               Foreground="#CBD5E1"
+                               FontSize="18"
+                               HorizontalAlignment="Right"/>
+                    <TextBlock Text="{Binding CurrentDateTime, StringFormat={}{0:HH:mm:ss}}"
+                               Foreground="#93C5FD"
+                               FontSize="18"
+                               HorizontalAlignment="Right"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- CONTENT -->
+        <Grid Grid.Row="1" Margin="32">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="220"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="220"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- LEWY PANEL -->
+            <StackPanel Grid.Column="0"
+                        VerticalAlignment="Bottom"
+                        Margin="0,0,18,24">
+                <Button Content="Zamknij"
+                        Style="{StaticResource SideActionButton}"
+                        Background="#DC2626"
+                        Foreground="White"
+                        Click="CloseButton_Click"/>
+            </StackPanel>
+
+            <!-- CENTRALNY PANEL LOGOWANIA -->
+            <Border Grid.Column="1"
+                    Width="430"
+                    Padding="26"
+                    Background="#0F172A"
+                    BorderBrush="#1E293B"
+                    BorderThickness="1"
+                    CornerRadius="24"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Margin="0,0,0,18">
+                        <TextBlock Text="WPROWADŹ PIN"
+                                   Foreground="White"
+                                   FontSize="30"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Text="Zaloguj się do systemu POS"
+                                   Foreground="#94A3B8"
+                                   FontSize="15"
+                                   Margin="0,6,0,0"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+
+                    <Border Grid.Row="1"
+                            Background="#111827"
+                            BorderBrush="#1F2937"
+                            BorderThickness="1"
+                            CornerRadius="14"
+                            Padding="18"
+                            Margin="0,0,0,18">
+                        <TextBlock Text="{Binding DisplayedPin}"
+                                   FontSize="36"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"/>
+                    </Border>
+
+                    <!-- LoginWindow -->
+                    <controls:NumericKeypadControl Grid.Row="2"
+           ButtonHeight="60"
+           ButtonFontSize="28"
+           NumberButtonBackground="{StaticResource Brush.Primary}"
+           DigitCommand="{Binding AppendDigitCommand}"
+           LeftButtonText="C"
+           LeftCommand="{Binding ClearPinCommand}"
+           LeftButtonBackground="{StaticResource Brush.Danger}"
+           RightButtonText="OK"
+           RightCommand="{Binding LoginCommand}"
+           RightButtonBackground="{StaticResource Brush.Success}"/>
+
+
+                    <Border Grid.Row="3"
+                            Background="#111827"
+                            CornerRadius="12"
+                            Padding="12">
+                        <TextBlock Text="{Binding Status}"
+                                   Foreground="#F8FAFC"
+                                   FontSize="16"
+                                   TextWrapping="Wrap"
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"/>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!-- FOOTER -->
+        <Border Grid.Row="2"
+                Background="#0F172A"
+                BorderBrush="#1E293B"
+                BorderThickness="1,1,1,0"
+                Padding="18,12">
+            <TextBlock Text="Oczekiwanie na logowanie operatora"
+                       Foreground="#64748B"
+                       FontSize="15"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+        </Border>
+    </Grid>
+</Window>

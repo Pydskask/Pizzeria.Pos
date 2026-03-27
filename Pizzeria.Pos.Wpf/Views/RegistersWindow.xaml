@@ -1,0 +1,188 @@
+﻿<Window x:Class="Pizzeria.Pos.Wpf.Views.RegistersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Rejestry"
+        Height="900"
+        Width="1450"
+        WindowStartupLocation="CenterOwner"
+        Background="#1F2937">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="REJESTR ZAMÓWIEŃ"
+                   Foreground="White"
+                   FontSize="28"
+                   FontWeight="Bold"
+                   Margin="0,0,0,15"/>
+
+        <Grid Grid.Row="1" Margin="0,0,0,15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="170"/>
+                <ColumnDefinition Width="170"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="170"/>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition Width="170"/>
+                <ColumnDefinition Width="170"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Margin="0,0,12,0">
+                <TextBlock Text="Data od" Foreground="White" Margin="0,0,0,6"/>
+                <DatePicker SelectedDate="{Binding DateFrom}" Height="40"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Margin="0,0,12,0">
+                <TextBlock Text="Data do" Foreground="White" Margin="0,0,0,6"/>
+                <DatePicker SelectedDate="{Binding DateTo}" Height="40"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" Margin="0,0,12,0">
+                <TextBlock Text="Typ" Foreground="White" Margin="0,0,0,6"/>
+                <ComboBox ItemsSource="{Binding TypeOptions}"
+                          SelectedItem="{Binding SelectedType}"
+                          Height="40"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="3" Margin="0,0,12,0">
+                <TextBlock Text="Status" Foreground="White" Margin="0,0,0,6"/>
+                <ComboBox ItemsSource="{Binding StatusOptions}"
+                          SelectedItem="{Binding SelectedStatus}"
+                          Height="40"/>
+            </StackPanel>
+
+            <Button Grid.Column="4"
+                    Content="Filtruj"
+                    Height="40"
+                    Margin="0,22,10,0"
+                    Command="{Binding ApplyFiltersCommand}"/>
+
+            <Button Grid.Column="5"
+                    Content="Wyczyść"
+                    Height="40"
+                    Margin="0,22,10,0"
+                    Command="{Binding ClearFiltersCommand}"/>
+
+            <Button Grid.Column="6"
+                    Content="Odśwież"
+                    Height="40"
+                    Margin="0,22,10,0"
+                    Command="{Binding LoadOrdersCommand}"/>
+
+            <Button Grid.Column="7"
+                    Content="Zamknij"
+                    Height="40"
+                    Margin="0,22,0,0"
+                    Background="#6B7280"
+                    Foreground="White"
+                    Command="{Binding CloseCommand}"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2.2*"/>
+                <ColumnDefinition Width="1.2*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0"
+                    Background="White"
+                    CornerRadius="10"
+                    Padding="10"
+                    Margin="0,0,15,0">
+                <DataGrid ItemsSource="{Binding Orders}"
+                          SelectedItem="{Binding SelectedOrder}"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          SelectionMode="Single"
+                          HeadersVisibility="Column"
+                          RowHeight="40">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="70"/>
+                        <DataGridTextColumn Header="Data" Binding="{Binding CreatedAt, StringFormat=dd.MM.yyyy HH:mm}" Width="150"/>
+                        <DataGridTextColumn Header="Typ" Binding="{Binding Type}" Width="70"/>
+                        <DataGridTextColumn Header="Status" Binding="{Binding StatusText}" Width="120"/>
+                        <DataGridTextColumn Header="Kwota" Binding="{Binding Total, StringFormat=F2}" Width="100"/>
+                        <DataGridTextColumn Header="Płatność" Binding="{Binding PaymentMethod}" Width="110"/>
+                        <DataGridTextColumn Header="Operator" Binding="{Binding OperatorName}" Width="130"/>
+                        <DataGridTextColumn Header="Pozycje" Binding="{Binding ItemsSummary}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0"
+                        Background="White"
+                        CornerRadius="10"
+                        Padding="15"
+                        Margin="0,0,0,15">
+                    <DockPanel>
+                        <TextBlock Text="SZCZEGÓŁY"
+                                   FontSize="22"
+                                   FontWeight="Bold"
+                                   Margin="0,0,0,12"
+                                   DockPanel.Dock="Top"/>
+
+                        <TextBox Text="{Binding DetailsText}"
+                                 IsReadOnly="True"
+                                 TextWrapping="Wrap"
+                                 AcceptsReturn="True"
+                                 VerticalScrollBarVisibility="Auto"
+                                 FontSize="16"
+                                 FontFamily="Consolas"
+                                 BorderThickness="0"
+                                 Background="White"/>
+                    </DockPanel>
+                </Border>
+
+                <UniformGrid Grid.Row="1" Columns="1">
+                    <Button Content="Wydrukuj ponownie BON kuchni"
+            Height="55"
+            Margin="0,0,0,10"
+            FontSize="16"
+            Background="#2563EB"
+            Foreground="White"
+            Command="{Binding ReprintKitchenBonCommand}"/>
+
+                    <Button Content="Wydrukuj ponownie BON dostawcy"
+            Height="55"
+            Margin="0,0,0,10"
+            FontSize="16"
+            Background="#8B5CF6"
+            Foreground="White"
+            Command="{Binding ReprintDeliveryBonCommand}"/>
+
+                    <Button Content="Wydrukuj ponownie paragon"
+            Height="55"
+            Margin="0,0,0,10"
+            FontSize="16"
+            Background="#16A34A"
+            Foreground="White"
+            Command="{Binding ReprintReceiptCommand}"/>
+
+                    <Button Content="Odśwież wybrane"
+            Height="55"
+            FontSize="16"
+            Command="{Binding RefreshSelectedCommand}"/>
+                </UniformGrid>
+            </Grid>
+        </Grid>
+
+        <TextBlock Grid.Row="3"
+                   Text="{Binding StatusMessage}"
+                   Foreground="#FCD34D"
+                   FontSize="16"
+                   Margin="0,15,0,0"/>
+    </Grid>
+</Window>

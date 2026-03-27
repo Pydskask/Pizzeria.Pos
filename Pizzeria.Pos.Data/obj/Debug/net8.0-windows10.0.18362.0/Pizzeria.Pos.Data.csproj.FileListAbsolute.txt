@@ -1,0 +1,17 @@
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Data\bin\Debug\net8.0-windows10.0.18362.0\Pizzeria.Pos.Data.deps.json
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Data\bin\Debug\net8.0-windows10.0.18362.0\Pizzeria.Pos.Data.runtimeconfig.json
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Data\bin\Debug\net8.0-windows10.0.18362.0\Pizzeria.Pos.Data.dll
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Data\bin\Debug\net8.0-windows10.0.18362.0\Pizzeria.Pos.Data.pdb
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Data\bin\Debug\net8.0-windows10.0.18362.0\Pizzeria.Pos.Core.dll
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Data\bin\Debug\net8.0-windows10.0.18362.0\Pizzeria.Pos.Core.pdb
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Data\obj\Debug\net8.0-windows10.0.18362.0\Pizzeria.Pos.Data.csproj.AssemblyReference.cache
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Data\obj\Debug\net8.0-windows10.0.18362.0\Pizzeria.Pos.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Data\obj\Debug\net8.0-windows10.0.18362.0\Pizzeria.Pos.Data.AssemblyInfoInputs.cache
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Data\obj\Debug\net8.0-windows10.0.18362.0\Pizzeria.Pos.Data.AssemblyInfo.cs
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Data\obj\Debug\net8.0-windows10.0.18362.0\Pizzeria.Pos.Data.csproj.CoreCompileInputs.cache
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Data\obj\Debug\net8.0-windows10.0.18362.0\Pizzeria.BE380CC5.Up2Date
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Data\obj\Debug\net8.0-windows10.0.18362.0\Pizzeria.Pos.Data.dll
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Data\obj\Debug\net8.0-windows10.0.18362.0\refint\Pizzeria.Pos.Data.dll
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Data\obj\Debug\net8.0-windows10.0.18362.0\Pizzeria.Pos.Data.pdb
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Data\obj\Debug\net8.0-windows10.0.18362.0\Pizzeria.Pos.Data.genruntimeconfig.cache
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Data\obj\Debug\net8.0-windows10.0.18362.0\ref\Pizzeria.Pos.Data.dll

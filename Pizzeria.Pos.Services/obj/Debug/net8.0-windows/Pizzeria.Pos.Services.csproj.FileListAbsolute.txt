@@ -1,0 +1,17 @@
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\bin\Debug\net8.0-windows\Pizzeria.Pos.Services.deps.json
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\bin\Debug\net8.0-windows\Pizzeria.Pos.Services.dll
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\bin\Debug\net8.0-windows\Pizzeria.Pos.Services.pdb
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\bin\Debug\net8.0-windows\Pizzeria.Pos.Core.dll
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\bin\Debug\net8.0-windows\Pizzeria.Pos.Data.dll
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\bin\Debug\net8.0-windows\Pizzeria.Pos.Core.pdb
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\bin\Debug\net8.0-windows\Pizzeria.Pos.Data.pdb
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows\Pizzeria.Pos.Services.csproj.AssemblyReference.cache
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows\Pizzeria.Pos.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows\Pizzeria.Pos.Services.AssemblyInfoInputs.cache
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows\Pizzeria.Pos.Services.AssemblyInfo.cs
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows\Pizzeria.Pos.Services.csproj.CoreCompileInputs.cache
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows\Pizzeria.2C8728E7.Up2Date
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows\Pizzeria.Pos.Services.dll
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows\refint\Pizzeria.Pos.Services.dll
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows\Pizzeria.Pos.Services.pdb
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows\ref\Pizzeria.Pos.Services.dll

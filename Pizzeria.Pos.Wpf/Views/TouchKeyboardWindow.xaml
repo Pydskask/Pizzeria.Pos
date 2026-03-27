@@ -1,0 +1,220 @@
+﻿<Window x:Class="Pizzeria.Pos.Wpf.Views.TouchKeyboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Klawiatura"
+        Height="470"
+        Width="820"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        Background="#ECF0F1">
+
+    <Window.Resources>
+        <Style x:Key="KeyboardButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="#1F2937"/>
+            <Setter Property="BorderBrush" Value="#CBD5E1"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <Style x:Key="AccentButtonStyle" TargetType="Button" BasedOn="{StaticResource KeyboardButtonStyle}">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+
+        <Style x:Key="BottomActionButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="44"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0"
+                Background="White"
+                BorderBrush="#CBD5E1"
+                BorderThickness="1"
+                CornerRadius="10"
+                Padding="8"
+                Margin="0,0,0,8">
+            <StackPanel>
+                <TextBox x:Name="InputTextBox"
+                         MinHeight="46"
+                         FontSize="20"
+                         Padding="10,6"
+                         VerticalContentAlignment="Center"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         VerticalScrollBarVisibility="Auto"/>
+            </StackPanel>
+        </Border>
+
+        <Grid Grid.Row="1" Margin="0,0,0,8">
+            <!-- ALPHA MODE -->
+            <StackPanel x:Name="AlphaPanel">
+                <UniformGrid Columns="10" Margin="0,0,0,2">
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="1" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="2" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="3" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="4" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="5" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="6" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="7" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="8" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="9" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="0" Click="Key_Click"/>
+                </UniformGrid>
+
+                <UniformGrid Columns="10" Margin="0,0,0,2">
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="q" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="w" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="e" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="r" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="t" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="y" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="u" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="i" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="o" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="p" Click="Key_Click"/>
+                </UniformGrid>
+
+                <UniformGrid Columns="9" Margin="20,0,20,2">
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="a" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="s" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="d" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="f" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="g" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="h" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="j" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="k" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="l" Click="Key_Click"/>
+                </UniformGrid>
+
+                <UniformGrid Columns="10" Margin="0,0,0,2">
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="z" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="x" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="c" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="v" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="b" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="n" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="m" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="-" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="/" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="." Click="Key_Click"/>
+                </UniformGrid>
+
+                <UniformGrid Columns="10" Margin="0,0,0,2">
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="ą" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="ć" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="ę" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="ł" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="ń" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="ó" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="ś" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="ż" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="ź" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="," Click="Key_Click"/>
+                </UniformGrid>
+            </StackPanel>
+
+            <!-- NUMERIC MODE -->
+            <StackPanel x:Name="NumericPanel"
+                        Visibility="Collapsed"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Width="280">
+                <UniformGrid Columns="3" Rows="4" Margin="0,0,0,6">
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="1" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="2" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="3" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="4" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="5" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="6" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="7" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="8" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="9" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="-" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="0" Click="Key_Click"/>
+                    <Button Style="{StaticResource KeyboardButtonStyle}" Content="," Click="Key_Click"/>
+                </UniformGrid>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="0,8,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <UniformGrid Grid.Row="0" Columns="4" Margin="0,0,0,6">
+                <Button Style="{StaticResource BottomActionButtonStyle}"
+                        Margin="0,0,3,0"
+                        Background="#475569"
+                        Content="spacja"
+                        Click="Space_Click"/>
+
+                <Button x:Name="CapsButton"
+                        Style="{StaticResource BottomActionButtonStyle}"
+                        Margin="0,0,3,0"
+                        Background="#475569"
+                        Content="Caps"
+                        Click="Caps_Click"/>
+
+                <Button Style="{StaticResource BottomActionButtonStyle}"
+                        Margin="3,0,3,0"
+                        FontSize="18"
+                        Background="#F59E0B"
+                        Content="⌫"
+                        Click="Backspace_Click"/>
+
+                <Button Style="{StaticResource BottomActionButtonStyle}"
+                        Margin="3,0,0,0"
+                        FontSize="18"
+                        Background="#EF4444"
+                        Content="C"
+                        Click="Clear_Click"/>
+            </UniformGrid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0"
+                        Height="54"
+                        Margin="0,0,4,0"
+                        FontSize="18"
+                        FontWeight="SemiBold"
+                        Background="#6B7280"
+                        Foreground="White"
+                        BorderThickness="0"
+                        Content="Anuluj"
+                        Click="Cancel_Click"/>
+
+                <Button Grid.Column="1"
+                        Height="54"
+                        Margin="4,0,0,0"
+                        FontSize="18"
+                        FontWeight="SemiBold"
+                        Background="#16A34A"
+                        Foreground="White"
+                        BorderThickness="0"
+                        Content="OK"
+                        Click="Ok_Click"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

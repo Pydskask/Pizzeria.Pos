@@ -1,0 +1,10 @@
+.vs/
+bin/
+obj/
+**/[Bb]in/*
+**/[Oo]bj/*
+*.user
+*.rsuser
+*.suo
+*.db
+app.db
