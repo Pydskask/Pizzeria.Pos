@@ -8,11 +8,13 @@ namespace Pizzeria.Pos.Wpf.Views;
 
 public partial class ReportsWindow : Window
 {
-    public ReportsWindow(IOrderRepository orderRepo, User currentUser)
+    public ReportsWindow(IOrderRepository orderRepo, User currentUser, int initialTab = 0)
     {
         InitializeComponent();
 
         var printService = App.ServiceProvider!.GetRequiredService<IPrintService>();
         DataContext = new ReportsViewModel(orderRepo, currentUser, printService);
+
+        MainTabControl.SelectedIndex = initialTab;
     }
 }

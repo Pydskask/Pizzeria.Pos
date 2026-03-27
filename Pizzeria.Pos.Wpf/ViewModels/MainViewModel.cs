@@ -587,11 +587,59 @@ public partial class MainViewModel : ObservableObject
     }
 
     [RelayCommand]
+    private void OpenMonthlyReport()
+    {
+        var reportsWindow = new ReportsWindow(_orderRepo, CurrentUser, initialTab: 1)
+        {
+            Owner = GetOwnerWindow()
+        };
+
+        reportsWindow.ShowDialog();
+    }
+
+    [RelayCommand]
     private void Logout()
     {
         _timer.Stop();
         Application.Current.Shutdown();
     }
+
+    [RelayCommand]
+    private void PrintPosReport()
+    {
+        var orders = _orderRepo.GetAll()
+            .Where(o => o.CreatedAt.Date == DateTime.Today && !o.IsCanceled && o.IsPaid)
+            .ToList();
+
+        var sb = new System.Text.StringBuilder();
+        sb.AppendLine("PIZZERIA POS");
+        sb.AppendLine("====================================");
+        sb.AppendLine($"RAPORT DNIA {DateTime.Today:yyyy-MM-dd}");
+        sb.AppendLine($"Generowano: {DateTime.Now:HH:mm:ss}");
+        sb.AppendLine($"Operator: {CurrentUser.Name}");
+        sb.AppendLine("====================================");
+        sb.AppendLine();
+        sb.AppendLine($"Liczba zamówień: {orders.Count}");
+        sb.AppendLine($"Obrót brutto:    {orders.Sum(o => o.Total):F2} zł");
+        sb.AppendLine();
+        sb.AppendLine("Płatności:");
+        sb.AppendLine($"  Gotówka:  {orders.Where(o => o.PaymentMethod == "Gotówka").Sum(o => o.Total):F2} zł");
+        sb.AppendLine($"  Karta:    {orders.Where(o => o.PaymentMethod == "Karta").Sum(o => o.Total):F2} zł");
+        sb.AppendLine($"  Przelew:  {orders.Where(o => o.PaymentMethod == "Przelew").Sum(o => o.Total):F2} zł");
+        sb.AppendLine($"  Online:   {orders.Where(o => o.PaymentMethod == "Online").Sum(o => o.Total):F2} zł");
+        sb.AppendLine($"  Voucher:  {orders.Where(o => o.PaymentMethod == "Voucher").Sum(o => o.Total):F2} zł");
+        sb.AppendLine("====================================");
+
+        _printService.PrintTextDocument(
+            title: $"Raport_POS_{DateTime.Today:yyyy-MM-dd}_{DateTime.Now:HHmmss}",
+            content: sb.ToString(),
+            orderId: null,
+            printedBy: CurrentUser,
+            documentType: "Raport POS");
+
+        MessageBox.Show($"Raport POS za {DateTime.Today:yyyy-MM-dd} został zapisany.", "Raport POS");
+    }
+
 
     private DeliveryData? OpenDeliveryEditor(Order order)
     {

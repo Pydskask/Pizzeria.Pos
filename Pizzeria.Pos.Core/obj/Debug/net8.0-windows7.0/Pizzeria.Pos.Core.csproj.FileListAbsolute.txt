@@ -10,3 +10,4 @@ C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Core\obj\Debug\net8.0-w
 C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Core\obj\Debug\net8.0-windows7.0\refint\Pizzeria.Pos.Core.dll
 C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Core\obj\Debug\net8.0-windows7.0\Pizzeria.Pos.Core.pdb
 C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Core\obj\Debug\net8.0-windows7.0\ref\Pizzeria.Pos.Core.dll
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Core\obj\Debug\net8.0-windows7.0\Pizzeria.Pos.Core.sourcelink.json

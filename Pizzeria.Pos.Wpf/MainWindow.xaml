@@ -290,8 +290,18 @@
                 <StackPanel Margin="10,10,10,0">
                     <TextBlock Text="RAPORTY OGÓLNE" Foreground="#AFC4E8" FontSize="18" FontWeight="Bold" Margin="0,0,0,6"/>
                     <WrapPanel>
-                        <Button Content="Raport&#x0a;dzienny" Style="{StaticResource SectionTileButton}" Background="#12B5EA" Foreground="White" Command="{Binding OpenReportsCommand}"/>
-                        <Button Content="Raport&#x0a;miesięczny" Style="{StaticResource SectionTileButton}" Background="#0D9488" Foreground="White" Command="{Binding OpenMonthlyReportCommand}"/>
+                        <Button Content="Raport&#x0a;dzienny"
+                                Style="{StaticResource SectionTileButton}"
+                                Background="#12B5EA" Foreground="White"
+                                Command="{Binding OpenReportsCommand}"/>
+                        <Button Content="Raport&#x0a;miesięczny"
+                                Style="{StaticResource SectionTileButton}"
+                                Background="#0D9488" Foreground="White"
+                                Command="{Binding OpenMonthlyReportCommand}"/>
+                        <Button Content="Raport&#x0a;POS"
+                                Style="{StaticResource SectionTileButton}"
+                                Background="#DC2626" Foreground="White"
+                                Command="{Binding PrintPosReportCommand}"/>
                     </WrapPanel>
                 </StackPanel>
             </ScrollViewer>

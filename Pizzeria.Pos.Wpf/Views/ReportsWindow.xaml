@@ -13,26 +13,19 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="RAPORTY I ROZLICZENIE"
+        <TextBlock Text="RAPORTY"
                    Foreground="White" FontSize="28" FontWeight="Bold"
                    Margin="0,0,0,15"/>
 
-        <TabControl Grid.Row="1"
+        <TabControl x:Name="MainTabControl"
+                    Grid.Row="1"
                     Background="#374151"
                     BorderBrush="#4B5563"
                     Padding="0">
             <TabControl.Resources>
                 <Style TargetType="TabItem">
-                    <Setter Property="Foreground" Value="White"/>
-                    <Setter Property="Background" Value="#374151"/>
-                    <Setter Property="FontSize" Value="16"/>
-                    <Setter Property="Padding" Value="18,8"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Background" Value="#1F2937"/>
-                            <Setter Property="Foreground" Value="#FCD34D"/>
-                        </Trigger>
-                    </Style.Triggers>
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Setter Property="Padding" Value="0"/>
                 </Style>
             </TabControl.Resources>
 
