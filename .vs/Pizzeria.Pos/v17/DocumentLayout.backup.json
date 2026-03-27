@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BDAA4D72-870F-4F84-851E-E7557208D62E}|Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj|c:\\users\\pydskask\\source\\repos\\pizzeria.pos\\pizzeria.pos.wpf\\views\\userspanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDAA4D72-870F-4F84-851E-E7557208D62E}|Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj|solutionrelative:pizzeria.pos.wpf\\views\\userspanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDAA4D72-870F-4F84-851E-E7557208D62E}|Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj|c:\\users\\pydskask\\source\\repos\\pizzeria.pos\\pizzeria.pos.wpf\\views\\userspanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BDAA4D72-870F-4F84-851E-E7557208D62E}|Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj|solutionrelative:pizzeria.pos.wpf\\views\\userspanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BDAA4D72-870F-4F84-851E-E7557208D62E}|Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj|c:\\users\\pydskask\\source\\repos\\pizzeria.pos\\pizzeria.pos.wpf\\views\\touchkeyboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BDAA4D72-870F-4F84-851E-E7557208D62E}|Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj|solutionrelative:pizzeria.pos.wpf\\views\\touchkeyboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -177,14 +185,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BDAA4D72-870F-4F84-851E-E7557208D62E}|Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj|c:\\users\\pydskask\\source\\repos\\pizzeria.pos\\pizzeria.pos.wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BDAA4D72-870F-4F84-851E-E7557208D62E}|Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj|solutionrelative:pizzeria.pos.wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDAA4D72-870F-4F84-851E-E7557208D62E}|Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj|c:\\users\\pydskask\\source\\repos\\pizzeria.pos\\pizzeria.pos.wpf\\views\\userspanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDAA4D72-870F-4F84-851E-E7557208D62E}|Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj|solutionrelative:pizzeria.pos.wpf\\views\\userspanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDAA4D72-870F-4F84-851E-E7557208D62E}|Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj|c:\\users\\pydskask\\source\\repos\\pizzeria.pos\\pizzeria.pos.wpf\\views\\userspanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BDAA4D72-870F-4F84-851E-E7557208D62E}|Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj|solutionrelative:pizzeria.pos.wpf\\views\\userspanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BDAA4D72-870F-4F84-851E-E7557208D62E}|Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj|c:\\users\\pydskask\\source\\repos\\pizzeria.pos\\pizzeria.pos.wpf\\views\\touchkeyboardwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -449,57 +449,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SettingsPanel.xaml",
-              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml",
-              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml",
-              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml",
-              "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-27T16:01:12.869Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\App.xaml",
-              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\App.xaml",
-              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\App.xaml",
-              "RelativeToolTip": "Pizzeria.Pos.Wpf\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-13T15:23:25.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ReportsViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\ViewModels\\ReportsViewModel.cs",
-              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\ViewModels\\ReportsViewModel.cs",
-              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\ViewModels\\ReportsViewModel.cs",
-              "RelativeToolTip": "Pizzeria.Pos.Wpf\\ViewModels\\ReportsViewModel.cs",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAwwNsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T10:56:47.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SettingsPanel.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml.cs",
-              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml.cs",
-              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml.cs",
-              "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T16:01:40.168Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\MainWindow.xaml",
@@ -511,7 +461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "TouchKeyboardWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\TouchKeyboardWindow.xaml",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\TouchKeyboardWindow.xaml",
@@ -523,7 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "BackupService.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Services\\BackupService.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Services\\BackupService.cs",
@@ -536,7 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\ViewModels\\MainViewModel.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\ViewModels\\MainViewModel.cs",
@@ -549,7 +499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "SettingsPanelViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\ViewModels\\SettingsPanelViewModel.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\ViewModels\\SettingsPanelViewModel.cs",
@@ -562,7 +512,82 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersPanel.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\UsersPanel.xaml.cs",
+              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\UsersPanel.xaml.cs",
+              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\UsersPanel.xaml.cs",
+              "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\UsersPanel.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T13:21:46.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "SettingsPanel.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml.cs",
+              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml.cs",
+              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml.cs",
+              "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T16:01:40.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersPanel.xaml",
+              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\UsersPanel.xaml",
+              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\UsersPanel.xaml",
+              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\UsersPanel.xaml",
+              "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\UsersPanel.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-20T13:21:11.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ReportsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\ViewModels\\ReportsViewModel.cs",
+              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\ViewModels\\ReportsViewModel.cs",
+              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\ViewModels\\ReportsViewModel.cs",
+              "RelativeToolTip": "Pizzeria.Pos.Wpf\\ViewModels\\ReportsViewModel.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAwwNsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T10:56:47.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\App.xaml",
+              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\App.xaml",
+              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\App.xaml",
+              "RelativeToolTip": "Pizzeria.Pos.Wpf\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-13T15:23:25.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SettingsPanel.xaml",
+              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml",
+              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml",
+              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml",
+              "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-27T16:01:12.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ReportsWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\ReportsWindow.xaml.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\ReportsWindow.xaml.cs",
@@ -575,7 +600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\App.xaml.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\App.xaml.cs",
@@ -588,7 +613,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\AssemblyInfo.cs",
@@ -601,7 +626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "IBackupService.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Services\\IBackupService.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Services\\IBackupService.cs",
@@ -614,7 +639,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "OrderViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\ViewModels\\OrderViewModel.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\ViewModels\\OrderViewModel.cs",
@@ -627,7 +652,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "OrderItem.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Core\\Models\\OrderItem.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Core\\Models\\OrderItem.cs",
@@ -640,7 +665,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "PosDataContext.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Data\\PosDataContext.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Data\\PosDataContext.cs",
@@ -653,7 +678,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "LoginWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\LoginWindow.xaml.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\LoginWindow.xaml.cs",
@@ -666,7 +691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "SelectedPizzaAddon.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Helpers\\SelectedPizzaAddon.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Helpers\\SelectedPizzaAddon.cs",
@@ -679,7 +704,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "DeliveryOrderHelper.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Helpers\\DeliveryOrderHelper.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Helpers\\DeliveryOrderHelper.cs",
@@ -692,7 +717,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "OrderRepository.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Services\\OrderRepository.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Services\\OrderRepository.cs",
@@ -705,7 +730,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "IOrderRepository.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Services\\IOrderRepository.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Services\\IOrderRepository.cs",
@@ -718,7 +743,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Core\\Models\\Order.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Core\\Models\\Order.cs",
@@ -731,7 +756,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "DeliveryAddressLookupResult.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Core\\Models\\DeliveryAddressLookupResult.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Core\\Models\\DeliveryAddressLookupResult.cs",
@@ -744,7 +769,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "DeliveriesRegisterWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\DeliveriesRegisterWindow.xaml.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\DeliveriesRegisterWindow.xaml.cs",
@@ -757,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "DeliveriesRegisterViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\ViewModels\\DeliveriesRegisterViewModel.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\ViewModels\\DeliveriesRegisterViewModel.cs",
@@ -770,7 +795,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "ReceiptsRegisterWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\ReceiptsRegisterWindow.xaml",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\ReceiptsRegisterWindow.xaml",
@@ -782,7 +807,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "ReceiptsRegisterWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\ReceiptsRegisterWindow.xaml.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\ReceiptsRegisterWindow.xaml.cs",
@@ -795,7 +820,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "ReceiptsRegisterViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\ViewModels\\ReceiptsRegisterViewModel.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\ViewModels\\ReceiptsRegisterViewModel.cs",
@@ -808,7 +833,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "DeliveriesRegisterWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\DeliveriesRegisterWindow.xaml",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\DeliveriesRegisterWindow.xaml",
@@ -820,7 +845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "CustomersRegisterViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\ViewModels\\CustomersRegisterViewModel.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\ViewModels\\CustomersRegisterViewModel.cs",
@@ -833,7 +858,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "CustomersRegisterWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\CustomersRegisterWindow.xaml.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\CustomersRegisterWindow.xaml.cs",
@@ -846,7 +871,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "CustomersRegisterWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\CustomersRegisterWindow.xaml",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\CustomersRegisterWindow.xaml",
@@ -858,7 +883,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "RegistersViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\ViewModels\\RegistersViewModel.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\ViewModels\\RegistersViewModel.cs",
@@ -871,7 +896,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "DeliveryWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\DeliveryWindow.xaml",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\DeliveryWindow.xaml",
@@ -883,7 +908,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "PaymentWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\PaymentWindow.xaml",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\PaymentWindow.xaml",
@@ -895,7 +920,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "ChangeOrderTypeWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\ChangeOrderTypeWindow.xaml",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\ChangeOrderTypeWindow.xaml",
@@ -907,7 +932,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "RegistersWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\RegistersWindow.xaml",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\RegistersWindow.xaml",
@@ -919,7 +944,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "LoginWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\LoginWindow.xaml",
@@ -931,7 +956,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "ReportsWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\ReportsWindow.xaml",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\ReportsWindow.xaml",
@@ -956,30 +981,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 44,
-              "Title": "UsersPanel.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\UsersPanel.xaml.cs",
-              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\UsersPanel.xaml.cs",
-              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\UsersPanel.xaml.cs",
-              "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\UsersPanel.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T13:21:46.871Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "UsersPanel.xaml",
-              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\UsersPanel.xaml",
-              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\UsersPanel.xaml",
-              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\UsersPanel.xaml",
-              "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\UsersPanel.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-20T13:21:11.509Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
               "Title": "Pizzeria.Pos.Wpf.csproj",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj",
@@ -1004,7 +1005,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "PizzaConfigWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\PizzaConfigWindow.xaml",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\PizzaConfigWindow.xaml",
@@ -1051,7 +1052,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "DeliveryWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\DeliveryWindow.xaml.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\DeliveryWindow.xaml.cs",
@@ -1099,7 +1100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\MainWindow.xaml.cs",
@@ -1112,7 +1113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "DeliveryAddressViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\ViewModels\\DeliveryAddressViewModel.cs",
               "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\ViewModels\\DeliveryAddressViewModel.cs",
