@@ -1,4 +1,4 @@
-﻿<Window x:Class="Pizzeria.Pos.Wpf.Views.RegistersWindow"
+<Window x:Class="Pizzeria.Pos.Wpf.Views.RegistersWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Rejestr zamówień"
@@ -53,18 +53,15 @@
                 <TextBlock Text="Data od" Foreground="White" Margin="0,0,0,6"/>
                 <DatePicker SelectedDate="{Binding DateFrom}" Height="40"/>
             </StackPanel>
-
             <StackPanel Grid.Column="1" Margin="0,0,12,0">
                 <TextBlock Text="Data do" Foreground="White" Margin="0,0,0,6"/>
                 <DatePicker SelectedDate="{Binding DateTo}" Height="40"/>
             </StackPanel>
-
             <StackPanel Grid.Column="2" Margin="0,0,12,0">
                 <TextBlock Text="Typ" Foreground="White" Margin="0,0,0,6"/>
                 <ComboBox ItemsSource="{Binding TypeOptions}"
                           SelectedItem="{Binding SelectedType}" Height="40"/>
             </StackPanel>
-
             <StackPanel Grid.Column="3" Margin="0,0,12,0">
                 <TextBlock Text="Status" Foreground="White" Margin="0,0,0,6"/>
                 <ComboBox ItemsSource="{Binding StatusOptions}"
@@ -74,18 +71,15 @@
             <Button Grid.Column="4" Content="Filtruj"
                     Height="40" Margin="0,22,8,0"
                     Command="{Binding ApplyFiltersCommand}"/>
-
             <Button Grid.Column="5" Content="Wyczyść"
                     Height="40" Margin="0,22,8,0"
                     Command="{Binding ClearFiltersCommand}"/>
-
             <Button Grid.Column="6" Content="Odśwież"
                     Height="40" Margin="0,22,8,0"
                     Command="{Binding LoadOrdersCommand}"/>
-
             <Button Grid.Column="7" Content="Zamknij"
                     Height="40" Margin="0,22,0,0"
-                    Background="#6B7280"
+                    Background="#DC2626"
                     Command="{Binding CloseCommand}"/>
         </Grid>
 
@@ -95,7 +89,7 @@
                 <ColumnDefinition Width="1.2*"/>
             </Grid.ColumnDefinitions>
 
-            <Border Grid.Column="0" Background="White" CornerRadius="0"
+            <Border Grid.Column="0" Background="White" CornerRadius="4"
                     Padding="10" Margin="0,0,15,0">
                 <DataGrid ItemsSource="{Binding Orders}"
                           SelectedItem="{Binding SelectedOrder}"
@@ -121,17 +115,36 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <Border Grid.Row="0" Background="White" CornerRadius="0"
-                        Padding="15" Margin="0,0,0,15">
-                    <DockPanel>
-                        <TextBlock Text="SZCZEGÓŁY" FontSize="22" FontWeight="Bold"
-                                   Margin="0,0,0,12" DockPanel.Dock="Top"/>
-                        <TextBox Text="{Binding DetailsText}" IsReadOnly="True"
-                                 TextWrapping="Wrap" AcceptsReturn="True"
-                                 VerticalScrollBarVisibility="Auto"
-                                 FontSize="15" FontFamily="Consolas"
-                                 BorderThickness="0" Background="White" Height="321"/>
-                    </DockPanel>
+                <Border Grid.Row="0"
+                        Background="#1E293B"
+                        BorderBrush="#334155"
+                        BorderThickness="1"
+                        CornerRadius="4"
+                        Padding="15"
+                        Margin="0,0,0,12">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0"
+                                   Text="SZCZEGÓŁY"
+                                   Foreground="#F8FAFC"
+                                   FontSize="16" FontWeight="Bold"
+                                   Margin="0,0,0,10"/>
+
+                        <ScrollViewer Grid.Row="1"
+                                      VerticalScrollBarVisibility="Auto"
+                                      HorizontalScrollBarVisibility="Disabled">
+                            <TextBlock Text="{Binding DetailsText}"
+                                       Foreground="#CBD5E1"
+                                       FontSize="14"
+                                       FontFamily="Consolas"
+                                       TextWrapping="Wrap"
+                                       LineHeight="22"/>
+                        </ScrollViewer>
+                    </Grid>
                 </Border>
 
                 <UniformGrid Grid.Row="1" Columns="1">
