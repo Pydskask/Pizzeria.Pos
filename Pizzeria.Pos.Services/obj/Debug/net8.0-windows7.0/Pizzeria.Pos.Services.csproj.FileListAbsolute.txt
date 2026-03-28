@@ -10,9 +10,9 @@ C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8
 C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows7.0\Pizzeria.Pos.Services.AssemblyInfoInputs.cache
 C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows7.0\Pizzeria.Pos.Services.AssemblyInfo.cs
 C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows7.0\Pizzeria.Pos.Services.csproj.CoreCompileInputs.cache
+C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows7.0\Pizzeria.Pos.Services.sourcelink.json
 C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows7.0\Pizzeria.2C8728E7.Up2Date
 C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows7.0\Pizzeria.Pos.Services.dll
 C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows7.0\refint\Pizzeria.Pos.Services.dll
 C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows7.0\Pizzeria.Pos.Services.pdb
 C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows7.0\ref\Pizzeria.Pos.Services.dll
-C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Services\obj\Debug\net8.0-windows7.0\Pizzeria.Pos.Services.sourcelink.json
