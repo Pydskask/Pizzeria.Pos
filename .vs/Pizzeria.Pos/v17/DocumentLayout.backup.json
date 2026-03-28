@@ -457,20 +457,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\AssemblyInfo.cs",
-              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\AssemblyInfo.cs",
-              "RelativeToolTip": "Pizzeria.Pos.Wpf\\AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T15:17:11.777Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 14,
@@ -522,6 +510,30 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\LoginWindow.xaml",
+              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\LoginWindow.xaml",
+              "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-13T16:03:46.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\AssemblyInfo.cs",
+              "RelativeToolTip": "Pizzeria.Pos.Wpf\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T15:17:11.777Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "20260328122943_nowe-adresy.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Data\\Migrations\\20260328122943_nowe-adresy.cs",
@@ -531,18 +543,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-28T12:29:43.769Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\LoginWindow.xaml",
-              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\LoginWindow.xaml",
-              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\LoginWindow.xaml*",
-              "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\LoginWindow.xaml*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-13T16:03:46.818Z",
               "EditorCaption": ""
             },
             {

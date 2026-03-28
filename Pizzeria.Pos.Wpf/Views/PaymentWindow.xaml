@@ -513,29 +513,29 @@
                                    Style="{StaticResource SectionTitleStyle}"
                                    Margin="0,0,0,10"/>
 
-                        <Button Content="💵  Gotówka"
+                        <Button Content="Gotówka"
                                 Style="{StaticResource PaymentMethodButtonStyle}"
-                                Background="#16A34A"
+                                Background="#2563EB"
                                 Command="{Binding SelectCashCommand}"/>
 
-                        <Button Content="💳  Karta"
+                        <Button Content="Karta"
                                 Style="{StaticResource PaymentMethodButtonStyle}"
                                 Background="#2563EB"
                                 Command="{Binding SelectCardCommand}"/>
 
-                        <Button Content="🏦  Przelew"
+                        <Button Content="Przelew"
                                 Style="{StaticResource PaymentMethodButtonStyle}"
-                                Background="#0D9488"
+                                Background="#2563EB"
                                 Command="{Binding SelectTransferCommand}"/>
 
-                        <Button Content="📱  Online"
+                        <Button Content="Online"
                                 Style="{StaticResource PaymentMethodButtonStyle}"
-                                Background="#7C3AED"
+                                Background="#2563EB"
                                 Command="{Binding SelectOnlineCommand}"/>
 
-                        <Button Content="🎟️  Voucher"
+                        <Button Content="Voucher"
                                 Style="{StaticResource PaymentMethodButtonStyle}"
-                                Background="#D97706"
+                                Background="#2563EB"
                                 Margin="0"
                                 Command="{Binding SelectVoucherCommand}"/>
                     </StackPanel>
