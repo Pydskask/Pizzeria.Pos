@@ -1,94 +1,4 @@
 
-
-Streszczenie i słowa kluczowe
-Rezultatem niniejszej pracy inżynierskiej jest desktopowa aplikacja typu POS (ang. Point of Sale) dedykowana dla pizzerii. Program umożliwia kompleksową obsługę procesu sprzedaży od przyjęcia zamówienia, przez konfigurację produktów i zarządzanie dostawami, aż po realizację płatności i generowanie raportów sprzedaży. Aplikacja zapewnia również obsługę drukowania dokumentów oraz automatyczne tworzenie kopii zapasowych bazy danych. Aplikacja została wykonana w języku C# oraz platformy .NET, z zastosowaniem technologii Windows Presentation Foundation (WPF), XAML, Entity Framework Core oraz SQLite. W projekcie zastosowano wzorzec architektoniczny MVVM oraz wzorzec Repozytorium, zapewniające czytelny podział odpowiedzialności i łatwość utrzymania kodu.
-Słowa kluczowe: system POS, WPF, C#, .NET, Entity Framework Core, SQLite, MVVM, gastronomia
-Summary and keywords
-The result of this engineering thesis is a desktop Point of Sale (POS) application dedicated to a pizzeria. The system enables comprehensive sales process management — from order taking, through product configuration and delivery management, to payment processing and sales report generation. The application also provides user management with role-based access control, document printing support, and automatic database backup functionality. The system was implemented using the C# language and the .NET platform, with Windows Presentation Foundation (WPF) and XAML technologies used for building the user interface. The data access layer is based on Entity Framework Core with a local SQLite database. The project applies the MVVM architectural pattern and the Repository pattern, ensuring a clear separation of concerns and ease of code maintenance.
-Keywords: POS system, WPF, C#, .NET, Entity Framework Core, SQLite, MVVM, gastronomy
-
-
-
-1. Wstęp
-    • 1.1. Wprowadzenie do problematyki systemów POS w gastronomii
-    • 1.2. Geneza projektu (+ tutaj akapit dlaczego desktop zamiast web — zgodnie z sugestią promotora)
-    • 1.3. Cel pracy
-    • 1.4. Organizacja pracy
-1.5. Analiza zagadnień i istniejących rozwiązań (przeniesione do wstępu per wskazówka promotora)
-    • 1.5.1. Specyfika systemów POS w gastronomii
-    • 1.5.2. Przegląd istniejących rozwiązań
-        ◦ Square for Restaurants
-        ◦ Poster POS
-        ◦ iKasa
-        ◦ Gastrosoft
-    • 1.5.3. Wnioski i uzasadnienie własnego rozwiązania
-2. Projekt aplikacji
-    • 2.1. Specyfikacja wymagań funkcjonalnych
-    • 2.2. Specyfikacja wymagań niefunkcjonalnych
-    • 2.3. Diagram przypadków użycia
-    • 2.4. Platforma docelowa i wybrane technologie
-        ◦ 2.4.1. Platforma docelowa — Windows Desktop
-        ◦ 2.4.2. .NET i język C#
-        ◦ 2.4.3. Windows Presentation Foundation (WPF) i XAML
-        ◦ 2.4.4. Entity Framework Core
-        ◦ 2.4.5. SQLite
-        ◦ 2.4.6. Microsoft.Extensions.DependencyInjection
-        ◦ 2.4.7. Visual Studio jako środowisko programistyczne
-    • 2.5. Architektura systemu
-    • 2.6. Wzorzec MVVM
-    • 2.7. Wzorzec Repository
-    • 2.8. Model danych
-    • 2.9. Diagram sekwencji — realizacja zamówienia
-3. Implementacja
-    • 3.1. Konfiguracja aplikacji i rejestracja zależności
-    • 3.2. Konfiguracja kontekstu bazy danych
-    • 3.3. Moduł zarządzania zamówieniami
-    • 3.4. Wyszukiwanie klientów dostawczych
-    • 3.5. Moduł kopii zapasowych
-    • 3.6. Moduł drukowania
-    • 3.7. Warstwa prezentacji — ViewModele
-    • 3.8. Konfiguracja interfejsu użytkownika
-4. Testowanie
-    • 4.1. Strategia testowania
-    • 4.2. Testy funkcjonalne
-    • 4.3. Prezentacja działania aplikacji
-        ◦ 4.3.1. Ekran logowania
-        ◦ 4.3.2. Ekran główny — wybór typu zamówienia
-        ◦ 4.3.3. Ekran tworzenia zamówienia
-        ◦ 4.3.4. Ekran konfiguracji pizzy
-        ◦ 4.3.5. Ekran formularza dostawy
-        ◦ 4.3.6. Ekran płatności
-        ◦ 4.3.7. Ekran zarządzania użytkownikami
-        ◦ 4.3.8. Ekran zarządzania produktami
-        ◦ 4.3.9. Ekran zarządzania dodatkami do pizzy
-        ◦ 4.3.10. Ekran ustawień programu
-        ◦ 4.3.11. Ekran rejestru zamówień
-        ◦ 4.3.12. Ekran rejestru klientów
-        ◦ 4.3.13. Ekran rejestru dostaw
-        ◦ 4.3.14. Ekran raportów dziennych
-        ◦ 4.3.15. Ekran raportów miesięcznych
-5. Podsumowanie
-    • 5.1. Wnioski z realizacji projektu
-    • 5.2. Perspektywy rozwoju
-6. Bibliografia
-7. Spis rysunków
-8. Spis tabel
-9. Dodatek D1 — Zawartość załączonej płyty CD/DVD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 1. Wstęp
 
 1.1. Wprowadzenie do problematyki systemów POS w gastronomii
@@ -101,7 +11,7 @@ Dostępne na rynku komercyjne systemy POS, takie jak Square, Poster POS czy iKas
 
 Mimo że temat niniejszej pracy został zdefiniowany jako aplikacja webowa, w toku analizy wymagań i specyfiki środowiska docelowego podjęto świadomą decyzję o realizacji systemu w formie aplikacji desktopowej. Kluczowym argumentem przemawiającym za tym wyborem była niezawodność działania w warunkach restauracyjnych — lokal gastronomiczny musi funkcjonować nieprzerwanie, niezależnie od dostępności połączenia internetowego. Awaria łącza sieciowego w przypadku aplikacji webowej oznaczałaby całkowity paraliż sprzedaży, co jest niedopuszczalne w środowisku produkcyjnym. Aplikacja desktopowa przechowuje wszystkie dane lokalnie i działa w pełni offline, eliminując tę klasę problemów. Dodatkowo rozwiązanie desktopowe zapewnia niższe opóźnienia interfejsu użytkownika, co ma bezpośrednie przełożenie na komfort pracy personelu podczas intensywnej obsługi klientów. Podjęta decyzja architektoniczna jest zatem uzasadniona pragmatycznymi wymaganiami środowiska gastronomicznego, a nie odstępstwem od założeń projektowych. 
 1.3. Cel pracy
-Głównym celem niniejszej pracy inżynierskiej jest zaprojektowanie i implementacja desktopowej aplikacji wspomagającej obsługę punktu sprzedaży w pizzerii. System ma działać w środowisku lokalnym, bez wymogu stałego połączenia z internetem, i być przystosowany do obsługi na ekranach dotykowych.
+Głównym celem pracy inżynierskiej jest zaprojektowanie i implementacja desktopowej aplikacji wspomagającej obsługę punktu sprzedaży w pizzerii. System ma działać w środowisku lokalnym, bez wymogu stałego połączenia z internetem, i być przystosowany do obsługi na ekranach dotykowych.
 Szczegółowe cele pracy obejmują:
     1. Opracowanie modułu zarządzania zamówieniami obsługującego różne typy zamówień — na miejscu, na wynos oraz z dostawą pod wskazany adres.
     2. Zaprojektowanie systemu konfiguracji produktów umożliwiającego dobór składników i dodatków do pizzy.
@@ -122,29 +32,22 @@ Praca kończy się podsumowaniem zawierającym wnioski z realizacji projektu ora
 
 
 
-
-
-
-
-
-Rozdział 2 — Analiza zagadnień i istniejących rozwiązań
-
-2. Analiza zagadnień i istniejących rozwiązań
-2.1. Specyfika systemów POS w gastronomii
+1.5 Analiza zagadnień i istniejących rozwiązań
+1.5.1. Specyfika systemów POS w gastronomii
 System POS (ang. Point of Sale) to oprogramowanie służące do rejestrowania transakcji sprzedaży w punkcie obsługi klienta. W kontekście gastronomicznym systemy tego typu wykraczają znacznie poza funkcję zwykłej kasy fiskalnej — integrują zarządzanie zamówieniami, komunikację z kuchnią, obsługę płatności oraz raportowanie sprzedaży w ramach jednego narzędzia.
 Systemy POS dedykowane branży gastronomicznej można podzielić na dwie główne kategorie ze względu na architekturę: systemy chmurowe (ang. cloud-based), wymagające stałego połączenia z internetem, oraz systemy lokalne (ang. on-premise), działające wyłącznie na urządzeniu w lokalu. Pierwsze z nich oferują dostęp do danych z dowolnego miejsca i automatyczne aktualizacje, jednak ich działanie jest uzależnione od stabilności łącza internetowego. Systemy lokalne z kolei zapewniają pełną niezależność operacyjną i większą kontrolę nad danymi, co jest szczególnie istotne w środowiskach o ograniczonej infrastrukturze sieciowej.
 W lokalach serwujących produkty konfigurowalne, takich jak pizzerie, system POS musi obsługiwać złożone struktury zamówień — uwzględniające wybór rozmiaru, składników bazowych, opcjonalnych dodatków grupowanych według kategorii oraz specjalnych uwag do zamówienia. Dodatkowym wymaganiem jest obsługa różnych trybów realizacji zamówienia: konsumpcji na miejscu, odbioru osobistego oraz dostawy pod wskazany adres. Każdy z tych trybów wiąże się z odmiennym przepływem pracy i odmiennymi danymi wymaganymi do realizacji zamówienia.
-2.2. Przegląd istniejących rozwiązań
+1.5.2. Przegląd istniejących rozwiązań
 Na rynku dostępnych jest wiele systemów POS dedykowanych gastronomii. Poniżej przedstawiono analizę wybranych, najpopularniejszych rozwiązań.
-2.2.1. Square for Restaurants
+ Square for Restaurants
 Square for Restaurants to system POS oparty na chmurze, oferowany przez firmę Square Inc. Aplikacja działa na urządzeniach iPad i jest dostępna w modelu subskrypcyjnym. Oferuje szeroki zakres funkcjonalności, w tym zarządzanie stolikami, obsługę zamówień online oraz integrację z systemami dostawy. System wyróżnia się prostotą konfiguracji i intuicyjnym interfejsem. Głównym ograniczeniem jest uzależnienie od połączenia internetowego — praca w trybie offline jest możliwa jedynie w ograniczonym zakresie — oraz konieczność korzystania z dedykowanego sprzętu firmy Square. Model subskrypcyjny generuje stałe miesięczne koszty, które dla małego lokalu mogą być znaczącym obciążeniem.
-2.2.2. Poster POS
+Poster POS
 Poster POS to system chmurowy skierowany przede wszystkim do małych i średnich lokali gastronomicznych. Oferuje obsługę zamówień na miejscu i na wynos, zarządzanie menu, raporty sprzedażowe oraz integrację z drukarkami paragonów. System działa przez przeglądarkę internetową, co eliminuje konieczność instalacji dedykowanego oprogramowania, jednak całkowicie uzależnia działanie lokalu od dostępności internetu. Poster POS oferuje możliwość kastomizacji menu, jednak konfiguracja złożonych produktów z wielopoziomowymi dodatkami bywa ograniczona w stosunku do potrzeb pizzerii.
-2.2.3. iKasa
+iKasa
 iKasa to polskie rozwiązanie POS skierowane do małych przedsiębiorstw handlowych i gastronomicznych. System działa na urządzeniach z systemem Android i iOS, oferując obsługę sprzedaży, zarządzanie magazynem oraz generowanie raportów. Aplikacja obsługuje tryb offline, co stanowi jej istotną zaletę. Jednakże funkcjonalność dedykowana gastronomii — w szczególności zarządzanie konfigurowalnymi produktami, obsługa zamówień dostawczych czy drukowanie biletów kuchennych — jest w tej aplikacji znacznie ograniczona w porównaniu z systemami wyspecjalizowanymi.
-2.2.4. Gastrosoft
+Gastrosoft
 Gastrosoft to polskie oprogramowanie gastronomiczne działające jako aplikacja desktopowa na systemie Windows. Oferuje kompleksową obsługę restauracji, w tym zarządzanie salą, magazynem i rozliczeniami. System jest rozbudowany funkcjonalnie, jednak jego interfejs nie jest zoptymalizowany pod kątem obsługi dotykowej, a wdrożenie wymaga specjalistycznej konfiguracji i wsparcia technicznego dostawcy. Wysokie koszty wdrożenia i licencji sprawiają, że rozwiązanie to jest skierowane przede wszystkim do większych obiektów gastronomicznych.
-2.3. Wnioski i uzasadnienie własnego rozwiązania
+1.5.3. Wnioski i uzasadnienie własnego rozwiązania
 Przeprowadzona analiza pozwala na sformułowanie wniosków dotyczących luk w dostępnych rozwiązaniach w kontekście potrzeb małej pizzerii. Zestawienie porównawcze przedstawiono w tabeli 1.
 Tabela 1. Porównanie wybranych systemów POS
 Cecha	Square	Poster POS	iKasa	Gastrosoft	Pizzeria.POS
@@ -161,11 +64,14 @@ Język polski	NIE	TAK	TAK	TAK	TAK
 Na podstawie powyższej analizy można stwierdzić, że dostępne rozwiązania chmurowe — pomimo bogatej funkcjonalności — są nieprzydatne w środowiskach o ograniczonej lub niestabilnej infrastrukturze sieciowej. Systemy lokalne z kolei albo nie są przystosowane do obsługi dotykowej, albo nie oferują wystarczającego stopnia konfigurowalności produktów wymaganego w pizzerii. Żadne z analizowanych rozwiązań nie spełnia jednocześnie wszystkich kluczowych wymagań: pracy w trybie offline, obsługi dotykowej, konfigurowalnych produktów z grupowanymi dodatkami, obsługi zamówień dostawczych oraz braku kosztów licencyjnych.
 Powyższe wnioski stanowią uzasadnienie dla zaprojektowania i implementacji dedykowanego systemu POS, który odpowiada na specyficzne potrzeby małej pizzerii. Aplikacja Pizzeria.POS została zaprojektowana jako rozwiązanie desktopowe działające całkowicie lokalnie, bez wymogu połączenia z internetem, z interfejsem zoptymalizowanym pod kątem obsługi dotykowej oraz pełną obsługą konfigurowalnych produktów i zamówień dostawczych.
 
-Rozdział 3 — Specyfikacja wymagań systemu
 
-3. Specyfikacja wymagań systemu
+
+
+
+
+2. Projekt aplikacji
 Specyfikacja wymagań stanowi podstawę procesu projektowania i implementacji systemu. Definiuje ona oczekiwane zachowanie aplikacji z perspektywy użytkownika końcowego, niezależnie od przyjętych rozwiązań technicznych. Wymagania zostały podzielone na funkcjonalne — opisujące konkretne funkcje systemu — oraz niefunkcjonalne, określające ogólne cechy jakościowe aplikacji.
-3.1. Wymagania funkcjonalne
+2.1. Wymagania funkcjonalne
 Wymagania funkcjonalne opisują operacje, które system musi być w stanie wykonać. Na podstawie analizy potrzeb pizzerii oraz obserwacji procesu obsługi zamówień zdefiniowano następujące wymagania funkcjonalne, pogrupowane według modułów:
 Moduł uwierzytelniania:
     • System musi umożliwiać logowanie pracownika przy użyciu czterocyfrowego kodu PIN.
@@ -232,7 +138,7 @@ Bezpieczeństwo:
 Przenośność i instalacja:
     • Aplikacja musi działać na systemie operacyjnym Windows 10 lub nowszym.
     • Instalacja aplikacji nie może wymagać dodatkowej konfiguracji serwera baz danych — baza SQLite musi być tworzona automatycznie przy pierwszym uruchomieniu.
-3.3. Diagram przypadków użycia
+2.3. Diagram przypadków użycia
 Diagram przypadków użycia (ang. Use Case Diagram) ilustruje interakcje pomiędzy aktorami systemu a dostępnymi funkcjonalnościami. W systemie Pizzeria.POS wyróżniono dwóch aktorów: Kelnera oraz Managera, przy czym Manager dziedziczy wszystkie uprawnienia Kelnera i dodatkowo posiada dostęp do funkcji administracyjnych.
 Kelner może wykonywać następujące operacje:
     • logowanie do systemu,
@@ -249,57 +155,49 @@ Manager, oprócz wszystkich powyższych, dodatkowo może:
     • konfigurować ustawienia aplikacji.
       📝 Wskazówka do LibreOffice: W tym miejscu wstaw diagram przypadków użycia jako rysunek (Rysunek 1). Możemy go wygenerować — powiedz mi, a przygotuję kod PlantUML lub Mermaid do narysowania diagramu.
       
-Rozdział 4 — Platforma docelowa i wybrane technologie
-
-4. Platforma docelowa i wybrane technologie
+2.4. Platforma docelowa i wybrane technologie
 Wybór technologii zastosowanych w projekcie był podyktowany kilkoma czynnikami: wymaganiem pracy w trybie offline, koniecznością optymalizacji interfejsu pod obsługę dotykową, dostępnością ekosystemu bibliotek dla platformy Windows oraz znajomością technologii przez autora. W niniejszym rozdziale opisano platformę docelową oraz poszczególne technologie i narzędzia wykorzystane podczas realizacji projektu.
-4.1. Platforma docelowa — Windows Desktop
+2.4.1. Platforma docelowa — Windows Desktop
 Aplikacja Pizzeria.POS została zaprojektowana jako oprogramowanie desktopowe przeznaczone na system operacyjny Windows 10 oraz nowsze wersje tego systemu. Wybór platformy desktopowej zamiast rozwiązania webowego lub mobilnego wynikał bezpośrednio z wymagań środowiska docelowego — terminalu kasowego w pizzerii. Urządzenia tego typu to najczęściej komputery klasy PC lub tablety z systemem Windows, wyposażone w ekrany dotykowe o przekątnej 15–21 cali, pracujące bez stałego połączenia z internetem.
 Aplikacja desktopowa zapewnia pełną kontrolę nad zasobami urządzenia, w tym nad systemem drukowania, lokalnym systemem plików oraz bazą danych. W odróżnieniu od aplikacji webowych nie wymaga serwera aplikacyjnego ani przeglądarki internetowej, co upraszcza wdrożenie i eliminuje dodatkowe punkty awarii. Środowisko docelowe zakłada instalację na jednym urządzeniu pełniącym rolę terminalu kasowego, przy czym architektura systemu nie wyklucza przyszłego rozszerzenia o obsługę wielu stanowisk.
-4.2. .NET i język C#
+2.4.2. .NET i język C#
 Projekt został zrealizowany w oparciu o platformę .NET firmy Microsoft oraz język programowania C#. .NET to wieloplatformowe środowisko uruchomieniowe i zestaw bibliotek umożliwiający tworzenie aplikacji desktopowych, webowych oraz mobilnych. Język C# jest silnie typowanym, obiektowym językiem programowania, który od wielu lat dominuje w ekosystemie Microsoft i stanowi podstawę tworzenia aplikacji dla systemu Windows.
 Wybór platformy .NET był uzasadniony przede wszystkim doskonałą integracją z technologią WPF, bogatym ekosystemem bibliotek NuGet oraz rozbudowanym wsparciem dla wzorców projektowych stosowanych w aplikacjach desktopowych. Projekt wykorzystuje platformę .NET 8, będącą najnowszą długoterminowo wspieraną wersją (ang. Long-Term Support, LTS) w momencie realizacji projektu, co zapewnia stabilność i dostęp do najnowszych funkcji języka C#.
-4.3. Windows Presentation Foundation (WPF) i XAML
+2.4.3. Windows Presentation Foundation (WPF) i XAML
 Windows Presentation Foundation (WPF) to framework do tworzenia desktopowych aplikacji graficznych dla systemu Windows, wchodzący w skład platformy .NET. WPF opiera się na silniku renderowania wektorowego, co zapewnia ostrość interfejsu niezależnie od rozdzielczości i skalowania ekranu — cecha szczególnie istotna w przypadku ekranów dotykowych o wysokiej rozdzielczości.
 Interfejs użytkownika w WPF definiowany jest przy użyciu języka XAML (ang. Extensible Application Markup Language) — deklaratywnego języka znacznikowego opartego na XML. XAML pozwala na oddzielenie definicji wyglądu interfejsu od logiki aplikacji, co jest fundamentem wzorca MVVM omówionego w kolejnym rozdziale. Mechanizm Data Binding dostępny w WPF umożliwia dwukierunkowe wiązanie właściwości elementów interfejsu z właściwościami obiektów w warstwie logiki, eliminując konieczność ręcznej aktualizacji widoku przy zmianie danych.
 WPF udostępnia rozbudowany system stylowania i templatowania kontrolek, który został wykorzystany do stworzenia spójnego, ciemnego motywu wizualnego aplikacji, zoptymalizowanego pod kątem pracy w środowisku gastronomicznym. Duże przyciski, wysoki kontrast oraz czytelna typografia zwiększają komfort obsługi dotykowej i redukują ryzyko pomyłek w trakcie intensywnej pracy.
-4.4. Entity Framework Core
+2.4.4. Entity Framework Core
 Entity Framework Core (EF Core) to nowoczesny, obiektowo-relacyjny mapper (ang. Object-Relational Mapper, ORM) dla platformy .NET, rozwijany przez firmę Microsoft. ORM to biblioteka umożliwiająca pracę z relacyjną bazą danych przy użyciu obiektów języka programowania, bez konieczności pisania zapytań SQL. Programista definiuje klasy modelowe w C#, a EF Core automatycznie odwzorowuje je na tabele w bazie danych i generuje odpowiednie zapytania SQL w czasie wykonania programu.
 W projekcie EF Core pełni rolę warstwy dostępu do danych, obsługując wszystkie operacje odczytu i zapisu na bazie SQLite. Centralna klasa PosDataContext dziedziczy po DbContext i zawiera definicje zbiorów danych (DbSet) dla każdej encji systemu: zamówień, pozycji zamówień, produktów, użytkowników, dokumentów druku oraz definicji dodatków do pizzy. Relacje między encjami są definiowane w metodzie OnModelCreating przy użyciu płynnego API (ang. Fluent API), co pozwala na precyzyjne określenie zachowań kaskadowych i indeksów bazy danych.
 Istotną funkcją EF Core wykorzystaną w projekcie jest mechanizm migracji (ang. Migrations). Migracje to zestaw operacji opisujących zmiany w schemacie bazy danych w kolejnych wersjach aplikacji. Przy każdym uruchomieniu aplikacja automatycznie stosuje brakujące migracje, co zapewnia aktualność struktury bazy danych bez ingerencji użytkownika. Mechanizm ten eliminuje problem niezgodności wersji oprogramowania i struktury bazy przy aktualizacji systemu.
-4.5. SQLite
+2.4.5. SQLite
 SQLite to lekka, bezserwerowa, relacyjna baza danych przechowywana w postaci pojedynczego pliku na dysku. W odróżnieniu od pełnoprawnych systemów zarządzania bazami danych, takich jak Microsoft SQL Server czy PostgreSQL, SQLite nie wymaga instalacji ani konfiguracji osobnego procesu serwerowego — cała baza danych zawarta jest w jednym pliku (app.db), którym zarządza bezpośrednio biblioteka wbudowana w aplikację.
 Wybór SQLite jako silnika bazy danych był w pełni uzasadniony charakterem projektu. Aplikacja POS działająca na jednym terminalu kasowym nie wymaga obsługi wielu równoczesnych połączeń ani skomplikowanej replikacji danych, które są domeną serwerowych baz danych. SQLite oferuje w tym przypadku wszystkie wymagane funkcje przy zerowych kosztach administracyjnych i minimalnych wymaganiach systemowych. Plik bazy danych może być łatwo przenoszony, kopiowany i archiwizowany, co bezpośrednio wspiera funkcję tworzenia kopii zapasowych zaimplementowaną w aplikacji.
-4.6. Wstrzykiwanie zależności — Microsoft.Extensions.DependencyInjection
+2.4.6. Wstrzykiwanie zależności — Microsoft.Extensions.DependencyInjection
 Wstrzykiwanie zależności (ang. Dependency Injection, DI) to wzorzec projektowy polegający na dostarczaniu obiektom ich zależności z zewnątrz, zamiast tworzenia ich wewnątrz klasy. Wzorzec ten promuje luźne powiązanie między komponentami systemu (ang. loose coupling), ułatwia testowanie jednostkowe oraz zwiększa modularność kodu.
 W projekcie zastosowano bibliotekę Microsoft.Extensions.DependencyInjection, będącą standardowym kontenerem DI w ekosystemie .NET. Konfiguracja kontenera odbywa się w klasie App.xaml.cs przy starcie aplikacji. Rejestrowane są tam wszystkie repozytoria, serwisy oraz ViewModele, a kontener automatycznie zarządza ich cyklem życia. Repozytoria i serwisy rejestrowane są ze scope'em Scoped (tworzony na żądanie w ramach zakresu), natomiast BackupService jako Singleton — jedna instancja przez cały czas działania aplikacji. Takie podejście eliminuje konieczność ręcznego tworzenia i przekazywania obiektów między warstwami aplikacji.
-4.7. Visual Studio jako środowisko programistyczne
+2.4.7. Visual Studio jako środowisko programistyczne
 Aplikacja została zrealizowana przy użyciu Microsoft Visual Studio 2022 — zintegrowanego środowiska programistycznego (ang. Integrated Development Environment, IDE) firmy Microsoft, będącego de facto standardem przy tworzeniu aplikacji w technologii .NET i C#. Visual Studio oferuje zaawansowane narzędzia wspierające każdy etap cyklu życia oprogramowania.
 Kluczową funkcją środowiska w kontekście projektu był projektant XAML (ang. XAML Designer) umożliwiający podgląd interfejsu użytkownika w czasie rzeczywistym bez konieczności uruchamiania aplikacji. Wbudowane narzędzia do zarządzania pakietami NuGet pozwoliły na sprawną integrację bibliotek zewnętrznych. Konsola Package Manager Console była wykorzystywana do generowania i stosowania migracji EF Core za pomocą narzędzia dotnet-ef. Zintegrowany debugger umożliwiał efektywne wykrywanie i usuwanie błędów na każdym etapie implementacji. System kontroli wersji Git, zintegrowany bezpośrednio ze środowiskiem, zapewniał śledzenie historii zmian w kodzie źródłowym i bezpieczne przechowywanie projektu w repozytorium zdalnym.
 
-Haha racja, Mermaid z takimi złożonymi diagramami to dramat 😄 Ogarniemy to na końcu — wygenerujemy wszystkie diagramy naraz i znajdziemy lepsze narzędzie (np. draw.io które jest o niebo lepsze od Mermaid do UML). Lecimy!
-
-Rozdział 5 — Projekt systemu
-
-5. Projekt systemu
-5.1. Architektura systemu
+2.5. Architektura systemu
 Aplikacja Pizzeria.POS została zaprojektowana w oparciu o architekturę warstwową, w której każda warstwa odpowiada za ściśle określony zakres odpowiedzialności i komunikuje się wyłącznie z warstwami bezpośrednio sąsiednimi. Podejście to zapewnia separację logiki biznesowej od interfejsu użytkownika i warstwy dostępu do danych, co przekłada się na większą czytelność kodu, łatwość utrzymania oraz możliwość niezależnego rozwijania poszczególnych komponentów systemu.
 Projekt rozwiązania składa się z trzech głównych warstw:
     • Warstwa prezentacji — odpowiedzialna za wyświetlanie interfejsu użytkownika i obsługę interakcji. Zbudowana przy użyciu technologii WPF i XAML. Zawiera widoki (ang. Views) oraz ViewModele (ang. ViewModels) zgodnie ze wzorcem MVVM.
     • Warstwa logiki biznesowej — zawiera serwisy implementujące reguły biznesowe aplikacji, takie jak logika obsługi zamówień, kalkulacja cen, obsługa płatności, drukowanie dokumentów oraz tworzenie kopii zapasowych.
     • Warstwa dostępu do danych — odpowiedzialna za komunikację z bazą danych SQLite poprzez Entity Framework Core. Zawiera repozytoria implementujące wzorzec Repository oraz klasę kontekstu bazy danych PosDataContext.
 Zależności między warstwami są jednokierunkowe — warstwa prezentacji zna warstwę logiki biznesowej, a warstwa logiki biznesowej zna warstwę dostępu do danych. Żadna z niższych warstw nie posiada referencji do warstwy wyższej. Komunikacja odbywa się poprzez interfejsy, co w połączeniu z mechanizmem wstrzykiwania zależności zapewnia luźne powiązanie komponentów.
-📝 Wskazówka: W tym miejscu wstaw diagram architektury warstwowej jako Rysunek 2.
-5.2. Wzorzec MVVM
+2.6. Wzorzec MVVM
 Warstwa prezentacji aplikacji opiera się na wzorcu architektonicznym MVVM (ang. Model-View-ViewModel). Wzorzec ten dzieli warstwę prezentacji na trzy komponenty o ściśle określonych rolach:
     • Model — reprezentuje dane i logikę domenową aplikacji. W kontekście projektu są to klasy encji takie jak Order, OrderItem, Product, User czy PizzaTopping, odpowiadające bezpośrednio tabelom w bazie danych.
     • View — definiuje wygląd i strukturę interfejsu użytkownika w języku XAML. Widok jest możliwie pozbawiony logiki — zawiera wyłącznie deklaracje elementów UI oraz powiązania danych (ang. bindings).
     • ViewModel — pośredniczy między widokiem a modelem. Zawiera właściwości eksponowane do widoku poprzez mechanizm Data Binding oraz komendy (ang. Commands) obsługujące akcje użytkownika. Implementuje interfejs INotifyPropertyChanged, który powiadamia widok o zmianach wartości właściwości.
 Kluczową zaletą wzorca MVVM w kontekście WPF jest możliwość pełnego odseparowania kodu C# od definicji XAML. Widok nie zawiera bezpośrednich odwołań do logiki biznesowej — komunikacja odbywa się wyłącznie przez mechanizm wiązania danych i komend. Każdy ViewModel dziedziczy po klasie bazowej BaseViewModel, która dostarcza implementację interfejsu INotifyPropertyChanged oraz metody pomocnicze do powiadamiania widoku o zmianach właściwości.
-5.3. Wzorzec Repository
+2.7. Wzorzec Repository
 Warstwa dostępu do danych implementuje wzorzec Repository (ang. Repository Pattern). Wzorzec ten polega na odseparowaniu logiki dostępu do danych od reszty aplikacji poprzez zdefiniowanie abstrakcyjnego interfejsu repozytorium, który opisuje dostępne operacje na danych, niezależnie od sposobu ich przechowywania.
 Każda encja domenowa posiada odpowiadający jej interfejs repozytorium oraz jego konkretną implementację opartą na EF Core. Przykładowo, interfejs IOrderRepository definiuje metody takie jak GetByIdAsync, GetAllAsync, AddAsync, UpdateAsync czy GetOrdersWithItemsAsync, natomiast klasa OrderRepository dostarcza ich konkretną implementację z użyciem PosDataContext. Serwisy warstwy biznesowej operują wyłącznie na interfejsach repozytoriów, co sprawia, że nie są uzależnione od konkretnej technologii przechowywania danych.
-5.4. Model danych
+2.8. Model danych
 Model danych aplikacji został zaprojektowany z myślą o elastycznym reprezentowaniu zamówień w pizzerii, z uwzględnieniem konfigurowalnych produktów i złożonej struktury dodatków. Poniżej opisano główne encje systemu i relacje między nimi.
 Order — encja reprezentująca zamówienie. Przechowuje typ zamówienia (OrderType: Na miejscu, Na wynos, Dostawa), status (OrderStatus: Otwarte, Opłacone, Anulowane), datę i godzinę utworzenia, identyfikator pracownika który je przyjął, metodę płatności oraz łączną wartość. Zamówienie typu Dostawa posiada dodatkowo powiązanie z encją DeliveryInfo.
 OrderItem — encja reprezentująca pojedynczą pozycję w zamówieniu. Powiązana relacją wiele-do-jednego z encją Order. Przechowuje identyfikator produktu, nazwę produktu (redundantnie, na wypadek usunięcia produktu z menu), ilość, cenę jednostkową oraz opcjonalny obiekt JSON z konfiguracją dodatków do pizzy.
@@ -316,7 +214,7 @@ Relacje między encjami:
     • PizzaToppingCategory → PizzaTopping: jeden-do-wielu (jedna kategoria zawiera wiele dodatków)
     • Order → PrintLog: jeden-do-wielu (jedno zamówienie może mieć wiele dokumentów wydruku)
       📝 Wskazówka: W tym miejscu wstaw diagram ERD bazy danych jako Rysunek 3.
-5.5. Diagram sekwencji — realizacja zamówienia
+2.9. Diagram sekwencji — realizacja zamówienia
 Diagram sekwencji ilustruje przebieg typowej operacji przyjęcia i opłacenia zamówienia w systemie Pizzeria.POS. Operacja składa się z następujących kroków:
     1. Kelner loguje się do systemu przy użyciu kodu PIN — ViewModel wysyła żądanie do AuthService, który weryfikuje hash PIN-u z bazą danych i zwraca obiekt zalogowanego użytkownika.
     2. Kelner tworzy nowe zamówienie — OrderViewModel wywołuje metodę CreateOrderAsync w OrderService, który tworzy nowy rekord Order w bazie danych poprzez OrderRepository i zwraca jego identyfikator.
@@ -330,9 +228,9 @@ Diagram sekwencji ilustruje przebieg typowej operacji przyjęcia i opłacenia za
 
 
 
-6. Implementacja aplikacji
+3. Implementacja
 Implementacja systemu Pizzeria.POS została zrealizowana w języku C# z wykorzystaniem platformy .NET 8. Kod źródłowy projektu jest zorganizowany w cztery osobne projekty w ramach jednego rozwiązania (ang. solution) Visual Studio: Pizzeria.Pos.Core zawierający modele domenowe, Pizzeria.Pos.Data zawierający kontekst bazy danych i migracje, Pizzeria.Pos.Services zawierający repozytoria i serwisy oraz Pizzeria.Pos.Wpf zawierający warstwę prezentacji.
-6.1. Konfiguracja aplikacji i rejestracja zależności
+3.1. Konfiguracja aplikacji i rejestracja zależności
 Punktem startowym aplikacji jest klasa App, dziedzicząca po Application z przestrzeni nazw WPF. Metoda OnStartup odpowiada za konfigurację kontenera DI, inicjalizację bazy danych oraz uruchomienie okna logowania. Pełna konfiguracja startu aplikacji przedstawiona jest na listingu 1.
 Listing 1. Konfiguracja kontenera DI i inicjalizacja bazy danych (App.xaml.cs)
 Screenshot 1 — App.xaml.cs
@@ -341,7 +239,7 @@ Co zaznaczyć: Całą metodę OnStartup — rejestrację serwisów (AddScoped
 Podpis: „Listing 1. Konfiguracja kontenera DI i inicjalizacja bazy danych"
 
 W metodzie OnStartup wykonywanych jest kilka kluczowych operacji. Najpierw budowany jest kontener DI poprzez rejestrację wszystkich zależności — repozytoria i serwisy rejestrowane są ze scope'em Scoped, natomiast BackupService jako Singleton, ponieważ nie posiada stanu zależnego od kontekstu bazy danych. Następnie tworzony jest tymczasowy scope, w ramach którego pobierany jest PosDataContext i wywoływana metoda db.Database.Migrate() — powoduje ona automatyczne zastosowanie wszystkich brakujących migracji przy każdym uruchomieniu aplikacji. Dzięki temu aktualizacja aplikacji do nowszej wersji nigdy nie wymaga ręcznej ingerencji w strukturę bazy danych.
-6.2. Konfiguracja kontekstu bazy danych
+3.2. Konfiguracja kontekstu bazy danych
 Klasa PosDataContext dziedziczy po DbContext z biblioteki Entity Framework Core i stanowi centralny punkt dostępu do bazy danych. Definiuje ona zbiory danych (DbSet) dla każdej encji oraz konfiguruje relacje i dane startowe (ang. seed data) w metodzie OnModelCreating. Fragment konfiguracji relacji i danych startowych przedstawia listing 2.
 Listing 2. Konfiguracja relacji i danych startowych w PosDataContext.cs
 
@@ -351,7 +249,7 @@ Co zaznaczyć: Metodę OnModelCreating — konfigurację relacji (HasMany, W
 Podpis: „Listing 2. Konfiguracja relacji i danych startowych w PosDataContext"
 
 Relacja Order → OrderItem jest skonfigurowana jako jeden-do-wielu z kaskadowym usuwaniem (DeleteBehavior.Cascade), co oznacza że usunięcie zamówienia automatycznie usuwa wszystkie jego pozycje. Na kolumnie OrderId w tabeli OrderItems tworzony jest indeks bazodanowy, który przyspiesza zapytania filtrujące pozycje zamówienia po jego identyfikatorze. Dane startowe definiowane przez HasData są wstawiane do bazy automatycznie podczas pierwszej migracji — dzięki temu aplikacja po instalacji posiada od razu przykładowych użytkowników i zestaw dodatków do pizzy.
-6.3. Moduł zarządzania zamówieniami
+3.3. Moduł zarządzania zamówieniami
 Centralnym elementem warstwy dostępu do danych jest klasa OrderRepository, implementująca interfejs IOrderRepository. Repozytorium udostępnia metody do pobierania zamówień według statusu, dodawania nowych zamówień, aktualizacji istniejących oraz anulowania. Prywatna metoda pomocnicza QueryWithDetails standaryzuje sposób pobierania danych, zapewniając zawsze dołączenie powiązanych encji.
 Listing 3. Metoda QueryWithDetails oraz pobieranie aktywnych zamówień (OrderRepository.cs)
 
@@ -361,7 +259,7 @@ Co zaznaczyć: Metodę QueryWithDetails() oraz GetActiveOrders() — górna
 Podpis: „Listing 3. Metoda QueryWithDetails i pobieranie aktywnych zamówień"
 
 Zastosowanie metody AsNoTracking() jest świadomą decyzją optymalizacyjną — ponieważ pobierane dane są używane wyłącznie do odczytu i wyświetlenia w interfejsie, wyłączenie mechanizmu śledzenia zmian przez EF Core zmniejsza zużycie pamięci i przyspiesza wykonanie zapytania. Metody GetActiveOrders, GetPaidOrders i GetCanceledOrders implementują spójną logikę filtrowania: anulowane zamówienia nigdy nie pojawiają się w liście opłaconych i odwrotnie, co zapewnia integralność danych prezentowanych użytkownikowi.
-6.4. Wyszukiwanie klientów dostawczych
+3.4. Wyszukiwanie klientów dostawczych
 Jedną z bardziej złożonych funkcjonalności systemu jest wyszukiwanie historycznych danych adresowych klienta na podstawie numeru telefonu. Mechanizm ten pozwala kelnerowi na szybkie uzupełnienie adresu dostawy bez konieczności ponownego wpisywania danych stałego klienta. Implementacja uwzględnia normalizację numeru telefonu — usuwane są wszelkie znaki niebędące cyframi — oraz normalizację tekstu adresu w celu grupowania adresów zapisanych z różną wielkością liter lub spacjami.
 Listing 4. Wyszukiwanie adresu dostawy po numerze telefonu (OrderRepository.cs)
  Screenshot 4 — OrderRepository.cs (część 2)
@@ -369,7 +267,7 @@ Plik: Pizzeria.Pos.Services/OrderRepository.cs
 Co zaznaczyć: Metodę GetDeliveryAddressesByPhone() wraz z pomocniczymi NormalizePhone() i NormalizeText() — dolna część pliku
 Podpis: „Listing 4. Wyszukiwanie adresu dostawy po numerze telefonu"
 Grupowanie wyników po znormalizowanych polach adresowych eliminuje duplikaty — ten sam adres zapisany w różny sposób (np. „ul. Długa" i „Długa") zostanie rozpoznany jako ten sam, a z grupy duplikatów wybierane jest zawsze najnowsze wystąpienie.
-6.5. Moduł kopii zapasowych
+3.5. Moduł kopii zapasowych
 Serwis BackupService odpowiada za tworzenie kopii zapasowych pliku bazy danych SQLite oraz automatyczne usuwanie kopii starszych niż 30 dni. Ze względu na brak stanu zależnego od kontekstu, serwis jest zarejestrowany jako Singleton — istnieje jedna instancja przez cały czas działania aplikacji.
 Listing 5. Implementacja tworzenia kopii zapasowej (BackupService.cs)
 Screenshot 5 — BackupService.cs
@@ -379,7 +277,7 @@ Podpis: „Listing 5. Implementacja tworzenia i rotacji kopii zapasowych"
 
 
 Nazwa pliku kopii zapasowej zawiera znacznik czasu w formacie yyyy-MM-dd_HH-mm-ss, co zapewnia unikalność nazw i umożliwia łatwą identyfikację daty utworzenia kopii. Metoda zwraca ścieżkę do utworzonego pliku lub null w przypadku błędu — takie podejście pozwala warstwie prezentacji na wyświetlenie stosownego komunikatu bez konieczności obsługi wyjątku. Kopiowanie pliku SQLite metodą File.Copy jest bezpiecznym sposobem tworzenia backupu dla bazy danych niepodlegającej aktywnym zapisom w momencie operacji.
-6.6. Moduł drukowania
+3.6. Moduł drukowania
 Serwis PrintService implementuje interfejs IPrintService i odpowiada za generowanie oraz wysyłanie dokumentów do drukarki systemowej. Aplikacja obsługuje dwa typy dokumentów: paragon dla klienta oraz bilet kuchenny KOT (ang. Kitchen Order Ticket), informujący kuchnię o szczegółach zamówienia. Wydruk realizowany jest przy użyciu klas PrintDocument i PrintController dostępnych w przestrzeni nazw System.Drawing.Printing, co pozwala na pełną kontrolę nad treścią i formatowaniem dokumentu bez zewnętrznych zależności.
 
 📸 Screenshot 6 — IOrderRepository.cs
@@ -389,7 +287,7 @@ Podpis: „Listing 6. Interfejs IOrderRepository — wzorzec Repository"
 
 
 
-6.7. Warstwa prezentacji — ViewModele
+3.7. Warstwa prezentacji — ViewModele
 Warstwa prezentacji aplikacji zawiera bogaty zestaw ViewModeli odpowiadających poszczególnym widokom systemu. Ich wykaz wraz z odpowiedzialnością przedstawia tabela 2.
 Tabela 2. ViewModele aplikacji Pizzeria.POS
 ViewModel	Odpowiedzialność
@@ -414,16 +312,49 @@ Podpis: „Rysunek X. Struktura rozwiązania Pizzeria.POS w Visual Studio"
 
 
 
-6.8. Konfiguracja interfejsu użytkownika
+3.8. Konfiguracja interfejsu użytkownika
 Interfejs aplikacji został zaprojektowany w pliku App.xaml jako zestaw globalnych zasobów obejmujących style, szablony kontrolek i paletę kolorów. Zastosowany motyw wizualny oparty jest na ciemnym tle z wysokim kontrastem elementów interaktywnych, co sprzyja czytelności w warunkach gastronomicznych — zmiennym oświetleniu i odblaskach na ekranie. Wszystkie przyciski akcji posiadają ustandaryzowaną minimalną wysokość 60 px i rozmiar czcionki 16 pt, zapewniając wygodne użytkowanie dotykowe bez ryzyka przypadkowego kliknięcia sąsiedniego elementu.
 
-7. Dokumentacja użytkowa
-7.1. Wprowadzenie
+4. Testowanie
+4.1. Strategia testowania
+Testowanie aplikacji stanowi nieodłączny etap procesu wytwarzania oprogramowania, pozwalający na weryfikację poprawności działania systemu względem zdefiniowanych wymagań funkcjonalnych i niefunkcjonalnych. W przypadku niniejszego projektu przyjęto strategię testowania wielopoziomowego, obejmującą zarówno testy jednostkowe wybranych komponentów logiki biznesowej, jak i testy funkcjonalne przeprowadzane manualnie na działającej aplikacji.
+Ze względu na desktopowy charakter aplikacji oraz jej ścisłą integrację z interfejsem użytkownika opartym na technologii WPF, główny nacisk położono na testy funkcjonalne typu end-to-end, weryfikujące poprawność działania poszczególnych modułów z perspektywy użytkownika końcowego. Testy przeprowadzano na środowisku zbliżonym do docelowego — stacji roboczej z systemem Windows 11 oraz ekranem dotykowym, symulując rzeczywiste warunki pracy w pizzerii. Każdy moduł był testowany niezależnie, a następnie weryfikowano poprawność współdziałania między modułami w ramach kompletnych scenariuszy użytkowych.
+Dodatkowym elementem strategii testowania była weryfikacja integralności danych — sprawdzano zachowanie aplikacji w sytuacjach brzegowych, takich jak próba złożenia pustego zamówienia, wprowadzenie nieprawidłowych danych w formularzach czy symulacja nagłego zamknięcia aplikacji w trakcie zapisu transakcji. Mechanizm kopii zapasowych był testowany poprzez celowe uszkodzenie pliku bazy danych i weryfikację poprawności przywrócenia danych z kopii.
+4.2. Testy funkcjonalne
+Testy funkcjonalne przeprowadzono w oparciu o scenariusze testowe wyprowadzone bezpośrednio z wymagań funkcjonalnych zdefiniowanych w rozdziale 2.1. Każdy scenariusz obejmował opis warunków wstępnych, sekwencję wykonywanych kroków oraz oczekiwany rezultat. Poniżej przedstawiono zestawienie kluczowych scenariuszy testowych wraz z wynikami:
+ID	Scenariusz testowy	Wynik
+ID	Scenariusz testowy	Wynik
+T-01	Logowanie poprawnym kodem PIN	✅ Pozytywny
+T-02	Logowanie błędnym kodem PIN	✅ Pozytywny
+T-03	Złożenie zamówienia na miejscu z wyborem pizzy i dodatków	✅ Pozytywny
+T-04	Złożenie zamówienia z dostawą z podaniem adresu	✅ Pozytywny
+T-05	Modyfikacja zamówienia przed finalizacją	✅ Pozytywny
+T-06	Realizacja płatności gotówką z wyliczeniem reszty	✅ Pozytywny
+T-07	Realizacja płatności kartą	✅ Pozytywny
+T-08	Przypisanie kuriera do zamówienia z dostawą	✅ Pozytywny
+T-09	Zmiana statusu dostawy	✅ Pozytywny
+T-10	Dodanie nowego produktu do menu przez administratora	✅ Pozytywny
+T-11	Edycja i usunięcie istniejącego produktu	✅ Pozytywny
+T-12	Generowanie raportu dziennego	✅ Pozytywny
+T-13	Generowanie raportu miesięcznego	✅ Pozytywny
+T-14	Eksport raportu do pliku PDF	✅ Pozytywny
+T-15	Manualne wykonanie kopii zapasowej bazy danych	✅ Pozytywny
+T-16	Przywrócenie danych z kopii zapasowej	✅ Pozytywny
+T-17	Próba dostępu do funkcji admina przez kasjera	✅ Pozytywny
+T-18	Złożenie zamówienia bez wybranych produktów	✅ Pozytywny
+T-19	Wprowadzenie nieprawidłowej kwoty płatności	✅ Pozytywny
+T-20	Działanie aplikacji po symulowanej utracie pliku bazy	✅ Pozytywny
+Wszystkie zdefiniowane scenariusze testowe zakończyły się wynikiem pozytywnym. W trakcie testowania zidentyfikowano i usunięto szereg drobnych błędów związanych głównie z walidacją danych wejściowych w formularzach oraz obsługą przypadków brzegowych w module płatności. Przeprowadzone testy potwierdzają, że aplikacja działa zgodnie z założonymi wymaganiami funkcjonalnymi i jest gotowa do wdrożenia w środowisku docelowym.
+
+
+
+
+4.3. Prezentacja działania aplikacji 
 Niniejszy rozdział stanowi dokumentację użytkową systemu POS (ang. Point of Sale) przeznaczonego dla pizzerii. Opisuje każdy ekran aplikacji, jego przeznaczenie, dostępne elementy interfejsu oraz sposób obsługi przez użytkownika. System został zrealizowany jako aplikacja desktopowa w technologii C# WPF, przeznaczona do pracy na stanowiskach kasowych oraz dotykowych ekranach w środowisku restauracyjnym.
 Aplikacja obsługuje dwa poziomy uprawnień użytkowników:
     • Kelner — dostęp do obsługi zamówień i procesu sprzedaży,
     • Manager — pełen dostęp do wszystkich funkcji systemu, w tym administracji, raportów i ustawień.
-7.2. Ekran logowania
+4.3.1.  Ekran logowania
 Ekran logowania jest pierwszym widokiem prezentowanym użytkownikowi po uruchomieniu aplikacji lub po wylogowaniu poprzedniego operatora. Jego zadaniem jest identyfikacja użytkownika na podstawie czterocyfrowego kodu PIN.
 [Rysunek 9.1 — Ekran logowania — wprowadzenie kodu PIN]
 Element	Opis
@@ -434,7 +365,7 @@ Przycisk „C"	Kasuje ostatnio wprowadzoną cyfrę
 Przycisk „OK" (zielony)	Zatwierdza wprowadzony PIN i inicjuje logowanie
 Przycisk „Zamknij" (czerwony)	Zamyka aplikację
 Użytkownik za pomocą klawiatury numerycznej lub ekranu dotykowego wprowadza swój czterocyfrowy kod PIN, a następnie zatwierdza go przyciskiem „OK". W przypadku wprowadzenia błędnego kodu system wyświetla komunikat o błędzie, a pole zostaje wyczyszczone. Aplikacja obsługuje wielokrotne próby logowania.
-7.3. Ekran główny — wybór typu zamówienia
+4.3.2. Ekran główny — wybór typu zamówienia
 Po poprawnym zalogowaniu użytkownik trafia na główny ekran modułu sprzedaży. Wyświetlane są tu aktywne zamówienia oraz możliwość rozpoczęcia nowego. Ekran prezentuje wybór rodzaju obsługi.
 [Rysunek 9.2 — Ekran główny z wyborem typu zamówienia]
 Element	Opis
@@ -446,7 +377,7 @@ Pasek dolny	Przyciski nawigacyjne: Sprzedaż, Opcje, Napoje, Raporty, Więcej
 Data i godzina	Zegar czasu rzeczywistego w lewym górnym rogu
 Informacja o operatorze	Nazwa i rola zalogowanego użytkownika w prawym górnym rogu
 Użytkownik wybiera jeden z trzech trybów obsługi. Po wybraniu opcji „Na miejscu" lub „Wynos" system przechodzi bezpośrednio do ekranu tworzenia zamówienia. Wybór opcji „Dostawa" uruchamia dodatkowo formularz danych klienta, obejmujący adres, numer telefonu oraz uwagi do zamówienia.
-7.4. Ekran tworzenia zamówienia
+4.3.3. Ekran tworzenia zamówienia
 Ekran tworzenia zamówienia stanowi główny ekran operacyjny systemu, na którym kasjer kompletuje zamówienie klienta. Ekran podzielony jest na trzy kolumny: kategorii, produktów oraz koszyka.
 [Rysunek 9.3 — Ekran tworzenia zamówienia — widok główny]
 Element	Opis
@@ -461,7 +392,7 @@ Przycisk „Zapisz i wróć"	Zapisuje zamówienie i wraca do ekranu sprzedaży
 Przycisk „Płatność" (zielony)	Przechodzi do procesu płatności
 Przycisk „Anuluj"	Anuluje tworzenie zamówienia
 Użytkownik wybiera kategorię w lewym panelu — lista produktów odświeża się automatycznie. Kliknięcie produktu dodaje go do koszyka po prawej stronie. Ilość produktu można zmienić przyciskami „−1" / „+1" po zaznaczeniu pozycji w koszyku. Po skompletowaniu zamówienia użytkownik klika „Płatność", aby przejść do realizacji transakcji, lub „Zapisz i wróć", aby zachować zamówienie jako aktywne.
-7.5. Ekran konfiguracji pizzy
+4.3.4. Ekran konfiguracji pizzy
 Ekran konfiguracji pizzy otwierany jest po kliknięciu przycisku „Edytuj pizzę" lub bezpośrednio po wybraniu produktu typu pizza z listy. Umożliwia on spersonalizowanie zamówienia poprzez dobór rozmiaru, rodzaju ciasta oraz dodatkowych składników.
 [Rysunek 9.4 — Ekran konfiguracji pizzy z wyborem rozmiaru, ciasta i dodatków]
 Element	Opis
@@ -473,7 +404,7 @@ Lista dodatków	Przewijalna lista składników wybranej kategorii wraz z cenami 
 Przycisk „Anuluj"	Zamyka ekran bez zapisywania zmian
 Przycisk „Dodaj do zamówienia" (zielony)	Zatwierdza konfigurację i dodaje pizzę do koszyka
 Użytkownik kolejno wybiera rozmiar, rodzaj ciasta, a następnie opcjonalne dodatki z dostępnych kategorii. Cena aktualizowana jest na bieżąco po każdej zmianie konfiguracji. Zatwierdzenie następuje przez kliknięcie przycisku „Dodaj do zamówienia".
-7.6. Ekran formularza dostawy
+4.3.5. Ekran formularza dostawy
 Ekran formularza dostawy wyświetlany jest po wybraniu trybu „Dostawa" na ekranie głównym. Umożliwia wprowadzenie lub wyszukanie danych klienta oraz określenie szczegółów zamówienia dostawczego.
 [Rysunek 9.5 — Ekran formularza dostawy z danymi klienta i wyborem płatności]
 Element	Opis
@@ -488,7 +419,7 @@ Informacja „Wybrano"	Wyświetla aktualnie wybraną metodę płatności i cenę
 Przycisk „Wróć"	Wraca do poprzedniego ekranu bez zapisywania
 Przycisk „OK" (zielony)	Zatwierdza dane i przechodzi do tworzenia zamówienia
 Po wpisaniu numeru telefonu i kliknięciu „Znajdź" system automatycznie uzupełnia dane klienta i jego zapisane adresy. Operator wybiera lub ręcznie wprowadza adres dostawy, określa termin realizacji, wpisuje ewentualne uwagi, a następnie wybiera metodę płatności i zatwierdza formularz przyciskiem „OK".
-7.7. Ekran płatności
+4.3.6. Ekran płatności
 Ekran płatności uruchamiany jest po zakończeniu kompletowania zamówienia. Umożliwia wybór formy płatności oraz finalizację transakcji.
 [Rysunek 9.6 — Ekran płatności z podsumowaniem zamówienia]
 Element	Opis
@@ -501,7 +432,7 @@ Przycisk „Voucher"	Wybór płatności bonem/voucherem
 Przycisk „Zatwierdź"	Finalizuje płatność i drukuje dokumenty
 Przycisk „Anuluj"	Wraca do ekranu zamówienia bez realizacji płatności
 Użytkownik wybiera metodę płatności odpowiednim przyciskiem, a następnie zatwierdza transakcję. System automatycznie generuje i wysyła do drukarki bon kuchenny oraz paragon fiskalny. Po opłaceniu zamówienie zmienia status na „Opłacone".
-7.8. Ekran zarządzania użytkownikami
+4.3.7. Ekran zarządzania użytkownikami
 Ekran zarządzania użytkownikami jest ekranem administracyjnym dostępnym wyłącznie dla użytkownika z rolą Managera. Umożliwia on przeglądanie, dodawanie, edytowanie oraz dezaktywowanie kont pracowników.
 [Rysunek 9.7 — Ekran zarządzania użytkownikami]
 Element	Opis
@@ -516,7 +447,7 @@ Przycisk „Zapisz" (zielony)	Zapisuje wprowadzone zmiany
 Przycisk „Dezaktywuj" (pomarańczowy)	Dezaktywuje wybrane konto bez jego usuwania
 Przycisk „Powrót"	Wraca do poprzedniego ekranu
 Manager wybiera pracownika z listy — jego dane ładują się automatycznie do formularza po prawej stronie. Po wprowadzeniu zmian (imię, PIN, rola, status) zatwierdza je przyciskiem „Zapisz". Aby dodać nowego pracownika, klika „Nowy", wypełnia formularz i zapisuje.
-7.9. Ekran zarządzania produktami
+4.3.8. Ekran zarządzania produktami
 Ekran zarządzania produktami umożliwia przeglądanie i edytowanie pozycji menu, obejmujących pizzę, napoje oraz inne produkty. Dostępny jest wyłącznie dla Managera.
 [Rysunek 9.8 — Ekran zarządzania produktami]
 Element	Opis
@@ -530,7 +461,7 @@ Przycisk „Zapisz zmiany" (zielony)	Zatwierdza edycję produktu
 Przycisk „Anuluj edycję"	Anuluje wprowadzone zmiany
 Przycisk „Odśwież"	Odświeża listę produktów
 Manager klika na produkt w tabeli, aby załadować jego dane do formularza edycji. Po dokonaniu zmian klika „Zapisz zmiany". Dodawanie nowej pozycji odbywa się przez przycisk „Nowy" — formularz zostaje wyczyszczony, a użytkownik wypełnia dane nowego produktu.
-7.10. Ekran zarządzania dodatkami do pizzy
+4.3.9. Ekran zarządzania dodatkami do pizzy
 Ekran zarządzania dodatkami jest dedykowany konfiguracji składników, które klient może wybrać podczas składania zamówienia na pizzę. Dostępny jest wyłącznie dla Managera.
 [Rysunek 9.9 — Ekran zarządzania dodatkami do pizzy]
 Element	Opis
@@ -542,7 +473,7 @@ Przycisk „Anuluj edycję"	Anuluje wprowadzone zmiany
 Przycisk „Nowy" (zielony)	Tworzy nowy dodatek
 Przycisk „Ukryj"	Ukrywa nieaktywne dodatki z widoku tabeli
 Manager zaznacza dodatek z tabeli — jego dane ładują się do formularza po prawej stronie. Po edycji klika „Zapisz zmiany". Dodatki pogrupowane są w kategorie (np. Mięsne, Ser, Sosy, Warzywne), co ułatwia zarządzanie szeroką ofertą składników.
-7.11. Ekran ustawień programu
+4.3.10. Ekran ustawień programu
 Ekran ustawień umożliwia konfigurację aplikacji w zakresie wyglądu interfejsu, parametrów pracy oraz zarządzania kopią zapasową bazy danych. Dostępny jest wyłącznie dla Managera.
 [Rysunek 9.10 — Ekran ustawień programu]
 Element	Opis
@@ -557,7 +488,7 @@ Przycisk „Odśwież listę"	Odświeża listę dostępnych archiwów kopii zapa
 Przycisk „Otwórz folder"	Otwiera folder z plikami kopii w eksploratorze systemu Windows
 Lista archiwów backup	Wyświetla datę, godzinę i rozmiar każdej kopii zapasowej
 Manager dostosowuje wygląd interfejsu poprzez wybór motywu, koloru akcentu i rozmiaru czcionki — podgląd zmian widoczny jest na bieżąco w lewym panelu. Opcja „Tryb dotykowy" powiększa przyciski i elementy interfejsu, co jest zalecane przy obsłudze na ekranach dotykowych. Kopia zapasowa tworzona jest przez przycisk „Zrób backup teraz" — plik zapisywany jest automatycznie w domyślnym katalogu aplikacji.
-7.12. Ekran rejestru zamówień
+4.3.11. Ekran rejestru zamówień
 Ekran rejestru zamówień umożliwia przeglądanie pełnej historii wszystkich zrealizowanych i anulowanych zamówień. Pozwala na filtrowanie wyników oraz ponowne drukowanie dokumentów. Dostępny jest dla Managera; Kelner może posiadać ograniczony dostęp, zależnie od konfiguracji systemu.
 [Rysunek 9.11 — Ekran rejestru zamówień z panelem szczegółów]
 Element	Opis
@@ -571,7 +502,7 @@ Przycisk „Wydrukuj BON dostawy" (fioletowy)	Ponownie drukuje bon dostawy
 Przycisk „Wydrukuj paragon" (zielony)	Ponownie drukuje paragon fiskalny
 Pasek statusu	Informacja o łącznej liczbie załadowanych zamówień
 Użytkownik zawęża listę zamówień za pomocą filtrów — po ustawieniu kryteriów (zakres dat, typ, status) klika „Filtruj". Kliknięcie wiersza w tabeli ładuje szczegóły zamówienia w prawym panelu, skąd możliwe jest ponowne wydrukowanie dowolnego dokumentu powiązanego z danym zamówieniem.
-7.13. Ekran rejestru klientów
+4.3.12. Ekran rejestru klientów
 Ekran rejestru klientów zawiera bazę osób, które składały zamówienia z dostawą. Umożliwia przeglądanie historii zakupów poszczególnych klientów. Dostępny jest wyłącznie dla Managera.
 [Rysunek 9.12 — Ekran rejestru klientów]
 Element	Opis
@@ -580,7 +511,7 @@ Panel „SZCZEGÓŁY KLIENTA" (prawy)	Informacje o zaznaczonym kliencie wyświet
 Przycisk „Odśwież"	Odświeża listę klientów
 Przycisk „Zamknij" (czerwony)	Zamyka ekran rejestru
 Manager przegląda listę klientów posortowaną według daty ostatniego zamówienia. Po kliknięciu klienta w tabeli w prawym panelu wyświetlają się jego szczegółowe dane oraz historia zamówień. Ekran służy głównie do weryfikacji danych przy przyjmowaniu kolejnego zamówienia telefonicznego oraz do analizy lojalności klientów.
-7.14. Ekran rejestru dostaw
+4.3.13. Ekran rejestru dostaw
 Ekran rejestru dostaw przeznaczony jest do przeglądania zamówień realizowanych w trybie dostawy. Pozwala filtrować dostawy według zakresu dat i statusu oraz umożliwia podgląd szczegółów każdej z nich. Dostępny jest wyłącznie dla Managera.
 [Rysunek 9.13 — Ekran rejestru dostaw]
 Element	Opis
@@ -589,7 +520,7 @@ Przycisk „Zamknij" (czerwony)	Zamyka ekran rejestru dostaw
 Tabela dostaw	Kolumny: ID, Data, Klient, Telefon, Kwota, Płatność, Status
 Panel „SZCZEGÓŁY DOSTAWY" (prawy)	Dane wybranej dostawy: adres, płatność, kwota, uwagi, lista pozycji
 Użytkownik filtruje dostawy według zakresu dat i/lub statusu, a następnie klika wybrany wiersz, by zobaczyć pełne szczegóły w prawym panelu. Panel szczegółów wyświetla m.in. adres dostawy, numer telefonu klienta, formę płatności oraz ewentualne uwagi przekazane przy składaniu zamówienia.
-7.15. Ekran raportów dziennych
+4.3.14. Ekran raportów dziennych
 Ekran raportów dziennych umożliwia generowanie i przeglądanie raportu sprzedaży za wybrany dzień. Pozwala na wydruk raportu oraz przeprowadzenie rozliczenia dnia kasowego. Dostępny jest wyłącznie dla Managera.
 [Rysunek 9.14 — Ekran raportów dziennych z podsumowaniem sprzedaży]
 Element	Opis
@@ -602,7 +533,7 @@ Sekcja „PODSUMOWANIE"	Liczba zamówień (opłacone/anulowane), obrót brutto, 
 Panel „PODGLĄD RAPORTU"	Tekstowy podgląd wydruku z pełną listą zamówień dnia
 Pasek statusu	Informacja o dacie raportu i liczbie załadowanych zamówień
 Manager wybiera datę w polu „Data raportu" i klika „Załaduj" — system pobiera dane i wypełnia sekcję podsumowania oraz panel podglądu. Przycisk „Rozliczenie dnia" służy do formalnego zamknięcia dnia kasowego. Raport można wydrukować w dowolnym momencie przyciskiem „Wydruk raportu".
-7.16. Ekran raportów miesięcznych
+4.3.15. Ekran raportów miesięcznych
 Ekran raportów miesięcznych służy do generowania zbiorczego raportu sprzedaży za wybrany miesiąc i rok. Zawiera zestawienie dzienne oraz pełne rozliczenie płatności za cały okres. Dostępny jest wyłącznie dla Managera.
 [Rysunek 9.15 — Ekran raportów miesięcznych]
 Element	Opis
@@ -617,12 +548,12 @@ Panel „PODGLĄD RAPORTU"	Tekstowy podgląd raportu z zestawieniem dziennym (da
 Pasek statusu	Informacja o okresie raportu i łącznej liczbie zamówień
 Manager wybiera miesiąc i rok, następnie klika „Załaduj". System generuje raport zbiorczy — w lewym panelu widoczne jest podsumowanie liczbowe, a w prawym szczegółowy podgląd z rozbiciem na poszczególne dni miesiąca. Raport można wydrukować przyciskiem „Wydruk raportu", który wysyła dokument bezpośrednio do drukarki.
 
-8. Podsumowanie i perspektywy rozwoju
-8.1. Wnioski z realizacji projektu
+5. Podsumowanie
+5.1. Wnioski z realizacji projektu
 Celem niniejszej pracy inżynierskiej było zaprojektowanie i zaimplementowanie systemu POS dedykowanego dla pizzerii, działającego jako aplikacja desktopowa. Zrealizowany system w pełni odpowiada na postawione wymagania funkcjonalne i niefunkcjonalne: umożliwia zarządzanie zamówieniami, obsługę dostaw, konfigurację produktów, przetwarzanie płatności, generowanie raportów oraz tworzenie kopii zapasowych danych.
 W trakcie realizacji projektu potwierdzono słuszność wyboru technologii. Platforma .NET z językiem C# oraz środowisko WPF zapewniły stabilną, wydajną podstawę dla aplikacji desktopowej przeznaczonej do intensywnej pracy w środowisku gastronomicznym. Wzorzec MVVM w połączeniu z wzorcem Repozytorium pozwolił na czytelny podział odpowiedzialności pomiędzy warstwami aplikacji, co znacząco ułatwiło utrzymanie i rozbudowę kodu. Entity Framework Core z bazą SQLite okazał się trafnym wyborem — zapewnił wygodne zarządzanie schematem bazy danych poprzez migracje oraz niezawodne przechowywanie danych lokalnie, bez potrzeby konfiguracji zewnętrznego serwera.
 Realizacja projektu pozwoliła na zdobycie praktycznego doświadczenia w zakresie projektowania wielowarstwowych aplikacji desktopowych, modelowania baz danych relacyjnych, implementacji wzorców projektowych oraz tworzenia responsywnych interfejsów zoptymalizowanych pod obsługę dotykową. Napotkane trudności — przede wszystkim związane z synchronizacją migracji bazy danych, zarządzaniem zależnościami w kontenerze DI oraz optymalizacją interfejsu pod ekrany dotykowe — zostały skutecznie rozwiązane, co przyczyniło się do poszerzenia kompetencji technicznych autora.
-8.2. Perspektywy rozwoju
+5.2. Perspektywy rozwoju
 Pomimo że zrealizowana aplikacja spełnia wszystkie założone wymagania, istnieje szereg obszarów, w których system może zostać rozbudowany w przyszłości:
     • Integracja z drukarką fiskalną — podłączenie urządzenia fiskalnego pozwoliłoby na automatyczne wystawianie paragonów zgodnych z wymogami prawnymi, co jest niezbędnym krokiem do wdrożenia komercyjnego.
     • Moduł rezerwacji stolików — rozszerzenie systemu o zarządzanie rezerwacjami pozwoliłoby na kompleksową obsługę sali restauracyjnej.
@@ -632,7 +563,7 @@ Pomimo że zrealizowana aplikacja spełnia wszystkie założone wymagania, istni
     • System lojalnościowy — zaimplementowanie programu punktowego dla stałych klientów zwiększyłoby ich zaangażowanie i zachęcało do powrotu.
     • Obsługa wielu punktów sprzedaży — architektura warstwowa projektu umożliwia rozbudowę systemu o centralny serwer synchronizacji, który obsługiwałby równocześnie wiele lokalizacji tej samej sieci gastronomicznej.
 Powyższe kierunki rozwoju potwierdzają, że zrealizowany projekt stanowi solidną podstawę architektoniczną, która może być stopniowo rozbudowywana wraz z rosnącymi potrzebami biznesowymi pizzerii.
-9. Bibliografia
+6. Bibliografia
 
 Publikacje książkowe i naukowe:
 Troelsen A., Japikse P., Pro C# 10 with .NET 6, Apress, 2022.
@@ -660,26 +591,39 @@ Normy i standardy:
 ISO/IEC 25010:2011, Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models, ISO, 2011.
 Ustawa z dnia 11 marca 2004 r. o podatku od towarów i usług (Dz.U. 2004 nr 54 poz. 535 z późn. zm.) — w zakresie wymogów dotyczących kas fiskalnych.
 
-10. Spis rysunków
-Nr	Tytuł	Strona
-Rysunek 3.1	Diagram przypadków użycia systemu POS	XX
-Rysunek 5.1	Architektura warstwowa projektu	XX
-Rysunek 5.2	Diagram wzorca MVVM	XX
-Rysunek 5.3	Diagram wzorca Repozytorium	XX
-Rysunek 5.4	Diagram klas / ERD modelu danych	XX
-Rysunek 5.5	Diagram sekwencji — składanie zamówienia	XX
-Rysunek 7.1	Ekran logowania — wprowadzenie kodu PIN	XX
-Rysunek 7.2	Panel główny aplikacji	XX
-Rysunek 7.3	Moduł zarządzania zamówieniami	XX
-Rysunek 7.4	Ekran konfiguracji pizzy i dodatków	XX
-Rysunek 7.5	Moduł dostaw — lista i mapa	XX
-Rysunek 7.6	Ekran płatności	XX
-Rysunek 7.7	Moduł raportów	XX
-Rysunek 7.8	Widok drukowania rachunku	XX
-Rysunek 7.9	Panel zarządzania użytkownikami	XX
-Rysunek 7.10	Ustawienia i kopie zapasowe	XX
 
-11. Spis tabel
+
+
+
+7. Spis rysunków
+
+
+Nr	Tytuł	Strona
+Rysunek 2.1	Diagram przypadków użycia systemu POS	XX
+Rysunek 2.2	Architektura warstwowa projektu	XX
+Rysunek 2.3	Diagram wzorca MVVM	XX
+Rysunek 2.4	Diagram wzorca Repozytorium	XX
+Rysunek 2.5	Diagram klas / ERD modelu danych	XX
+Rysunek 2.6	Diagram sekwencji — składanie zamówienia	XX
+Rysunek 4.1	Ekran logowania — wprowadzenie kodu PIN	XX
+Rysunek 4.2	Ekran główny — wybór typu zamówienia	XX
+Rysunek 4.3	Ekran tworzenia zamówienia	XX
+Rysunek 4.4	Ekran konfiguracji pizzy i dodatków	XX
+Rysunek 4.5	Ekran formularza dostawy	XX
+Rysunek 4.6	Ekran płatności	XX
+Rysunek 4.7	Ekran zarządzania użytkownikami	XX
+Rysunek 4.8	Ekran zarządzania produktami	XX
+Rysunek 4.9	Ekran zarządzania dodatkami do pizzy	XX
+Rysunek 4.10	Ekran ustawień programu	XX
+Rysunek 4.11	Ekran rejestru zamówień	XX
+Rysunek 4.12	Ekran rejestru klientów	XX
+Rysunek 4.13	Ekran rejestru dostaw	XX
+Rysunek 4.14	Ekran raportów dziennych	XX
+Rysunek 4.15	Ekran raportów miesięcznych	XX
+Rysunek 3.1	Struktura rozwiązania Pizzeria.POS w Visual Studio	XX
+
+
+8. Spis tabel
 Nr	Tytuł	Strona
 Tabela 3.1	Wymagania funkcjonalne systemu	XX
 Tabela 3.2	Wymagania niefunkcjonalne systemu	XX
@@ -687,7 +631,7 @@ Tabela 2.1	Porównanie istniejących systemów POS	XX
 Tabela 4.1	Zestawienie wykorzystanych technologii	XX
 Tabela 5.1	Opis encji modelu danych	XX
 
-12. Dodatek D1 — Zawartość załączonej płyty CD/DVD
+9. Dodatek D1 — Zawartość załączonej płyty CD/DVD
 Załączona nośnik cyfrowy zawiera następujące materiały:
 text
 /
