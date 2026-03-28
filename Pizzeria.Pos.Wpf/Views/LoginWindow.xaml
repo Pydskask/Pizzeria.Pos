@@ -110,14 +110,14 @@
 
             <!-- LEWY PANEL -->
             <StackPanel Grid.Column="0"
-                        VerticalAlignment="Center"
-                        Margin="0,0,18,0">
+                        VerticalAlignment="Top"
+                        Margin="0,544,18,0">
                 <Button Content="Zamknij"
                         Height="56"
                         Style="{StaticResource SideActionButton}"
                         Background="#DC2626"
                         Foreground="White"
-                        Click="CloseButton_Click"/>
+                        Click="CloseButton_Click" Width="181"/>
             </StackPanel>
 
             <!-- CENTRALNY PANEL LOGOWANIA -->
@@ -199,11 +199,6 @@
                 BorderBrush="#1E293B"
                 BorderThickness="1,1,1,0"
                 Padding="18,12">
-            <TextBlock Text="Oczekiwanie na logowanie operatora"
-                       Foreground="#64748B"
-                       FontSize="15"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"/>
         </Border>
     </Grid>
 </Window>
