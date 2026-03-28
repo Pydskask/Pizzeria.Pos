@@ -117,7 +117,7 @@
                         Style="{StaticResource SideActionButton}"
                         Background="#DC2626"
                         Foreground="White"
-                        Click="CloseButton_Click" Width="181"/>
+                        Click="CloseButton_Click" Width="182"/>
             </StackPanel>
 
             <!-- CENTRALNY PANEL LOGOWANIA -->
