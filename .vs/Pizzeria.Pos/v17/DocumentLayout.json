@@ -445,20 +445,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TouchKeyboardWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\TouchKeyboardWindow.xaml",
-              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\TouchKeyboardWindow.xaml",
-              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\TouchKeyboardWindow.xaml",
-              "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\TouchKeyboardWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-27T00:27:11.626Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -468,8 +456,7 @@
               "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\PizzaConfigWindow.xaml",
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\PizzaConfigWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-18T15:55:29.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T15:55:29.871Z"
             },
             {
               "$type": "Document",
@@ -481,8 +468,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\ViewModels\\SettingsPanelViewModel.cs",
               "ViewState": "AgIAADwAAAAAAAAAAAAmwJ0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T16:02:30.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T16:02:30.169Z"
             },
             {
               "$type": "Document",
@@ -494,8 +480,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\ViewModels\\MainViewModel.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAqwFYAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T16:20:09.93Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T16:20:09.93Z"
             },
             {
               "$type": "Document",
@@ -523,6 +508,17 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TouchKeyboardWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\TouchKeyboardWindow.xaml",
+              "RelativeDocumentMoniker": "Pizzeria.Pos.Wpf\\Views\\TouchKeyboardWindow.xaml",
+              "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\TouchKeyboardWindow.xaml",
+              "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\TouchKeyboardWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-27T00:27:11.626Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "PizzaConfigViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\ViewModels\\PizzaConfigViewModel.cs",
@@ -531,8 +527,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\ViewModels\\PizzaConfigViewModel.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAApwD8AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T15:54:24.326Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T15:54:24.326Z"
             },
             {
               "$type": "Document",
@@ -544,8 +539,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\ViewModels\\PizzaAddonGroupViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T17:19:17.526Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T17:19:17.526Z"
             },
             {
               "$type": "Document",
@@ -556,8 +550,7 @@
               "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\OrderWindow.xaml",
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\OrderWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-18T14:49:55.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T14:49:55.657Z"
             },
             {
               "$type": "Document",
@@ -569,8 +562,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T16:01:40.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T16:01:40.168Z"
             },
             {
               "$type": "Document",
@@ -582,8 +574,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\UsersPanel.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T13:21:46.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T13:21:46.871Z"
             },
             {
               "$type": "Document",
@@ -595,8 +586,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Services\\BackupService.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwDQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T21:47:37.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T21:47:37.608Z"
             },
             {
               "$type": "Document",
@@ -608,8 +598,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\ViewModels\\ReportsViewModel.cs",
               "ViewState": "AgIAAKIAAAAAAAAAAAAwwNsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T10:56:47.452Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T10:56:47.452Z"
             },
             {
               "$type": "Document",
@@ -632,8 +621,7 @@
               "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml",
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\SettingsPanel.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-27T16:01:12.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T16:01:12.869Z"
             },
             {
               "$type": "Document",
@@ -645,8 +633,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\ReportsWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T10:57:32.043Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T10:57:32.043Z"
             },
             {
               "$type": "Document",
@@ -658,8 +645,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T14:58:36.198Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T14:58:36.198Z"
             },
             {
               "$type": "Document",
@@ -671,8 +657,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T15:17:11.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T15:17:11.777Z"
             },
             {
               "$type": "Document",
@@ -684,8 +669,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Services\\IBackupService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T21:47:18.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T21:47:18.103Z"
             },
             {
               "$type": "Document",
@@ -697,8 +681,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\ViewModels\\OrderViewModel.cs",
               "ViewState": "AgIAAFwDAAAAAAAAAAAnwEIDAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T14:24:32.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T14:24:32.563Z"
             },
             {
               "$type": "Document",
@@ -710,8 +693,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Core\\Models\\OrderItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T14:54:03.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T14:54:03.408Z"
             },
             {
               "$type": "Document",
@@ -723,8 +705,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Data\\PosDataContext.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAYwE4AAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T14:56:12.172Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T14:56:12.172Z"
             },
             {
               "$type": "Document",
@@ -736,8 +717,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\LoginWindow.xaml.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T16:04:29.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T16:04:29.155Z"
             },
             {
               "$type": "Document",
@@ -749,8 +729,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Helpers\\SelectedPizzaAddon.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T17:17:46.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T17:17:46.963Z"
             },
             {
               "$type": "Document",
@@ -762,8 +741,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Helpers\\DeliveryOrderHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T02:40:45.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T02:40:45.681Z"
             },
             {
               "$type": "Document",
@@ -775,8 +753,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Services\\OrderRepository.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAcwE8AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T15:32:20.594Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T15:32:20.594Z"
             },
             {
               "$type": "Document",
@@ -788,8 +765,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Services\\IOrderRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T15:32:11.836Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T15:32:11.836Z"
             },
             {
               "$type": "Document",
@@ -801,8 +777,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Core\\Models\\Order.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T14:53:27.001Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T14:53:27.001Z"
             },
             {
               "$type": "Document",
@@ -814,8 +789,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Core\\Models\\DeliveryAddressLookupResult.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T00:02:15.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T00:02:15.157Z"
             },
             {
               "$type": "Document",
@@ -827,8 +801,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\DeliveriesRegisterWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T21:03:10.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T21:03:10.116Z"
             },
             {
               "$type": "Document",
@@ -840,8 +813,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\ViewModels\\DeliveriesRegisterViewModel.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAAwwHkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T21:03:26.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T21:03:26.342Z"
             },
             {
               "$type": "Document",
@@ -852,8 +824,7 @@
               "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\ReceiptsRegisterWindow.xaml",
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\ReceiptsRegisterWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-27T21:03:50.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T21:03:50.253Z"
             },
             {
               "$type": "Document",
@@ -865,8 +836,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\ReceiptsRegisterWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T21:04:02.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T21:04:02.403Z"
             },
             {
               "$type": "Document",
@@ -878,8 +848,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\ViewModels\\ReceiptsRegisterViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T21:04:15.423Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T21:04:15.423Z"
             },
             {
               "$type": "Document",
@@ -890,8 +859,7 @@
               "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\DeliveriesRegisterWindow.xaml",
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\DeliveriesRegisterWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-27T21:02:55.371Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T21:02:55.371Z"
             },
             {
               "$type": "Document",
@@ -903,8 +871,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\ViewModels\\CustomersRegisterViewModel.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAApwEkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T21:02:14.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T21:02:14.83Z"
             },
             {
               "$type": "Document",
@@ -916,8 +883,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\CustomersRegisterWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T21:01:55.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T21:01:55.044Z"
             },
             {
               "$type": "Document",
@@ -928,8 +894,7 @@
               "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\CustomersRegisterWindow.xaml",
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\CustomersRegisterWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-27T21:01:36.927Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T21:01:36.927Z"
             },
             {
               "$type": "Document",
@@ -941,8 +906,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\ViewModels\\RegistersViewModel.cs",
               "ViewState": "AgIAAFcAAAAAAAAAAAAAAHsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T15:23:00.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T15:23:00.652Z"
             },
             {
               "$type": "Document",
@@ -953,8 +917,7 @@
               "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\DeliveryWindow.xaml",
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\DeliveryWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-18T21:31:38.126Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T21:31:38.126Z"
             },
             {
               "$type": "Document",
@@ -965,8 +928,7 @@
               "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\PaymentWindow.xaml",
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\PaymentWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-18T19:26:29.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:26:29.777Z"
             },
             {
               "$type": "Document",
@@ -977,8 +939,7 @@
               "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\ChangeOrderTypeWindow.xaml",
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\ChangeOrderTypeWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-27T11:56:23.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T11:56:23.378Z"
             },
             {
               "$type": "Document",
@@ -989,8 +950,7 @@
               "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\RegistersWindow.xaml",
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\RegistersWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-20T15:23:23.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T15:23:23.949Z"
             },
             {
               "$type": "Document",
@@ -1001,8 +961,7 @@
               "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\LoginWindow.xaml",
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-13T16:03:46.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T16:03:46.818Z"
             },
             {
               "$type": "Document",
@@ -1013,8 +972,7 @@
               "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\ReportsWindow.xaml",
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\ReportsWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-20T10:57:10.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T10:57:10.521Z"
             },
             {
               "$type": "Document",
@@ -1038,8 +996,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-13T13:17:28.379Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T13:17:28.379Z"
             },
             {
               "$type": "Document",
@@ -1098,8 +1055,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\DeliveryWindow.xaml.cs",
               "ViewState": "AgIAAFQAAAAAAAAAAAAmwGEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T21:31:57.716Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T21:31:57.716Z"
             },
             {
               "$type": "Document",
@@ -1135,8 +1091,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T12:30:08.036Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T12:30:08.036Z"
             },
             {
               "$type": "Document",
@@ -1148,8 +1103,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\ViewModels\\DeliveryAddressViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T21:17:08.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T21:17:08.155Z"
             },
             {
               "$type": "Document",
@@ -1207,8 +1161,7 @@
               "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Views\\Controls\\NumericKeypadControl.xaml",
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Views\\Controls\\NumericKeypadControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-26T19:29:55.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T19:29:55.116Z"
             },
             {
               "$type": "Document",
@@ -1568,8 +1521,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Data\\Pizzeria.Pos.Data.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-13T13:07:50.385Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T13:07:50.385Z"
             },
             {
               "$type": "Document",
@@ -1665,8 +1617,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Services\\Pizzeria.Pos.Services.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-13T13:01:00.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T13:01:00.386Z"
             },
             {
               "$type": "Document",
@@ -1678,8 +1629,7 @@
               "RelativeToolTip": "Pizzeria.Pos.Core\\Pizzeria.Pos.Core.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-13T12:35:20.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T12:35:20.409Z"
             },
             {
               "$type": "Document",
@@ -1739,8 +1689,7 @@
               "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj",
               "RelativeToolTip": "Pizzeria.Pos.Wpf\\Pizzeria.Pos.Wpf.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-18T11:53:52.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T11:53:52.743Z"
             },
             {
               "$type": "Document",
@@ -1751,8 +1700,7 @@
               "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Core\\Pizzeria.Pos.Core.csproj",
               "RelativeToolTip": "Pizzeria.Pos.Core\\Pizzeria.Pos.Core.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-18T11:54:24.824Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T11:54:24.824Z"
             },
             {
               "$type": "Document",
@@ -1763,8 +1711,7 @@
               "ToolTip": "C:\\Users\\Pydskask\\source\\repos\\Pizzeria.Pos\\Pizzeria.Pos.Data\\Pizzeria.Pos.Data.csproj",
               "RelativeToolTip": "Pizzeria.Pos.Data\\Pizzeria.Pos.Data.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-18T11:54:12.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T11:54:12.553Z"
             },
             {
               "$type": "Document",

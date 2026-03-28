@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pizzeria.Pos.Wpf")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc20a8a90db1defa5face376c211f87dd56eb38d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44fb172e363543d785a98fcffae48a6fe7dc2841")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pizzeria.Pos.Wpf")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pizzeria.Pos.Wpf")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
