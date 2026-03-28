@@ -10,7 +10,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <TextBlock Text="RAPORTY"
@@ -29,9 +28,7 @@
                 </Style>
             </TabControl.Resources>
 
-            <!-- ═══════════════════════════════════════════ -->
-            <!-- ZAKŁADKA: RAPORT DZIENNY                    -->
-            <!-- ═══════════════════════════════════════════ -->
+            <!-- RAPORT DZIENNY -->
             <TabItem Header="📅 Raport dzienny">
                 <Grid Margin="15" Background="#1F2937">
                     <Grid.RowDefinitions>
@@ -40,7 +37,6 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <!-- Pasek akcji -->
                     <Grid Grid.Row="0" Margin="0,0,0,15">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="220"/>
@@ -59,49 +55,70 @@
                         <Button Grid.Column="1" Content="Załaduj"
                                 Height="42" Margin="0,22,10,0" FontSize="15"
                                 Command="{Binding LoadDailyReportCommand}"/>
-
                         <Button Grid.Column="2" Content="Wydruk raportu"
                                 Height="42" Margin="0,22,10,0" FontSize="15"
                                 Background="#2563EB"
                                 Command="{Binding PrintDailyReportCommand}"/>
-
                         <Button Grid.Column="3" Content="Rozliczenie dnia"
                                 Height="42" Margin="0,22,10,0" FontSize="15"
                                 Background="#16A34A"
                                 Command="{Binding CloseDayCommand}"/>
-
                         <Button Grid.Column="4" Content="Zamknij"
                                 Height="42" Margin="0,22,0,0" FontSize="15"
                                 Background="#DC2626"
                                 Command="{Binding CloseCommand}"/>
                     </Grid>
 
-                    <!-- Treść -->
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="300"/>
+                            <ColumnDefinition Width="280"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <Border Background="White" CornerRadius="10" Padding="15" Margin="0,0,15,0">
+                        <!-- PODSUMOWANIE -->
+                        <Border Background="#1E293B"
+                                BorderBrush="#334155"
+                                BorderThickness="1"
+                                CornerRadius="4"
+                                Padding="16"
+                                Margin="0,0,12,0">
                             <ScrollViewer VerticalScrollBarVisibility="Auto">
                                 <StackPanel>
-                                    <TextBlock Text="PODSUMOWANIE" FontSize="20" FontWeight="Bold" Margin="0,0,0,15"/>
-                                    <TextBlock Text="{Binding TotalOrders, StringFormat=Liczba zamówień: {0}}" FontSize="17" Margin="0,0,0,8"/>
-                                    <TextBlock Text="{Binding PaidOrders, StringFormat=Opłacone: {0}}" FontSize="17" Margin="0,0,0,8"/>
-                                    <TextBlock Text="{Binding CanceledOrders, StringFormat=Anulowane: {0}}" FontSize="17" Margin="0,0,0,18"/>
-                                    <TextBlock Text="{Binding GrossTotal, StringFormat=Obrót brutto: {0:F2} zł}" FontSize="17" FontWeight="Bold" Margin="0,0,0,10"/>
-                                    <Separator Margin="0,0,0,10"/>
-                                    <TextBlock Text="{Binding CashTotal, StringFormat=Gotówka: {0:F2} zł}" FontSize="15" Margin="0,0,0,5"/>
-                                    <TextBlock Text="{Binding CardTotal, StringFormat=Karta: {0:F2} zł}" FontSize="15" Margin="0,0,0,5"/>
-                                    <TextBlock Text="{Binding TransferTotal, StringFormat=Przelew: {0:F2} zł}" FontSize="15" Margin="0,0,0,5"/>
-                                    <TextBlock Text="{Binding OnlineTotal, StringFormat=Online: {0:F2} zł}" FontSize="15" Margin="0,0,0,5"/>
-                                    <TextBlock Text="{Binding VoucherTotal, StringFormat=Voucher: {0:F2} zł}" FontSize="15"/>
+                                    <TextBlock Text="PODSUMOWANIE"
+                                               Foreground="#F8FAFC"
+                                               FontSize="16" FontWeight="Bold"
+                                               Margin="0,0,0,14"/>
+                                    <TextBlock Text="{Binding TotalOrders, StringFormat=Liczba zamówień: {0}}"
+                                               Foreground="#CBD5E1" FontSize="15" Margin="0,0,0,7"/>
+                                    <TextBlock Text="{Binding PaidOrders, StringFormat=Opłacone: {0}}"
+                                               Foreground="#CBD5E1" FontSize="15" Margin="0,0,0,7"/>
+                                    <TextBlock Text="{Binding CanceledOrders, StringFormat=Anulowane: {0}}"
+                                               Foreground="#CBD5E1" FontSize="15" Margin="0,0,0,16"/>
+                                    <TextBlock Text="{Binding GrossTotal, StringFormat=Obrót brutto: {0:F2} zł}"
+                                               Foreground="#86EFAC" FontSize="17" FontWeight="Bold"
+                                               Margin="0,0,0,10"/>
+                                    <Separator Background="#334155" Margin="0,0,0,10"/>
+                                    <TextBlock Text="{Binding CashTotal, StringFormat=Gotówka: {0:F2} zł}"
+                                               Foreground="#CBD5E1" FontSize="14" Margin="0,0,0,5"/>
+                                    <TextBlock Text="{Binding CardTotal, StringFormat=Karta: {0:F2} zł}"
+                                               Foreground="#CBD5E1" FontSize="14" Margin="0,0,0,5"/>
+                                    <TextBlock Text="{Binding TransferTotal, StringFormat=Przelew: {0:F2} zł}"
+                                               Foreground="#CBD5E1" FontSize="14" Margin="0,0,0,5"/>
+                                    <TextBlock Text="{Binding OnlineTotal, StringFormat=Online: {0:F2} zł}"
+                                               Foreground="#CBD5E1" FontSize="14" Margin="0,0,0,5"/>
+                                    <TextBlock Text="{Binding VoucherTotal, StringFormat=Voucher: {0:F2} zł}"
+                                               Foreground="#CBD5E1" FontSize="14"/>
                                 </StackPanel>
                             </ScrollViewer>
                         </Border>
 
-                        <Border Grid.Column="1" Background="White" CornerRadius="10" Padding="15">
+                        <!-- PODGLĄD RAPORTU -->
+                        <Border Grid.Column="1"
+                                Background="#1E293B"
+                                BorderBrush="#334155"
+                                BorderThickness="1"
+                                CornerRadius="4"
+                                Padding="16">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
@@ -109,29 +126,29 @@
                                 </Grid.RowDefinitions>
                                 <TextBlock Grid.Row="0"
                                            Text="PODGLĄD RAPORTU"
-                                           FontSize="20" FontWeight="Bold"
+                                           Foreground="#F8FAFC"
+                                           FontSize="16" FontWeight="Bold"
                                            Margin="0,0,0,10"/>
-                                <TextBox Grid.Row="1"
-                                         Text="{Binding ReportText}"
-                                         IsReadOnly="True"
-                                         TextWrapping="Wrap"
-                                         AcceptsReturn="True"
-                                         VerticalScrollBarVisibility="Auto"
-                                         VerticalAlignment="Stretch"
-                                         FontSize="14" FontFamily="Consolas"
-                                         BorderThickness="0" Background="White"/>
+                                <ScrollViewer Grid.Row="1"
+                                              VerticalScrollBarVisibility="Auto"
+                                              HorizontalScrollBarVisibility="Disabled">
+                                    <TextBlock Text="{Binding ReportText}"
+                                               Foreground="#CBD5E1"
+                                               FontSize="14"
+                                               FontFamily="Consolas"
+                                               TextWrapping="Wrap"
+                                               LineHeight="22"/>
+                                </ScrollViewer>
                             </Grid>
                         </Border>
                     </Grid>
 
                     <TextBlock Grid.Row="2" Text="{Binding StatusMessage}"
-                               Foreground="#FCD34D" FontSize="15" Margin="0,12,0,0"/>
+                               Foreground="#FCD34D" FontSize="15" Margin="0,10,0,0"/>
                 </Grid>
             </TabItem>
 
-            <!-- ═══════════════════════════════════════════ -->
-            <!-- ZAKŁADKA: RAPORT MIESIĘCZNY                 -->
-            <!-- ═══════════════════════════════════════════ -->
+            <!-- RAPORT MIESIĘCZNY -->
             <TabItem Header="📊 Raport miesięczny">
                 <Grid Margin="15" Background="#1F2937">
                     <Grid.RowDefinitions>
@@ -140,7 +157,6 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <!-- Pasek akcji -->
                     <Grid Grid.Row="0" Margin="0,0,0,15">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="160"/>
@@ -157,7 +173,6 @@
                                       SelectedItem="{Binding SelectedMonth}"
                                       Height="42" FontSize="15"/>
                         </StackPanel>
-
                         <StackPanel Grid.Column="1" Margin="0,0,12,0">
                             <TextBlock Text="Rok" Foreground="White" FontSize="15" Margin="0,0,0,5"/>
                             <ComboBox ItemsSource="{Binding YearOptions}"
@@ -168,44 +183,64 @@
                         <Button Grid.Column="2" Content="Załaduj"
                                 Height="42" Margin="0,22,10,0" FontSize="15"
                                 Command="{Binding LoadMonthlyReportCommand}"/>
-
                         <Button Grid.Column="3" Content="Wydruk raportu"
                                 Height="42" Margin="0,22,10,0" FontSize="15"
                                 Background="#2563EB"
                                 Command="{Binding PrintMonthlyReportCommand}"/>
-
                         <Button Grid.Column="4" Content="Zamknij"
                                 Height="42" Margin="0,22,0,0" FontSize="15"
                                 Background="#DC2626"
                                 Command="{Binding CloseCommand}"/>
                     </Grid>
 
-                    <!-- Treść -->
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="300"/>
+                            <ColumnDefinition Width="280"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <Border Background="White" CornerRadius="10" Padding="15" Margin="0,0,15,0">
+                        <Border Background="#1E293B"
+                                BorderBrush="#334155"
+                                BorderThickness="1"
+                                CornerRadius="4"
+                                Padding="16"
+                                Margin="0,0,12,0">
                             <ScrollViewer VerticalScrollBarVisibility="Auto">
                                 <StackPanel>
-                                    <TextBlock Text="PODSUMOWANIE" FontSize="20" FontWeight="Bold" Margin="0,0,0,15"/>
-                                    <TextBlock Text="{Binding MonthTotalOrders, StringFormat=Liczba zamówień: {0}}" FontSize="17" Margin="0,0,0,8"/>
-                                    <TextBlock Text="{Binding MonthPaidOrders, StringFormat=Opłacone: {0}}" FontSize="17" Margin="0,0,0,8"/>
-                                    <TextBlock Text="{Binding MonthCanceledOrders, StringFormat=Anulowane: {0}}" FontSize="17" Margin="0,0,0,18"/>
-                                    <TextBlock Text="{Binding MonthGrossTotal, StringFormat=Obrót brutto: {0:F2} zł}" FontSize="17" FontWeight="Bold" Margin="0,0,0,10"/>
-                                    <Separator Margin="0,0,0,10"/>
-                                    <TextBlock Text="{Binding MonthCashTotal, StringFormat=Gotówka: {0:F2} zł}" FontSize="15" Margin="0,0,0,5"/>
-                                    <TextBlock Text="{Binding MonthCardTotal, StringFormat=Karta: {0:F2} zł}" FontSize="15" Margin="0,0,0,5"/>
-                                    <TextBlock Text="{Binding MonthTransferTotal, StringFormat=Przelew: {0:F2} zł}" FontSize="15" Margin="0,0,0,5"/>
-                                    <TextBlock Text="{Binding MonthOnlineTotal, StringFormat=Online: {0:F2} zł}" FontSize="15" Margin="0,0,0,5"/>
-                                    <TextBlock Text="{Binding MonthVoucherTotal, StringFormat=Voucher: {0:F2} zł}" FontSize="15"/>
+                                    <TextBlock Text="PODSUMOWANIE"
+                                               Foreground="#F8FAFC"
+                                               FontSize="16" FontWeight="Bold"
+                                               Margin="0,0,0,14"/>
+                                    <TextBlock Text="{Binding MonthTotalOrders, StringFormat=Liczba zamówień: {0}}"
+                                               Foreground="#CBD5E1" FontSize="15" Margin="0,0,0,7"/>
+                                    <TextBlock Text="{Binding MonthPaidOrders, StringFormat=Opłacone: {0}}"
+                                               Foreground="#CBD5E1" FontSize="15" Margin="0,0,0,7"/>
+                                    <TextBlock Text="{Binding MonthCanceledOrders, StringFormat=Anulowane: {0}}"
+                                               Foreground="#CBD5E1" FontSize="15" Margin="0,0,0,16"/>
+                                    <TextBlock Text="{Binding MonthGrossTotal, StringFormat=Obrót brutto: {0:F2} zł}"
+                                               Foreground="#86EFAC" FontSize="17" FontWeight="Bold"
+                                               Margin="0,0,0,10"/>
+                                    <Separator Background="#334155" Margin="0,0,0,10"/>
+                                    <TextBlock Text="{Binding MonthCashTotal, StringFormat=Gotówka: {0:F2} zł}"
+                                               Foreground="#CBD5E1" FontSize="14" Margin="0,0,0,5"/>
+                                    <TextBlock Text="{Binding MonthCardTotal, StringFormat=Karta: {0:F2} zł}"
+                                               Foreground="#CBD5E1" FontSize="14" Margin="0,0,0,5"/>
+                                    <TextBlock Text="{Binding MonthTransferTotal, StringFormat=Przelew: {0:F2} zł}"
+                                               Foreground="#CBD5E1" FontSize="14" Margin="0,0,0,5"/>
+                                    <TextBlock Text="{Binding MonthOnlineTotal, StringFormat=Online: {0:F2} zł}"
+                                               Foreground="#CBD5E1" FontSize="14" Margin="0,0,0,5"/>
+                                    <TextBlock Text="{Binding MonthVoucherTotal, StringFormat=Voucher: {0:F2} zł}"
+                                               Foreground="#CBD5E1" FontSize="14"/>
                                 </StackPanel>
                             </ScrollViewer>
                         </Border>
 
-                        <Border Grid.Column="1" Background="White" CornerRadius="10" Padding="15">
+                        <Border Grid.Column="1"
+                                Background="#1E293B"
+                                BorderBrush="#334155"
+                                BorderThickness="1"
+                                CornerRadius="4"
+                                Padding="16">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
@@ -213,23 +248,25 @@
                                 </Grid.RowDefinitions>
                                 <TextBlock Grid.Row="0"
                                            Text="PODGLĄD RAPORTU"
-                                           FontSize="20" FontWeight="Bold"
+                                           Foreground="#F8FAFC"
+                                           FontSize="16" FontWeight="Bold"
                                            Margin="0,0,0,10"/>
-                                <TextBox Grid.Row="1"
-                                         Text="{Binding MonthReportText}"
-                                         IsReadOnly="True"
-                                         TextWrapping="Wrap"
-                                         AcceptsReturn="True"
-                                         VerticalScrollBarVisibility="Auto"
-                                         VerticalAlignment="Stretch"
-                                         FontSize="14" FontFamily="Consolas"
-                                         BorderThickness="0" Background="White"/>
+                                <ScrollViewer Grid.Row="1"
+                                              VerticalScrollBarVisibility="Auto"
+                                              HorizontalScrollBarVisibility="Disabled">
+                                    <TextBlock Text="{Binding MonthReportText}"
+                                               Foreground="#CBD5E1"
+                                               FontSize="14"
+                                               FontFamily="Consolas"
+                                               TextWrapping="Wrap"
+                                               LineHeight="22"/>
+                                </ScrollViewer>
                             </Grid>
                         </Border>
                     </Grid>
 
                     <TextBlock Grid.Row="2" Text="{Binding MonthStatusMessage}"
-                               Foreground="#FCD34D" FontSize="15" Margin="0,12,0,0"/>
+                               Foreground="#FCD34D" FontSize="15" Margin="0,10,0,0"/>
                 </Grid>
             </TabItem>
         </TabControl>
