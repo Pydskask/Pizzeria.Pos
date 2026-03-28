@@ -130,7 +130,7 @@
                                  TextWrapping="Wrap" AcceptsReturn="True"
                                  VerticalScrollBarVisibility="Auto"
                                  FontSize="15" FontFamily="Consolas"
-                                 BorderThickness="0" Background="White"/>
+                                 BorderThickness="0" Background="White" Height="321"/>
                     </DockPanel>
                 </Border>
 
