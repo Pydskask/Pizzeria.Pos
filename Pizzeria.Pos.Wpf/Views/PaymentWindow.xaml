@@ -1,4 +1,4 @@
-﻿<Window x:Class="Pizzeria.Pos.Wpf.Views.PaymentWindow"
+<Window x:Class="Pizzeria.Pos.Wpf.Views.PaymentWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Płatność"
@@ -43,6 +43,7 @@
         <Style x:Key="ActionButtonStyle" TargetType="Button">
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Background" Value="{StaticResource AccentBrush}"/>
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Padding" Value="10,6"/>
             <Setter Property="Template">
@@ -58,10 +59,10 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="Root" Property="Background" Value="{StaticResource AccentHoverBrush}"/>
+                                <Setter TargetName="Root" Property="Opacity" Value="0.88"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="True">
-                                <Setter TargetName="Root" Property="Background" Value="{StaticResource AccentPressedBrush}"/>
+                                <Setter TargetName="Root" Property="Opacity" Value="0.75"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="False">
                                 <Setter TargetName="Root" Property="Opacity" Value="0.55"/>
@@ -88,6 +89,7 @@
         <Style x:Key="KeypadButtonStyle" TargetType="Button" BasedOn="{StaticResource ActionButtonStyle}">
             <Setter Property="Height" Value="54"/>
             <Setter Property="FontSize" Value="22"/>
+            <Setter Property="Background" Value="#1E3A5F"/>
             <Setter Property="Margin" Value="3"/>
         </Style>
 
@@ -96,6 +98,7 @@
             <Setter Property="Height" Value="40"/>
             <Setter Property="FontSize" Value="15"/>
             <Setter Property="Margin" Value="3"/>
+            <Setter Property="Background" Value="#1D4ED8"/>
         </Style>
 
         <Style x:Key="ValueDisplayButtonStyle" TargetType="Button">
@@ -126,6 +129,43 @@
                             <Trigger Property="IsEnabled" Value="False">
                                 <Setter TargetName="Root" Property="Opacity" Value="0.75"/>
                                 <Setter TargetName="Root" Property="Background" Value="#111827"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- STYL KAFELKA FORMY PŁATNOŚCI -->
+        <Style x:Key="PaymentMethodButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Margin" Value="0,0,0,8"/>
+            <Setter Property="Height" Value="58"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Root"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="8"
+                                Padding="16,0">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Root" Property="Opacity" Value="0.88"/>
+                                <Setter TargetName="Root" Property="BorderBrush" Value="White"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Root" Property="Opacity" Value="0.72"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -292,8 +332,8 @@
                 </Grid.RowDefinitions>
 
                 <Border Grid.Row="0"
-        Style="{StaticResource PanelBorderStyle}"
-        Margin="0,0,0,8">
+                        Style="{StaticResource PanelBorderStyle}"
+                        Margin="0,0,0,8">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -302,58 +342,58 @@
 
                         <StackPanel Grid.Column="0">
                             <TextBlock Text="ROZLICZENIE"
-                       Style="{StaticResource SectionTitleStyle}"
-                       Margin="0,0,0,6"/>
+                                       Style="{StaticResource SectionTitleStyle}"
+                                       Margin="0,0,0,6"/>
 
                             <TextBlock Text="{Binding OrderTotal, StringFormat=Kwota bazowa: {0:F2} zł}"
-                       Foreground="{StaticResource TextPrimaryBrush}"
-                       FontSize="16"
-                       Margin="0,2"/>
+                                       Foreground="{StaticResource TextPrimaryBrush}"
+                                       FontSize="16"
+                                       Margin="0,2"/>
 
                             <TextBlock Text="{Binding DiscountAmount, StringFormat=Rabat: -{0:F2} zł}"
-                       Foreground="{StaticResource TextPrimaryBrush}"
-                       FontSize="16"
-                       Margin="0,2"/>
+                                       Foreground="{StaticResource TextPrimaryBrush}"
+                                       FontSize="16"
+                                       Margin="0,2"/>
 
                             <TextBlock Text="{Binding AmountPaid, StringFormat=Wpłacono: {0:F2} zł}"
-                       Foreground="{StaticResource TextPrimaryBrush}"
-                       FontSize="16"
-                       Margin="0,2"/>
+                                       Foreground="{StaticResource TextPrimaryBrush}"
+                                       FontSize="16"
+                                       Margin="0,2"/>
 
                             <TextBlock Text="{Binding RemainingAmount, StringFormat=Pozostało: {0:F2} zł}"
-                       Foreground="#FBBF24"
-                       FontSize="16"
-                       Margin="0,2"/>
+                                       Foreground="#FBBF24"
+                                       FontSize="16"
+                                       Margin="0,2"/>
 
                             <TextBlock Text="{Binding ChangeAmount, StringFormat=Reszta: {0:F2} zł}"
-                       Foreground="{StaticResource TextPrimaryBrush}"
-                       FontSize="16"
-                       Margin="0,2"/>
+                                       Foreground="{StaticResource TextPrimaryBrush}"
+                                       FontSize="16"
+                                       Margin="0,2"/>
 
                             <TextBlock Text="{Binding SelectedMethod, StringFormat=Forma płatności: {0}}"
-                       Foreground="{StaticResource TextPrimaryBrush}"
-                       FontSize="16"
-                       Margin="0,2"/>
+                                       Foreground="{StaticResource TextPrimaryBrush}"
+                                       FontSize="16"
+                                       Margin="0,2"/>
                         </StackPanel>
 
                         <Border Grid.Column="1"
-                Background="{StaticResource PanelBrushSoft}"
-                BorderBrush="{StaticResource BorderBrushDark}"
-                BorderThickness="1"
-                CornerRadius="3"
-                Padding="10,8"
-                Margin="10,0,0,0"
-                VerticalAlignment="Stretch">
+                                Background="{StaticResource PanelBrushSoft}"
+                                BorderBrush="{StaticResource BorderBrushDark}"
+                                BorderThickness="1"
+                                CornerRadius="3"
+                                Padding="10,8"
+                                Margin="10,0,0,0"
+                                VerticalAlignment="Stretch">
                             <StackPanel VerticalAlignment="Center">
                                 <TextBlock Text="DO ZAPŁATY"
-                           Foreground="{StaticResource TextMutedBrush}"
-                           FontSize="12"
-                           HorizontalAlignment="Center"/>
+                                           Foreground="{StaticResource TextMutedBrush}"
+                                           FontSize="12"
+                                           HorizontalAlignment="Center"/>
                                 <TextBlock Text="{Binding FinalTotal, StringFormat={}{0:F2} zł}"
-                           Foreground="#86EFAC"
-                           FontSize="24"
-                           FontWeight="Bold"
-                           HorizontalAlignment="Center"/>
+                                           Foreground="#86EFAC"
+                                           FontSize="24"
+                                           FontWeight="Bold"
+                                           HorizontalAlignment="Center"/>
                             </StackPanel>
                         </Border>
                     </Grid>
@@ -422,35 +462,29 @@
                             Command="{Binding AppendDigitCommand}" CommandParameter="2"/>
                     <Button Content="3" Style="{StaticResource KeypadButtonStyle}"
                             Command="{Binding AppendDigitCommand}" CommandParameter="3"/>
-
                     <Button Content="4" Style="{StaticResource KeypadButtonStyle}"
                             Command="{Binding AppendDigitCommand}" CommandParameter="4"/>
                     <Button Content="5" Style="{StaticResource KeypadButtonStyle}"
                             Command="{Binding AppendDigitCommand}" CommandParameter="5"/>
                     <Button Content="6" Style="{StaticResource KeypadButtonStyle}"
                             Command="{Binding AppendDigitCommand}" CommandParameter="6"/>
-
                     <Button Content="7" Style="{StaticResource KeypadButtonStyle}"
                             Command="{Binding AppendDigitCommand}" CommandParameter="7"/>
                     <Button Content="8" Style="{StaticResource KeypadButtonStyle}"
                             Command="{Binding AppendDigitCommand}" CommandParameter="8"/>
                     <Button Content="9" Style="{StaticResource KeypadButtonStyle}"
                             Command="{Binding AppendDigitCommand}" CommandParameter="9"/>
-
                     <Button Content=","
                             Style="{StaticResource KeypadButtonStyle}"
                             Command="{Binding AppendDigitCommand}"
                             CommandParameter=","/>
-
                     <Button Content="0"
                             Style="{StaticResource KeypadButtonStyle}"
                             Command="{Binding AppendDigitCommand}"
                             CommandParameter="0"/>
-
                     <Button Content="C"
                             Style="{StaticResource KeypadButtonStyle}"
                             Background="{StaticResource WarningBrush}"
-                            BorderBrush="#B45309"
                             Command="{Binding BackspaceCommand}"/>
                 </UniformGrid>
 
@@ -476,27 +510,33 @@
                         Margin="0,0,0,8">
                     <StackPanel>
                         <TextBlock Text="FORMY PŁATNOŚCI"
-                                   Style="{StaticResource SectionTitleStyle}"/>
+                                   Style="{StaticResource SectionTitleStyle}"
+                                   Margin="0,0,0,10"/>
 
-                        <Button Content="Gotówka"
-                                Style="{StaticResource ActionButtonStyle}"
+                        <Button Content="💵  Gotówka"
+                                Style="{StaticResource PaymentMethodButtonStyle}"
+                                Background="#16A34A"
                                 Command="{Binding SelectCashCommand}"/>
 
-                        <Button Content="Karta"
-                                Style="{StaticResource ActionButtonStyle}"
+                        <Button Content="💳  Karta"
+                                Style="{StaticResource PaymentMethodButtonStyle}"
+                                Background="#2563EB"
                                 Command="{Binding SelectCardCommand}"/>
 
-                        <Button Content="Przelew"
-                                Style="{StaticResource ActionButtonStyle}"
+                        <Button Content="🏦  Przelew"
+                                Style="{StaticResource PaymentMethodButtonStyle}"
+                                Background="#0D9488"
                                 Command="{Binding SelectTransferCommand}"/>
 
-                        <Button Content="Online"
-                                Style="{StaticResource ActionButtonStyle}"
+                        <Button Content="📱  Online"
+                                Style="{StaticResource PaymentMethodButtonStyle}"
+                                Background="#7C3AED"
                                 Command="{Binding SelectOnlineCommand}"/>
 
-                        <Button Content="Voucher"
-                                Style="{StaticResource ActionButtonStyle}"
-                                Margin="0,0,0,6"
+                        <Button Content="🎟️  Voucher"
+                                Style="{StaticResource PaymentMethodButtonStyle}"
+                                Background="#D97706"
+                                Margin="0"
                                 Command="{Binding SelectVoucherCommand}"/>
                     </StackPanel>
                 </Border>
