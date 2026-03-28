@@ -16,5 +16,5 @@ C:\Users\Pydskask\source\repos\Pizzeria.Pos\Pizzeria.Pos.Wpf\App.xaml
 237-18702835
 MainWindow.xaml;Views\ChangeOrderTypeWindow.xaml;Views\Controls\NumericKeypadControl.xaml;Views\CustomersRegisterWindow.xaml;Views\DeliveriesRegisterWindow.xaml;Views\DeliveryWindow.xaml;Views\LoginWindow.xaml;Views\OrderWindow.xaml;Views\PaymentWindow.xaml;Views\PizzaAddonsWindow.xaml;Views\PizzaConfigWindow.xaml;Views\ProductsWindow.xaml;Views\ReceiptsRegisterWindow.xaml;Views\RegistersWindow.xaml;Views\ReportsWindow.xaml;Views\SettingsPanel.xaml;Views\TouchKeyboardWindow.xaml;Views\UsersPanel.xaml;
 
-True
+False
 
