@@ -1,4 +1,4 @@
-﻿<Window x:Class="Pizzeria.Pos.Wpf.Views.LoginWindow"
+<Window x:Class="Pizzeria.Pos.Wpf.Views.LoginWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:controls="clr-namespace:Pizzeria.Pos.Wpf.Views.Controls"
@@ -110,9 +110,10 @@
 
             <!-- LEWY PANEL -->
             <StackPanel Grid.Column="0"
-                        VerticalAlignment="Bottom"
-                        Margin="0,0,18,24">
+                        VerticalAlignment="Center"
+                        Margin="0,0,18,0">
                 <Button Content="Zamknij"
+                        Height="56"
                         Style="{StaticResource SideActionButton}"
                         Background="#DC2626"
                         Foreground="White"
@@ -165,7 +166,6 @@
                                    TextAlignment="Center"/>
                     </Border>
 
-                    <!-- LoginWindow -->
                     <controls:NumericKeypadControl Grid.Row="2"
            ButtonHeight="60"
            ButtonFontSize="28"
@@ -177,7 +177,6 @@
            RightButtonText="OK"
            RightCommand="{Binding LoginCommand}"
            RightButtonBackground="{StaticResource Brush.Success}"/>
-
 
                     <Border Grid.Row="3"
                             Background="#111827"
