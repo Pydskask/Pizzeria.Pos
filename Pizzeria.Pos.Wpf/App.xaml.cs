@@ -45,6 +45,7 @@ public partial class App : Application
         {
             var db = scope.ServiceProvider.GetRequiredService<PosDataContext>();
             db.Database.Migrate();
+            DbSeeder.SeedOrders(db);
         }
 
 
