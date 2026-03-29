@@ -311,7 +311,7 @@
                                        Foreground="#2C3E50"
                                        Margin="0,0,0,10"/>
 
-                            <TextBlock Grid.Row="1"
+                            <!--<TextBlock Grid.Row="1"
                                        Grid.Column="0"
                                        Text="Termin"
                                        Style="{StaticResource FieldLabelStyle}"
@@ -329,9 +329,14 @@
                                      Background="#F8F9F9"
                                      BorderBrush="#BDC3C7"
                                      BorderThickness="1"
-                                     Text="{Binding DeliveryTime, StringFormat={}{0:yyyy-MM-dd HH:mm}}"/>
+                                     Text="{Binding DeliveryTime, StringFormat={}{0:yyyy-MM-dd HH:mm}}"/> -->
 
                             <Grid Grid.Row="2" Grid.ColumnSpan="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="45*"/>
+                                    <ColumnDefinition Width="26*"/>
+                                    <ColumnDefinition Width="333*"/>
+                                </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="*"/>
@@ -340,7 +345,7 @@
                                 <TextBlock Grid.Row="0"
                                            Text="Uwagi"
                                            Style="{StaticResource FieldLabelStyle}"
-                                           Margin="0,0,0,6"/>
+                                           Margin="0,0,0,6" Grid.ColumnSpan="3"/>
 
                                 <TextBox x:Name="NotesTextBox"
                                          Grid.Row="1"
@@ -350,8 +355,6 @@
                                          Cursor="Hand"
                                          FontSize="17"
                                          Padding="12,10"
-                                         VerticalAlignment="Stretch"
-                                         HorizontalAlignment="Stretch"
                                          MinHeight="220"
                                          TextWrapping="Wrap"
                                          AcceptsReturn="True"
@@ -359,7 +362,7 @@
                                          Background="#FDFEFE"
                                          BorderBrush="#BDC3C7"
                                          BorderThickness="1"
-                                         PreviewMouseDown="InputTextBox_PreviewMouseDown"/>
+                                         PreviewMouseDown="InputTextBox_PreviewMouseDown" Grid.ColumnSpan="3" Margin="0,46,0,59"/>
                             </Grid>
                         </Grid>
                     </Border>

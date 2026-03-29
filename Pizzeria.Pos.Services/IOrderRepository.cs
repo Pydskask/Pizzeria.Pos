@@ -16,3 +16,4 @@ namespace Pizzeria.Pos.Services
         List<DeliveryAddressLookupResult> GetDeliveryAddressesByPhone(string phone);
     }
 }
+

@@ -324,7 +324,7 @@
                                     BorderThickness="0"
                                     Command="{Binding IncreaseQuantityCommand}"
                                     IsEnabled="{Binding CanModifySelectedItem}"/>
-                            <Button Content="✏ Edytuj pizzę"
+                            <Button Content="Edytuj pizzę"
                                     Height="48"
                                     Margin="4,0"
                                     FontSize="15"
@@ -334,7 +334,7 @@
                                     BorderThickness="0"
                                     Command="{Binding EditSelectedPizzaCommand}"
                                     IsEnabled="{Binding CanEditSelectedPizza}"/>
-                            <Button Content="🗑 Usuń"
+                            <Button Content="Usuń"
                                     Height="48"
                                     Margin="4,0,0,0"
                                     FontSize="15"
@@ -348,7 +348,7 @@
 
                         <!-- PRZYCISKI NAWIGACJI -->
                         <UniformGrid Grid.Row="2" Columns="3">
-                            <Button Content="💾 Zapisz i wróć"
+                            <Button Content="Zapisz i wróć"
                                     Height="52"
                                     Margin="0,0,4,0"
                                     FontSize="15"
@@ -357,7 +357,7 @@
                                     Foreground="White"
                                     BorderThickness="0"
                                     Command="{Binding SaveAndBackCommand}"/>
-                            <Button Content="💳 Płatność"
+                            <Button Content="Płatność"
                                     Height="52"
                                     Margin="4,0"
                                     FontSize="15"
@@ -366,7 +366,7 @@
                                     Foreground="White"
                                     BorderThickness="0"
                                     Command="{Binding GoToPaymentCommand}"/>
-                            <Button Content="✖ Anuluj"
+                            <Button Content="Anuluj"
                                     Height="52"
                                     Margin="4,0,0,0"
                                     FontSize="15"

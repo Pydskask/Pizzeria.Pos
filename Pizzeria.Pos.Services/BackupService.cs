@@ -25,8 +25,6 @@ public class BackupService : IBackupService
             var destPath = Path.Combine(backupDir, backupFileName);
 
             File.Copy(sourceDb, destPath, overwrite: false);
-
-            // Usuń backupy starsze niż 30 dni żeby nie zaśmiecać dysku
             CleanOldBackups(backupDir, keepDays: 30);
 
             return destPath;
@@ -48,6 +46,8 @@ public class BackupService : IBackupService
                     File.Delete(file);
             }
         }
-        catch { /* nie przerywaj jeśli sprzątanie padnie */ }
+        catch { }
+
+
     }
 }

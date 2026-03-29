@@ -39,23 +39,19 @@ public class PosDataContext : DbContext
         modelBuilder.Entity<OrderItem>()
             .HasIndex(i => i.OrderId);
 
-        // ── Użytkownicy ──────────────────────────────────────
         modelBuilder.Entity<User>().HasData(
             new User { Id = 1, Name = "Manager", Pin = "1989", Role = "Manager", IsActive = true },
-            new User { Id = 2, Name = "Kelner1", Pin = "1648", Role = "Kelner",  IsActive = true },
-            new User { Id = 3, Name = "Kelner2", Pin = "2211", Role = "Kelner",  IsActive = true }
+            new User { Id = 2, Name = "Kelner1", Pin = "1648", Role = "Kelner", IsActive = true },
+            new User { Id = 3, Name = "Kelner2", Pin = "2211", Role = "Kelner", IsActive = true }
         );
 
-        // ── Produkty ──────────────────────────────────────────
         modelBuilder.Entity<Product>().HasData(
-
-            // PIZZA
-            new Product { Id =  1, Name = "Margherita",          Price = 32m, Category = "Pizza" },
-            new Product { Id =  2, Name = "Pepperoni",           Price = 38m, Category = "Pizza" },
-            new Product { Id =  3, Name = "Quattro Formaggi",    Price = 42m, Category = "Pizza" },
-            new Product { Id =  4, Name = "Prosciutto",          Price = 40m, Category = "Pizza" },
-            new Product { Id =  5, Name = "Diavola",             Price = 39m, Category = "Pizza" },
-            new Product { Id =  6, Name = "Hawajska",            Price = 37m, Category = "Pizza" },
+            new Product { Id =  1, Name = "Margherita", Price = 32m, Category = "Pizza" },
+            new Product { Id =  2, Name = "Pepperoni", Price = 38m, Category = "Pizza" },
+            new Product { Id =  3, Name = "Quattro Formaggi", Price = 42m, Category = "Pizza" },
+            new Product { Id =  4, Name = "Prosciutto", Price = 40m, Category = "Pizza" },
+            new Product { Id =  5, Name = "Diavola", Price = 39m, Category = "Pizza" },
+            new Product { Id =  6, Name = "Hawajska", Price = 37m, Category = "Pizza" },
             new Product { Id =  7, Name = "Capricciosa",         Price = 40m, Category = "Pizza" },
             new Product { Id =  8, Name = "Vege",                Price = 35m, Category = "Pizza" },
             new Product { Id =  9, Name = "BBQ Kurczak",         Price = 41m, Category = "Pizza" },
@@ -65,7 +61,6 @@ public class PosDataContext : DbContext
             new Product { Id = 13, Name = "Calabrese",           Price = 41m, Category = "Pizza" },
             new Product { Id = 14, Name = "Truflowa",            Price = 48m, Category = "Pizza" },
 
-            // NAPOJE ZIMNE
             new Product { Id = 15, Name = "Coca-Cola 0,33l",     Price =  7m, Category = "Napoje zimne" },
             new Product { Id = 16, Name = "Coca-Cola 0,5l",      Price =  9m, Category = "Napoje zimne" },
             new Product { Id = 17, Name = "Sprite 0,33l",        Price =  7m, Category = "Napoje zimne" },
@@ -76,14 +71,12 @@ public class PosDataContext : DbContext
             new Product { Id = 22, Name = "Sok jabłkowy",        Price =  8m, Category = "Napoje zimne" },
             new Product { Id = 23, Name = "Lemońska domowa",     Price = 10m, Category = "Napoje zimne" },
 
-            // NAPOJE CIEPŁE
             new Product { Id = 24, Name = "Kawa espresso",       Price =  8m, Category = "Napoje ciepłe" },
             new Product { Id = 25, Name = "Cappuccino",          Price = 10m, Category = "Napoje ciepłe" },
             new Product { Id = 26, Name = "Latte macchiato",     Price = 11m, Category = "Napoje ciepłe" },
             new Product { Id = 27, Name = "Herbata",             Price =  7m, Category = "Napoje ciepłe" }
         );
 
-        // ── Konfiguracja kolumn ──────────────────────────────
         modelBuilder.Entity<PrintedDocument>()
             .Property(x => x.DocumentType).HasMaxLength(100);
         modelBuilder.Entity<PrintedDocument>()
@@ -97,17 +90,14 @@ public class PosDataContext : DbContext
         modelBuilder.Entity<PizzaAddonDefinition>()
             .Property(x => x.GroupName).HasMaxLength(80);
 
-        // ── Dodatki do pizzy ────────────────────────────────
         modelBuilder.Entity<PizzaAddonDefinition>().HasData(
 
-            // SER
             new PizzaAddonDefinition { Id =  1, Name = "Extra ser",               GroupName = "Ser",     Price = 6m, SortOrder = 1, IsActive = true },
             new PizzaAddonDefinition { Id =  2, Name = "Mozzarella",               GroupName = "Ser",     Price = 7m, SortOrder = 2, IsActive = true },
             new PizzaAddonDefinition { Id =  3, Name = "Gorgonzola",               GroupName = "Ser",     Price = 8m, SortOrder = 3, IsActive = true },
             new PizzaAddonDefinition { Id =  4, Name = "Parmezan",                 GroupName = "Ser",     Price = 7m, SortOrder = 4, IsActive = true },
             new PizzaAddonDefinition { Id =  5, Name = "Ricotta",                  GroupName = "Ser",     Price = 8m, SortOrder = 5, IsActive = true },
 
-            // MIĘSNE
             new PizzaAddonDefinition { Id =  6, Name = "Szynka",                   GroupName = "Mięsne", Price = 7m, SortOrder = 1, IsActive = true },
             new PizzaAddonDefinition { Id =  7, Name = "Salami",                   GroupName = "Mięsne", Price = 7m, SortOrder = 2, IsActive = true },
             new PizzaAddonDefinition { Id =  8, Name = "Boczek",                   GroupName = "Mięsne", Price = 8m, SortOrder = 3, IsActive = true },
@@ -116,7 +106,6 @@ public class PosDataContext : DbContext
             new PizzaAddonDefinition { Id = 11, Name = "Nduja",                    GroupName = "Mięsne", Price = 9m, SortOrder = 6, IsActive = true },
             new PizzaAddonDefinition { Id = 12, Name = "Salsiccia",                GroupName = "Mięsne", Price = 9m, SortOrder = 7, IsActive = true },
 
-            // WARZYWNE
             new PizzaAddonDefinition { Id = 13, Name = "Pieczarki",               GroupName = "Warzywne", Price = 5m, SortOrder = 1, IsActive = true },
             new PizzaAddonDefinition { Id = 14, Name = "Papryka",                 GroupName = "Warzywne", Price = 4m, SortOrder = 2, IsActive = true },
             new PizzaAddonDefinition { Id = 15, Name = "Cebula",                  GroupName = "Warzywne", Price = 3m, SortOrder = 3, IsActive = true },
@@ -128,7 +117,6 @@ public class PosDataContext : DbContext
             new PizzaAddonDefinition { Id = 21, Name = "Szpinak",                 GroupName = "Warzywne", Price = 4m, SortOrder = 9, IsActive = true },
             new PizzaAddonDefinition { Id = 22, Name = "Karczoch",                GroupName = "Warzywne", Price = 6m, SortOrder = 10, IsActive = true },
 
-            // SOSY
             new PizzaAddonDefinition { Id = 23, Name = "Sos pomidorowy",          GroupName = "Sosy",    Price = 4m, SortOrder = 1, IsActive = true },
             new PizzaAddonDefinition { Id = 24, Name = "Sos czosnkowy",           GroupName = "Sosy",    Price = 4m, SortOrder = 2, IsActive = true },
             new PizzaAddonDefinition { Id = 25, Name = "Sos BBQ",                 GroupName = "Sosy",    Price = 4m, SortOrder = 3, IsActive = true },
